@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style type="text/css">
+    .tableizer-firstrow{
+        background-color: teal; 
+		color: #FFF;
+		font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+
+    }
+    .table-responsive{
+        padding: 20px;
+		margin: 20px;
+		border: 100px solid #CCC;
+        font-size: 20px;
+		font-family: Arial, Helvetica, sans-serif;
+        overflow-x: auto; 
+        overflow-y: auto; 
+        max-height: 800px;
+        max-width: auto;
+
+    }
+    .img-thumbnail {
+        width: 60%; 
+        height: 60%; 
+        margin: 15px;
+    }
+    .navbar-brand{
+        color: teal !important;
+        padding-left: 28px;
+        font-size: 26px;
+        font: Georgia;  
+    }
+
+
+  .sum{
+      padding: 0;
+      margin: 0;
+      padding-left:0;
+      grid-auto-flow: inherit;
+  }
+
+  .box{
+    padding: 20px;
+	margin: 20px;
+	border: 1px solid black;
+    background-color: ghostwhite
+    }
+    .vizbox{
+    padding: 20px;
+	margin: 20px;
+	border: 1px solid black;
+    background-color: ghostwhite
+
+    }
+
+</style>
+
+
+</head>
+
+<body>
+<div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Project Edge</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </nav>    
+    </div>
+
+        <div class="jumbotron">
+                <h1 class="display-4">Project Edge</h1>
+                <p class="lead">Analyzing market data to make informed trading decisions</p>
+                <hr class="my-4">
+                <p>Looking at the S&P 500 ETF, SPY, what trends can we identify when analyzing  price action, volume, call option order flow and logrithmic returns?</p>
+        </div>
+
+<div class="container">
+<div class="row">
+<div class="col-8">
+<div class = "box"> 
+<h3>Summary: Project Edge</h3>
+<hr>
+<img src="https://github.com/bendgame/hw11/blob/master/test1.PNG?raw=true" alt="..." class="img-thumbnail float-left" >
+<p class = sum> This page documents project Edge: Finding an Edge in the Options Market by analyzing price action, volume, call option order flow. It is a work in progress. 
+    I have been working on collecting the data and writing analysis scripts for over a year using Python and SQL.The working thesis is aggressive trades in the option market can lead to momentum in the underlying stock. By analyzing aggressive order flow, 
+    I hope to find an indication of market direction, as well as confirmation that the underlying stock will move in that direction with momentum.</p>
+</div>
+</div>
+
+<div class="col-4">
+<div class = "vizbox"> 
+<h3>Vizualization</h3>
+<h5>Plot 1</h5>
+<img src="https://github.com/bendgame/hw11/blob/master/test1.PNG?raw=true" alt="..." class="img-thumbnail">
+<h5>Plot 2</h5>
+<img src="https://github.com/bendgame/hw11/blob/master/test1.PNG?raw=true" alt="..." class="img-thumbnail">
+<h5>Plot 3</h5>
+<img src="https://github.com/bendgame/hw11/blob/master/test1.PNG?raw=true" alt="..." class="img-thumbnail">
+<h5>Plot 4</h5>
+<img src="https://github.com/bendgame/hw11/blob/master/test1.PNG?raw=true" alt="..." class="img-thumbnail">
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
