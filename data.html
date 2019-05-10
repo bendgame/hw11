@@ -11,1069 +11,316 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Project Edge</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body>
+<div class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="https://bendgame.github.io/hw11/lp">Project Edge</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                   <li class="nav-item">
+                      <a class="nav-link" href="#">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Data</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Vizualizations
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">SMA</a>
+                        <a class="dropdown-item" href="#">SMA Strategy</a>
+                        <a class="dropdown-item" href="#">Volumes</a>
+                        <a class="dropdown-item" href="#">Spent on Calls</a>
+                        <a class="dropdown-item" href="#">Log Returns</a>
+                        <a class="dropdown-item" href="#">Log and Calls</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>  
+    </div>
 
 
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <div class="jumbotron">
+          <h1 class="display-4">Raw Data</h1>
+          <p class="lead">This page displays the raw data from 11/29/2017 - 11/29/2018 used to make the graphs.</p>
+          <hr class="my-4">
+          <p class = jp>The stock data was sourced using google finance. The option data was sourced from a curated list of option trades output by Trade-alert.com. 
+            The option orders are filtered based on a proprietary algorithm designed to find aggressive option order flow. The option orders are assumed to be long calls. Regardless of the assumptions made by the algorithms responsible for the call option data,
+            there is no guarantee any party besides the owner of the options understands the intentions behind the trade. Through careful analysis, I hope to uncover patterns in the data to make informed trading decisions.
+
+          </p>
   </div>
 
-<div class = "table-responsive">
+<div class = "table-responsive" style ="">
 <table class="table table-sm">
-<thead><tr class="tableizer-firstrow">
-    <th>Sym</th>
+<tbody>
+  <thead><tr class="tableizer-firstrow">
     <th>Date</th>
-    <th>Open Price</th>
-    <th>High Price</th>
-    <th>Low Price</th>
+    <th>Sym</th>
     <th>Close Price</th>
     <th>Volume</th>
-</tr>
+    <th>Call Volume</th>
+    <th>Total Spent on Calls</th>
+  </tr>
 </thead>
-<tbody>
- <tr><td>SPY</td><td>10/2/2017 16:00:00</td><td>251.49</td><td>252.32</td><td>251.29</td><td>252.32</td><td>59022985</td></tr>
- <tr><td>SPY</td><td>10/3/2017 16:00:00</td><td>252.46</td><td>252.89</td><td>252.23</td><td>252.86</td><td>66810169</td></tr>
- <tr><td>SPY</td><td>10/4/2017 16:00:00</td><td>252.69</td><td>253.44</td><td>252.56</td><td>253.16</td><td>55953619</td></tr>
- <tr><td>SPY</td><td>10/5/2017 16:00:00</td><td>253.54</td><td>254.68</td><td>253.2</td><td>254.66</td><td>63522757</td></tr>
- <tr><td>SPY</td><td>10/6/2017 16:00:00</td><td>254.15</td><td>254.7</td><td>253.85</td><td>254.37</td><td>80645998</td></tr>
- <tr><td>SPY</td><td>10/9/2017 16:00:00</td><td>254.2</td><td>254.7</td><td>253.65</td><td>253.95</td><td>35803138</td></tr>
- <tr><td>SPY</td><td>10/10/2017 16:00:00</td><td>254.6</td><td>255.05</td><td>253.98</td><td>254.62</td><td>43057363</td></tr>
- <tr><td>SPY</td><td>10/11/2017 16:00:00</td><td>254.51</td><td>255.02</td><td>254.32</td><td>255.02</td><td>47674325</td></tr>
- <tr><td>SPY</td><td>10/12/2017 16:00:00</td><td>254.66</td><td>255.06</td><td>254.37</td><td>254.64</td><td>47065144</td></tr>
- <tr><td>SPY</td><td>10/13/2017 16:00:00</td><td>255.14</td><td>255.27</td><td>254.64</td><td>254.95</td><td>54800435</td></tr>
- <tr><td>SPY</td><td>10/16/2017 16:00:00</td><td>255.21</td><td>255.51</td><td>254.82</td><td>255.29</td><td>38221675</td></tr>
- <tr><td>SPY</td><td>10/17/2017 16:00:00</td><td>255.23</td><td>255.52</td><td>254.98</td><td>255.47</td><td>31560964</td></tr>
- <tr><td>SPY</td><td>10/18/2017 16:00:00</td><td>255.9</td><td>255.95</td><td>255.5</td><td>255.72</td><td>40888330</td></tr>
- <tr><td>SPY</td><td>10/19/2017 16:00:00</td><td>254.83</td><td>255.83</td><td>254.35</td><td>255.79</td><td>61903788</td></tr>
- <tr><td>SPY</td><td>10/20/2017 16:00:00</td><td>256.7</td><td>257.14</td><td>255.77</td><td>257.11</td><td>89176377</td></tr>
- <tr><td>SPY</td><td>10/23/2017 16:00:00</td><td>257.48</td><td>257.51</td><td>256.02</td><td>256.11</td><td>63915306</td></tr>
- <tr><td>SPY</td><td>10/24/2017 16:00:00</td><td>256.6</td><td>256.83</td><td>256.15</td><td>256.56</td><td>66935910</td></tr>
- <tr><td>SPY</td><td>10/25/2017 16:00:00</td><td>256.18</td><td>256.31</td><td>254</td><td>255.29</td><td>103715291</td></tr>
- <tr><td>SPY</td><td>10/26/2017 16:00:00</td><td>255.99</td><td>256.3</td><td>255.48</td><td>255.62</td><td>69797972</td></tr>
- <tr><td>SPY</td><td>10/27/2017 16:00:00</td><td>256.47</td><td>257.89</td><td>255.63</td><td>257.71</td><td>85562544</td></tr>
- <tr><td>SPY</td><td>10/30/2017 16:00:00</td><td>257.07</td><td>257.6</td><td>256.41</td><td>256.75</td><td>54285687</td></tr>
- <tr><td>SPY</td><td>10/31/2017 16:00:00</td><td>257.18</td><td>257.44</td><td>256.81</td><td>257.15</td><td>60304781</td></tr>
- <tr><td>SPY</td><td>11/1/2017 16:00:00</td><td>258.04</td><td>258.43</td><td>257.07</td><td>257.49</td><td>54202736</td></tr>
- <tr><td>SPY</td><td>11/2/2017 16:00:00</td><td>257.41</td><td>257.75</td><td>256.19</td><td>257.59</td><td>56449535</td></tr>
- <tr><td>SPY</td><td>11/3/2017 16:00:00</td><td>257.77</td><td>258.5</td><td>257.3</td><td>258.45</td><td>59589730</td></tr>
- <tr><td>SPY</td><td>11/6/2017 16:00:00</td><td>258.3</td><td>259</td><td>258.22</td><td>258.85</td><td>49652598</td></tr>
- <tr><td>SPY</td><td>11/7/2017 16:00:00</td><td>258.97</td><td>259.35</td><td>258.09</td><td>258.67</td><td>57502161</td></tr>
- <tr><td>SPY</td><td>11/8/2017 16:00:00</td><td>258.47</td><td>259.22</td><td>258.15</td><td>259.11</td><td>50469579</td></tr>
- <tr><td>SPY</td><td>11/9/2017 16:00:00</td><td>257.73</td><td>258.39</td><td>256.36</td><td>258.17</td><td>95085497</td></tr>
- <tr><td>SPY</td><td>11/10/2017 16:00:00</td><td>257.73</td><td>258.29</td><td>257.37</td><td>258.09</td><td>59984662</td></tr>
- <tr><td>SPY</td><td>11/13/2017 16:00:00</td><td>257.31</td><td>258.59</td><td>257.27</td><td>258.33</td><td>50228648</td></tr>
- <tr><td>SPY</td><td>11/14/2017 16:00:00</td><td>257.41</td><td>257.85</td><td>256.52</td><td>257.73</td><td>61315152</td></tr>
- <tr><td>SPY</td><td>11/15/2017 16:00:00</td><td>256.62</td><td>257.22</td><td>255.63</td><td>256.44</td><td>80811525</td></tr>
- <tr><td>SPY</td><td>11/16/2017 16:00:00</td><td>257.52</td><td>259.04</td><td>257.47</td><td>258.62</td><td>67777027</td></tr>
- <tr><td>SPY</td><td>11/17/2017 16:00:00</td><td>258.22</td><td>258.59</td><td>257.77</td><td>257.86</td><td>75756833</td></tr>
- <tr><td>SPY</td><td>11/20/2017 16:00:00</td><td>258.14</td><td>258.52</td><td>257.86</td><td>258.3</td><td>48075514</td></tr>
- <tr><td>SPY</td><td>11/21/2017 16:00:00</td><td>259.18</td><td>260.2</td><td>258.26</td><td>259.99</td><td>69176799</td></tr>
- <tr><td>SPY</td><td>11/22/2017 16:00:00</td><td>260</td><td>260.15</td><td>259.57</td><td>259.76</td><td>45033392</td></tr>
- <tr><td>SPY</td><td>11/24/2017 16:00:00</td><td>260.32</td><td>260.48</td><td>260.16</td><td>260.36</td><td>27856514</td></tr>
- <tr><td>SPY</td><td>11/27/2017 16:00:00</td><td>260.41</td><td>260.75</td><td>260</td><td>260.23</td><td>52274922</td></tr>
- <tr><td>SPY</td><td>11/28/2017 16:00:00</td><td>260.76</td><td>262.9</td><td>260.65</td><td>262.87</td><td>98971719</td></tr>
- <tr><td>SPY</td><td>11/29/2017 16:00:00</td><td>263.02</td><td>263.63</td><td>262.2</td><td>262.71</td><td>77512102</td></tr>
- <tr><td>SPY</td><td>11/30/2017 16:00:00</td><td>263.76</td><td>266.05</td><td>263.67</td><td>265.01</td><td>127894389</td></tr>
- <tr><td>SPY</td><td>12/1/2017 16:00:00</td><td>264.76</td><td>265.31</td><td>260.76</td><td>264.46</td><td>164390902</td></tr>
- <tr><td>SPY</td><td>12/4/2017 16:00:00</td><td>266.31</td><td>266.8</td><td>264.08</td><td>264.14</td><td>94040560</td></tr>
- <tr><td>SPY</td><td>12/5/2017 16:00:00</td><td>264.43</td><td>265.15</td><td>263.04</td><td>263.19</td><td>77994544</td></tr>
- <tr><td>SPY</td><td>12/6/2017 16:00:00</td><td>262.87</td><td>263.73</td><td>262.71</td><td>263.24</td><td>75898566</td></tr>
- <tr><td>SPY</td><td>12/7/2017 16:00:00</td><td>263.09</td><td>264.43</td><td>262.94</td><td>264.07</td><td>77218569</td></tr>
- <tr><td>SPY</td><td>12/8/2017 16:00:00</td><td>264.99</td><td>265.52</td><td>264.03</td><td>265.51</td><td>76563873</td></tr>
- <tr><td>SPY</td><td>12/11/2017 16:00:00</td><td>265.58</td><td>266.38</td><td>265.48</td><td>266.31</td><td>83077533</td></tr>
- <tr><td>SPY</td><td>12/12/2017 16:00:00</td><td>266.57</td><td>267.32</td><td>266.35</td><td>266.78</td><td>85195750</td></tr>
- <tr><td>SPY</td><td>12/13/2017 16:00:00</td><td>267.06</td><td>267.56</td><td>266.65</td><td>266.75</td><td>102905409</td></tr>
- <tr><td>SPY</td><td>12/14/2017 16:00:00</td><td>267.09</td><td>267.22</td><td>265.6</td><td>265.66</td><td>100666692</td></tr>
- <tr><td>SPY</td><td>12/15/2017 16:00:00</td><td>265.45</td><td>267.04</td><td>265.39</td><td>266.51</td><td>144610290</td></tr>
- <tr><td>SPY</td><td>12/18/2017 16:00:00</td><td>268.1</td><td>268.6</td><td>267.98</td><td>268.2</td><td>83653572</td></tr>
- <tr><td>SPY</td><td>12/19/2017 16:00:00</td><td>268.48</td><td>268.53</td><td>267.09</td><td>267.17</td><td>82382876</td></tr>
- <tr><td>SPY</td><td>12/20/2017 16:00:00</td><td>268.27</td><td>268.33</td><td>266.69</td><td>267.03</td><td>76751500</td></tr>
- <tr><td>SPY</td><td>12/21/2017 16:00:00</td><td>267.74</td><td>268.39</td><td>267.3</td><td>267.58</td><td>67032339</td></tr>
- <tr><td>SPY</td><td>12/22/2017 16:00:00</td><td>267.6</td><td>267.64</td><td>266.9</td><td>267.51</td><td>78720873</td></tr>
- <tr><td>SPY</td><td>12/26/2017 16:00:00</td><td>267.05</td><td>267.44</td><td>266.89</td><td>267.19</td><td>45244433</td></tr>
- <tr><td>SPY</td><td>12/27/2017 16:00:00</td><td>267.38</td><td>267.73</td><td>267.01</td><td>267.32</td><td>57750986</td></tr>
- <tr><td>SPY</td><td>12/28/2017 16:00:00</td><td>267.89</td><td>267.92</td><td>267.45</td><td>267.87</td><td>45116139</td></tr>
- <tr><td>SPY</td><td>12/29/2017 16:00:00</td><td>268.53</td><td>268.55</td><td>266.64</td><td>266.86</td><td>96007424</td></tr>
- <tr><td>SPY</td><td>1/2/2018 16:00:00</td><td>267.84</td><td>268.81</td><td>267.4</td><td>268.77</td><td>86655749</td></tr>
- <tr><td>SPY</td><td>1/3/2018 16:00:00</td><td>268.96</td><td>270.64</td><td>268.96</td><td>270.47</td><td>90070416</td></tr>
- <tr><td>SPY</td><td>1/4/2018 16:00:00</td><td>271.2</td><td>272.16</td><td>270.54</td><td>271.61</td><td>80636408</td></tr>
- <tr><td>SPY</td><td>1/5/2018 16:00:00</td><td>272.51</td><td>273.56</td><td>271.95</td><td>273.42</td><td>83523995</td></tr>
- <tr><td>SPY</td><td>1/8/2018 16:00:00</td><td>273.31</td><td>274.1</td><td>272.98</td><td>273.92</td><td>57319192</td></tr>
- <tr><td>SPY</td><td>1/9/2018 16:00:00</td><td>274.4</td><td>275.25</td><td>274.08</td><td>274.54</td><td>57253957</td></tr>
- <tr><td>SPY</td><td>1/10/2018 16:00:00</td><td>273.68</td><td>274.42</td><td>272.92</td><td>274.12</td><td>69574318</td></tr>
- <tr><td>SPY</td><td>1/11/2018 16:00:00</td><td>274.75</td><td>276.12</td><td>274.56</td><td>276.12</td><td>62361455</td></tr>
- <tr><td>SPY</td><td>1/12/2018 16:00:00</td><td>276.42</td><td>278.11</td><td>276.08</td><td>277.92</td><td>90816076</td></tr>
- <tr><td>SPY</td><td>1/16/2018 16:00:00</td><td>279.35</td><td>280.09</td><td>276.18</td><td>276.97</td><td>106555142</td></tr>
- <tr><td>SPY</td><td>1/17/2018 16:00:00</td><td>278.03</td><td>280.05</td><td>276.97</td><td>279.61</td><td>113258799</td></tr>
- <tr><td>SPY</td><td>1/18/2018 16:00:00</td><td>279.48</td><td>279.96</td><td>278.58</td><td>279.14</td><td>100728006</td></tr>
- <tr><td>SPY</td><td>1/19/2018 16:00:00</td><td>279.8</td><td>280.41</td><td>279.14</td><td>280.41</td><td>140920098</td></tr>
- <tr><td>SPY</td><td>1/22/2018 16:00:00</td><td>280.17</td><td>282.69</td><td>280.11</td><td>282.69</td><td>91322408</td></tr>
- <tr><td>SPY</td><td>1/23/2018 16:00:00</td><td>282.74</td><td>283.62</td><td>282.37</td><td>283.29</td><td>97084700</td></tr>
- <tr><td>SPY</td><td>1/24/2018 16:00:00</td><td>284.02</td><td>284.7</td><td>281.84</td><td>283.18</td><td>134816117</td></tr>
- <tr><td>SPY</td><td>1/25/2018 16:00:00</td><td>284.16</td><td>284.27</td><td>282.4</td><td>283.3</td><td>84587313</td></tr>
- <tr><td>SPY</td><td>1/26/2018 16:00:00</td><td>284.25</td><td>286.63</td><td>283.96</td><td>286.58</td><td>107743119</td></tr>
- <tr><td>SPY</td><td>1/29/2018 16:00:00</td><td>285.93</td><td>286.43</td><td>284.5</td><td>284.68</td><td>90118337</td></tr>
- <tr><td>SPY</td><td>1/30/2018 16:00:00</td><td>282.6</td><td>284.74</td><td>281.22</td><td>281.76</td><td>131796419</td></tr>
- <tr><td>SPY</td><td>1/31/2018 16:00:00</td><td>282.73</td><td>283.3</td><td>280.68</td><td>281.9</td><td>118948131</td></tr>
- <tr><td>SPY</td><td>2/1/2018 16:00:00</td><td>281.07</td><td>283.06</td><td>280.68</td><td>281.58</td><td>90102470</td></tr>
- <tr><td>SPY</td><td>2/2/2018 16:00:00</td><td>280.08</td><td>280.23</td><td>275.41</td><td>275.45</td><td>173174790</td></tr>
- <tr><td>SPY</td><td>2/5/2018 16:00:00</td><td>273.45</td><td>275.85</td><td>263.31</td><td>263.93</td><td>294681816</td></tr>
- <tr><td>SPY</td><td>2/6/2018 16:00:00</td><td>259.94</td><td>269.7</td><td>258.7</td><td>269.13</td><td>355026782</td></tr>
- <tr><td>SPY</td><td>2/7/2018 16:00:00</td><td>268.5</td><td>272.36</td><td>267.58</td><td>267.67</td><td>167376100</td></tr>
- <tr><td>SPY</td><td>2/8/2018 16:00:00</td><td>268.01</td><td>268.17</td><td>257.59</td><td>257.63</td><td>246449505</td></tr>
- <tr><td>SPY</td><td>2/9/2018 16:00:00</td><td>260.8</td><td>263.61</td><td>252.92</td><td>261.5</td><td>283565315</td></tr>
- <tr><td>SPY</td><td>2/12/2018 16:00:00</td><td>263.83</td><td>267.01</td><td>261.66</td><td>265.34</td><td>143735976</td></tr>
- <tr><td>SPY</td><td>2/13/2018 16:00:00</td><td>263.97</td><td>266.62</td><td>263.31</td><td>266</td><td>81223640</td></tr>
- <tr><td>SPY</td><td>2/14/2018 16:00:00</td><td>264.31</td><td>270</td><td>264.3</td><td>269.59</td><td>120735685</td></tr>
- <tr><td>SPY</td><td>2/15/2018 16:00:00</td><td>271.57</td><td>273.04</td><td>268.77</td><td>273.03</td><td>111200286</td></tr>
- <tr><td>SPY</td><td>2/16/2018 16:00:00</td><td>272.32</td><td>275.32</td><td>272.27</td><td>273.11</td><td>160420135</td></tr>
- <tr><td>SPY</td><td>2/20/2018 16:00:00</td><td>272.03</td><td>273.67</td><td>270.5</td><td>271.4</td><td>86369662</td></tr>
- <tr><td>SPY</td><td>2/21/2018 16:00:00</td><td>271.9</td><td>274.72</td><td>269.94</td><td>270.05</td><td>98883740</td></tr>
- <tr><td>SPY</td><td>2/22/2018 16:00:00</td><td>271.1</td><td>273.05</td><td>269.64</td><td>270.4</td><td>110511290</td></tr>
- <tr><td>SPY</td><td>2/23/2018 16:00:00</td><td>271.79</td><td>274.71</td><td>271.25</td><td>274.71</td><td>92766428</td></tr>
- <tr><td>SPY</td><td>2/26/2018 16:00:00</td><td>275.93</td><td>278.01</td><td>275.26</td><td>277.9</td><td>86491406</td></tr>
- <tr><td>SPY</td><td>2/27/2018 16:00:00</td><td>278.11</td><td>278.92</td><td>274.36</td><td>274.43</td><td>99099165</td></tr>
- <tr><td>SPY</td><td>2/28/2018 16:00:00</td><td>275.68</td><td>276.19</td><td>271.29</td><td>271.65</td><td>121907767</td></tr>
- <tr><td>SPY</td><td>3/1/2018 16:00:00</td><td>271.41</td><td>273.17</td><td>266</td><td>267.7</td><td>176855077</td></tr>
- <tr><td>SPY</td><td>3/2/2018 16:00:00</td><td>265.8</td><td>269.72</td><td>264.82</td><td>269.08</td><td>139083217</td></tr>
- <tr><td>SPY</td><td>3/5/2018 16:00:00</td><td>267.73</td><td>272.89</td><td>267.61</td><td>272.19</td><td>97307387</td></tr>
- <tr><td>SPY</td><td>3/6/2018 16:00:00</td><td>273.3</td><td>273.39</td><td>271.18</td><td>272.88</td><td>79213163</td></tr>
- <tr><td>SPY</td><td>3/7/2018 16:00:00</td><td>270.42</td><td>273.18</td><td>270.2</td><td>272.78</td><td>87063502</td></tr>
- <tr><td>SPY</td><td>3/8/2018 16:00:00</td><td>273.55</td><td>274.24</td><td>272.42</td><td>274.1</td><td>66901150</td></tr>
- <tr><td>SPY</td><td>3/9/2018 16:00:00</td><td>275.7</td><td>278.87</td><td>275.34</td><td>278.87</td><td>113625335</td></tr>
- <tr><td>SPY</td><td>3/12/2018 16:00:00</td><td>279.2</td><td>279.91</td><td>278.08</td><td>278.52</td><td>71924793</td></tr>
- <tr><td>SPY</td><td>3/13/2018 16:00:00</td><td>279.84</td><td>280.41</td><td>276.03</td><td>276.72</td><td>91968937</td></tr>
- <tr><td>SPY</td><td>3/14/2018 16:00:00</td><td>277.81</td><td>278.02</td><td>274.67</td><td>275.3</td><td>105895079</td></tr>
- <tr><td>SPY</td><td>3/15/2018 16:00:00</td><td>275.88</td><td>276.61</td><td>274.43</td><td>275</td><td>83433038</td></tr>
- <tr><td>SPY</td><td>3/16/2018 16:00:00</td><td>274.5</td><td>275.39</td><td>274.14</td><td>274.2</td><td>100343673</td></tr>
- <tr><td>SPY</td><td>3/19/2018 16:00:00</td><td>273.35</td><td>274.4</td><td>268.62</td><td>270.49</td><td>109208442</td></tr>
- <tr><td>SPY</td><td>3/20/2018 16:00:00</td><td>270.94</td><td>271.67</td><td>270.18</td><td>270.95</td><td>59757271</td></tr>
- <tr><td>SPY</td><td>3/21/2018 16:00:00</td><td>270.9</td><td>273.27</td><td>270.19</td><td>270.43</td><td>78709578</td></tr>
- <tr><td>SPY</td><td>3/22/2018 16:00:00</td><td>267.91</td><td>268.87</td><td>263.36</td><td>263.67</td><td>148785916</td></tr>
- <tr><td>SPY</td><td>3/23/2018 16:00:00</td><td>264.17</td><td>265.02</td><td>257.83</td><td>258.05</td><td>183534751</td></tr>
- <tr><td>SPY</td><td>3/26/2018 16:00:00</td><td>262.13</td><td>265.43</td><td>259.41</td><td>265.11</td><td>141956102</td></tr>
- <tr><td>SPY</td><td>3/27/2018 16:00:00</td><td>266.17</td><td>266.77</td><td>258.84</td><td>260.6</td><td>129941445</td></tr>
- <tr><td>SPY</td><td>3/28/2018 16:00:00</td><td>260.75</td><td>262.64</td><td>258.58</td><td>259.83</td><td>146452306</td></tr>
- <tr><td>SPY</td><td>3/29/2018 16:00:00</td><td>261.12</td><td>265.26</td><td>259.84</td><td>263.15</td><td>124244790</td></tr>
- <tr><td>SPY</td><td>4/2/2018 16:00:00</td><td>262.55</td><td>263.13</td><td>254.67</td><td>257.47</td><td>186286343</td></tr>
- <tr><td>SPY</td><td>4/3/2018 16:00:00</td><td>258.87</td><td>261.31</td><td>256.84</td><td>260.77</td><td>119956861</td></tr>
- <tr><td>SPY</td><td>4/4/2018 16:00:00</td><td>256.75</td><td>264.36</td><td>256.6</td><td>263.56</td><td>123715339</td></tr>
- <tr><td>SPY</td><td>4/5/2018 16:00:00</td><td>265.55</td><td>266.64</td><td>264.32</td><td>265.64</td><td>82652618</td></tr>
- <tr><td>SPY</td><td>4/6/2018 16:00:00</td><td>263.42</td><td>265.11</td><td>258</td><td>259.72</td><td>179521209</td></tr>
- <tr><td>SPY</td><td>4/9/2018 16:00:00</td><td>261.37</td><td>264.84</td><td>259.94</td><td>261</td><td>105442932</td></tr>
- <tr><td>SPY</td><td>4/10/2018 16:00:00</td><td>264.27</td><td>266.04</td><td>262.98</td><td>265.15</td><td>105573736</td></tr>
- <tr><td>SPY</td><td>4/11/2018 16:00:00</td><td>263.47</td><td>265.64</td><td>263.39</td><td>263.76</td><td>91140243</td></tr>
- <tr><td>SPY</td><td>4/12/2018 16:00:00</td><td>265.26</td><td>267</td><td>265.06</td><td>265.93</td><td>68890480</td></tr>
- <tr><td>SPY</td><td>4/13/2018 16:00:00</td><td>267.41</td><td>267.54</td><td>264.01</td><td>265.15</td><td>85079176</td></tr>
- <tr><td>SPY</td><td>4/16/2018 16:00:00</td><td>267</td><td>268.2</td><td>266.07</td><td>267.33</td><td>63405287</td></tr>
- <tr><td>SPY</td><td>4/17/2018 16:00:00</td><td>269.33</td><td>270.87</td><td>268.75</td><td>270.19</td><td>64682036</td></tr>
- <tr><td>SPY</td><td>4/18/2018 16:00:00</td><td>270.69</td><td>271.3</td><td>269.87</td><td>270.39</td><td>57303857</td></tr>
- <tr><td>SPY</td><td>4/19/2018 16:00:00</td><td>269.65</td><td>269.88</td><td>267.72</td><td>268.89</td><td>77655909</td></tr>
- <tr><td>SPY</td><td>4/20/2018 16:00:00</td><td>268.81</td><td>269.06</td><td>265.61</td><td>266.61</td><td>99953133</td></tr>
- <tr><td>SPY</td><td>4/23/2018 16:00:00</td><td>267.26</td><td>267.89</td><td>265.35</td><td>266.57</td><td>65557954</td></tr>
- <tr><td>SPY</td><td>4/24/2018 16:00:00</td><td>267.73</td><td>267.98</td><td>261.28</td><td>262.98</td><td>112885452</td></tr>
- <tr><td>SPY</td><td>4/25/2018 16:00:00</td><td>262.91</td><td>264.13</td><td>260.85</td><td>263.63</td><td>103840948</td></tr>
- <tr><td>SPY</td><td>4/26/2018 16:00:00</td><td>264.79</td><td>267.25</td><td>264.29</td><td>266.31</td><td>67731942</td></tr>
- <tr><td>SPY</td><td>4/27/2018 16:00:00</td><td>267</td><td>267.34</td><td>265.5</td><td>266.56</td><td>57053647</td></tr>
- <tr><td>SPY</td><td>4/30/2018 16:00:00</td><td>267.26</td><td>267.89</td><td>264.43</td><td>264.51</td><td>82182324</td></tr>
- <tr><td>SPY</td><td>5/1/2018 16:00:00</td><td>263.87</td><td>265.1</td><td>262.11</td><td>264.98</td><td>74203365</td></tr>
- <tr><td>SPY</td><td>5/2/2018 16:00:00</td><td>264.76</td><td>265.68</td><td>262.76</td><td>263.2</td><td>86368943</td></tr>
- <tr><td>SPY</td><td>5/3/2018 16:00:00</td><td>262.26</td><td>263.36</td><td>259.05</td><td>262.62</td><td>136311479</td></tr>
- <tr><td>SPY</td><td>5/4/2018 16:00:00</td><td>261.52</td><td>266.79</td><td>261.15</td><td>266.02</td><td>91222075</td></tr>
- <tr><td>SPY</td><td>5/7/2018 16:00:00</td><td>266.89</td><td>268.02</td><td>266.11</td><td>266.92</td><td>55304907</td></tr>
- <tr><td>SPY</td><td>5/8/2018 16:00:00</td><td>266.5</td><td>267.33</td><td>265.15</td><td>266.92</td><td>67499247</td></tr>
- <tr><td>SPY</td><td>5/9/2018 16:00:00</td><td>267.68</td><td>269.87</td><td>267.09</td><td>269.5</td><td>59666143</td></tr>
- <tr><td>SPY</td><td>5/10/2018 16:00:00</td><td>270.34</td><td>272.39</td><td>270.22</td><td>272.02</td><td>72063931</td></tr>
- <tr><td>SPY</td><td>5/11/2018 16:00:00</td><td>272.16</td><td>273.15</td><td>271.58</td><td>272.85</td><td>59871511</td></tr>
- <tr><td>SPY</td><td>5/14/2018 16:00:00</td><td>273.34</td><td>274.08</td><td>272.36</td><td>272.98</td><td>54790606</td></tr>
- <tr><td>SPY</td><td>5/15/2018 16:00:00</td><td>271.59</td><td>271.61</td><td>270.03</td><td>271.1</td><td>87036136</td></tr>
- <tr><td>SPY</td><td>5/16/2018 16:00:00</td><td>271.14</td><td>272.76</td><td>271.11</td><td>272.24</td><td>53942631</td></tr>
- <tr><td>SPY</td><td>5/17/2018 16:00:00</td><td>271.94</td><td>273.23</td><td>271.13</td><td>272.01</td><td>56536400</td></tr>
- <tr><td>SPY</td><td>5/18/2018 16:00:00</td><td>271.62</td><td>272.03</td><td>270.93</td><td>271.33</td><td>64367959</td></tr>
- <tr><td>SPY</td><td>5/21/2018 16:00:00</td><td>273.01</td><td>273.98</td><td>271.35</td><td>273.37</td><td>58025875</td></tr>
- <tr><td>SPY</td><td>5/22/2018 16:00:00</td><td>273.96</td><td>274.25</td><td>272.24</td><td>272.61</td><td>52966358</td></tr>
- <tr><td>SPY</td><td>5/23/2018 16:00:00</td><td>271.17</td><td>273.39</td><td>270.99</td><td>273.36</td><td>64694184</td></tr>
- <tr><td>SPY</td><td>5/24/2018 16:00:00</td><td>272.91</td><td>273.22</td><td>270.78</td><td>272.8</td><td>76043827</td></tr>
- <tr><td>SPY</td><td>5/25/2018 16:00:00</td><td>272.15</td><td>272.86</td><td>271.58</td><td>272.15</td><td>56374755</td></tr>
- <tr><td>SPY</td><td>5/29/2018 16:00:00</td><td>270.31</td><td>271.17</td><td>267.76</td><td>269.02</td><td>115908607</td></tr>
- <tr><td>SPY</td><td>5/30/2018 16:00:00</td><td>270.5</td><td>273.11</td><td>270.42</td><td>272.61</td><td>69678449</td></tr>
- <tr><td>SPY</td><td>5/31/2018 16:00:00</td><td>272.15</td><td>272.49</td><td>270.26</td><td>270.94</td><td>93519941</td></tr>
- <tr><td>SPY</td><td>6/1/2018 16:00:00</td><td>272.41</td><td>273.94</td><td>272.33</td><td>273.6</td><td>71258411</td></tr>
- <tr><td>SPY</td><td>6/4/2018 16:00:00</td><td>274.53</td><td>275.19</td><td>274.26</td><td>274.9</td><td>45385166</td></tr>
- <tr><td>SPY</td><td>6/5/2018 16:00:00</td><td>275.05</td><td>275.53</td><td>274.18</td><td>275.1</td><td>51135038</td></tr>
- <tr><td>SPY</td><td>6/6/2018 16:00:00</td><td>275.79</td><td>277.52</td><td>275.09</td><td>277.4</td><td>62732215</td></tr>
- <tr><td>SPY</td><td>6/7/2018 16:00:00</td><td>277.95</td><td>278.28</td><td>276.34</td><td>277.37</td><td>72969402</td></tr>
- <tr><td>SPY</td><td>6/8/2018 16:00:00</td><td>276.85</td><td>278.25</td><td>276.66</td><td>278.19</td><td>72139719</td></tr>
- <tr><td>SPY</td><td>6/11/2018 16:00:00</td><td>278.44</td><td>279.37</td><td>278.31</td><td>278.56</td><td>58892515</td></tr>
- <tr><td>SPY</td><td>6/12/2018 16:00:00</td><td>279.03</td><td>279.33</td><td>278.19</td><td>278.92</td><td>72329028</td></tr>
- <tr><td>SPY</td><td>6/13/2018 16:00:00</td><td>279.19</td><td>279.48</td><td>277.8</td><td>278.03</td><td>79070610</td></tr>
- <tr><td>SPY</td><td>6/14/2018 16:00:00</td><td>279.01</td><td>279.33</td><td>278.06</td><td>278.73</td><td>77097620</td></tr>
- <tr><td>SPY</td><td>6/15/2018 16:00:00</td><td>276.6</td><td>277.51</td><td>275.35</td><td>277.13</td><td>120041562</td></tr>
- <tr><td>SPY</td><td>6/18/2018 16:00:00</td><td>275.49</td><td>276.7</td><td>274.95</td><td>276.56</td><td>52917581</td></tr>
- <tr><td>SPY</td><td>6/19/2018 16:00:00</td><td>274</td><td>275.75</td><td>273.53</td><td>275.5</td><td>97531510</td></tr>
- <tr><td>SPY</td><td>6/20/2018 16:00:00</td><td>276.27</td><td>276.72</td><td>275.59</td><td>275.97</td><td>53785486</td></tr>
- <tr><td>SPY</td><td>6/21/2018 16:00:00</td><td>275.96</td><td>275.98</td><td>273.68</td><td>274.24</td><td>71061404</td></tr>
- <tr><td>SPY</td><td>6/22/2018 16:00:00</td><td>275.66</td><td>275.79</td><td>274.49</td><td>274.74</td><td>56612003</td></tr>
- <tr><td>SPY</td><td>6/25/2018 16:00:00</td><td>273.44</td><td>273.62</td><td>269.1</td><td>271</td><td>137854162</td></tr>
- <tr><td>SPY</td><td>6/26/2018 16:00:00</td><td>271.64</td><td>272.56</td><td>270.79</td><td>271.6</td><td>68683211</td></tr>
- <tr><td>SPY</td><td>6/27/2018 16:00:00</td><td>271.64</td><td>272.56</td><td>270.79</td><td>271.6</td><td>2725809</td></tr>
- <tr><td>SPY</td><td>6/28/2018 16:00:00</td><td>269.29</td><td>271.75</td><td>268.49</td><td>270.89</td><td>76650517</td></tr>
- <tr><td>SPY</td><td>6/29/2018 16:00:00</td><td>272.12</td><td>273.66</td><td>271.15</td><td>271.28</td><td>97592499</td></tr>
- <tr><td>SPY</td><td>7/2/2018 16:00:00</td><td>269.51</td><td>272.04</td><td>269.24</td><td>271.86</td><td>63554774</td></tr>
- <tr><td>SPY</td><td>7/3/2018 13:00:00</td><td>272.87</td><td>272.98</td><td>270.42</td><td>270.9</td><td>42187071</td></tr>
- <tr><td>SPY</td><td>7/5/2018 16:00:00</td><td>272.17</td><td>273.18</td><td>270.96</td><td>273.11</td><td>56925919</td></tr>
- <tr><td>SPY</td><td>7/6/2018 16:00:00</td><td>273.14</td><td>275.84</td><td>272.71</td><td>275.42</td><td>66493696</td></tr>
- <tr><td>SPY</td><td>7/9/2018 16:00:00</td><td>276.55</td><td>277.96</td><td>276.5</td><td>277.9</td><td>50550399</td></tr>
- <tr><td>SPY</td><td>7/10/2018 16:00:00</td><td>278.41</td><td>279.01</td><td>278.08</td><td>278.9</td><td>51966829</td></tr>
- <tr><td>SPY</td><td>7/11/2018 16:00:00</td><td>277.15</td><td>278.04</td><td>276.52</td><td>276.86</td><td>77054739</td></tr>
- <tr><td>SPY</td><td>7/12/2018 16:00:00</td><td>278.28</td><td>279.43</td><td>277.6</td><td>279.37</td><td>60124687</td></tr>
- <tr><td>SPY</td><td>7/13/2018 16:00:00</td><td>279.17</td><td>279.93</td><td>278.66</td><td>279.59</td><td>48234964</td></tr>
- <tr><td>SPY</td><td>7/16/2018 16:00:00</td><td>279.64</td><td>279.8</td><td>278.84</td><td>279.34</td><td>48201038</td></tr>
- <tr><td>SPY</td><td>7/17/2018 16:00:00</td><td>278.47</td><td>280.91</td><td>278.41</td><td>280.47</td><td>52315500</td></tr>
- <tr><td>SPY</td><td>7/18/2018 16:00:00</td><td>280.56</td><td>281.18</td><td>280.06</td><td>281.06</td><td>44593465</td></tr>
- <tr><td>SPY</td><td>7/19/2018 16:00:00</td><td>280.31</td><td>280.74</td><td>279.46</td><td>280</td><td>61412117</td></tr>
- <tr><td>SPY</td><td>7/20/2018 16:00:00</td><td>279.77</td><td>280.48</td><td>279.5</td><td>279.68</td><td>82372729</td></tr>
- <tr><td>SPY</td><td>7/23/2018 16:00:00</td><td>279.45</td><td>280.43</td><td>279.06</td><td>280.2</td><td>47047565</td></tr>
- <tr><td>SPY</td><td>7/24/2018 16:00:00</td><td>281.79</td><td>282.56</td><td>280.63</td><td>281.61</td><td>68026935</td></tr>
- <tr><td>SPY</td><td>7/25/2018 16:00:00</td><td>281.33</td><td>284.37</td><td>281.28</td><td>284.01</td><td>78882927</td></tr>
- <tr><td>SPY</td><td>7/26/2018 16:00:00</td><td>283.2</td><td>284.11</td><td>283.09</td><td>283.34</td><td>57919495</td></tr>
- <tr><td>SPY</td><td>7/27/2018 16:00:00</td><td>283.71</td><td>283.82</td><td>280.38</td><td>281.42</td><td>76783177</td></tr>
- <tr><td>SPY</td><td>7/30/2018 16:00:00</td><td>281.51</td><td>281.69</td><td>279.36</td><td>279.95</td><td>63742508</td></tr>
- <tr><td>SPY</td><td>7/31/2018 16:00:00</td><td>280.81</td><td>282.02</td><td>280.38</td><td>281.33</td><td>68570493</td></tr>
- <tr><td>SPY</td><td>8/1/2018 16:00:00</td><td>281.56</td><td>282.13</td><td>280.13</td><td>280.86</td><td>53853326</td></tr>
- <tr><td>SPY</td><td>8/2/2018 16:00:00</td><td>279.39</td><td>282.58</td><td>279.16</td><td>282.39</td><td>63426363</td></tr>
- <tr><td>SPY</td><td>8/3/2018 16:00:00</td><td>282.53</td><td>283.66</td><td>282.33</td><td>283.6</td><td>53935386</td></tr>
- <tr><td>SPY</td><td>8/6/2018 16:00:00</td><td>283.64</td><td>284.99</td><td>283.2</td><td>284.64</td><td>39400887</td></tr>
- <tr><td>SPY</td><td>8/7/2018 16:00:00</td><td>285.39</td><td>286.01</td><td>285.24</td><td>285.58</td><td>43196646</td></tr>
- <tr><td>SPY</td><td>8/8/2018 16:00:00</td><td>285.39</td><td>285.91</td><td>284.94</td><td>285.46</td><td>42114551</td></tr>
- <tr><td>SPY</td><td>8/9/2018 16:00:00</td><td>285.53</td><td>285.97</td><td>284.92</td><td>285.07</td><td>35716976</td></tr>
- <tr><td>SPY</td><td>8/10/2018 16:00:00</td><td>283.45</td><td>284.06</td><td>282.36</td><td>283.16</td><td>77076044</td></tr>
- <tr><td>SPY</td><td>8/13/2018 16:00:00</td><td>283.47</td><td>284.16</td><td>281.77</td><td>282.1</td><td>65732909</td></tr>
- <tr><td>SPY</td><td>8/14/2018 16:00:00</td><td>282.92</td><td>284.17</td><td>282.48</td><td>283.9</td><td>43842031</td></tr>
- <tr><td>SPY</td><td>8/15/2018 16:00:00</td><td>282.38</td><td>282.54</td><td>280.16</td><td>281.78</td><td>102925355</td></tr>
- <tr><td>SPY</td><td>8/16/2018 16:00:00</td><td>283.4</td><td>285.04</td><td>283.36</td><td>284.06</td><td>69967919</td></tr>
- <tr><td>SPY</td><td>8/17/2018 16:00:00</td><td>283.83</td><td>285.56</td><td>283.37</td><td>285.06</td><td>65618481</td></tr>
- <tr><td>SPY</td><td>8/20/2018 16:00:00</td><td>285.57</td><td>285.97</td><td>285.06</td><td>285.67</td><td>39807490</td></tr>
- <tr><td>SPY</td><td>8/21/2018 16:00:00</td><td>286.25</td><td>287.31</td><td>285.71</td><td>286.34</td><td>67271983</td></tr>
- <tr><td>SPY</td><td>8/22/2018 16:00:00</td><td>285.88</td><td>286.76</td><td>285.58</td><td>286.17</td><td>44993333</td></tr>
- <tr><td>SPY</td><td>8/23/2018 16:00:00</td><td>285.97</td><td>286.94</td><td>285.43</td><td>285.79</td><td>49204851</td></tr>
- <tr><td>SPY</td><td>8/24/2018 16:00:00</td><td>286.44</td><td>287.67</td><td>286.38</td><td>287.51</td><td>57487399</td></tr>
- <tr><td>SPY</td><td>8/27/2018 16:00:00</td><td>288.86</td><td>289.9</td><td>288.68</td><td>289.78</td><td>57072377</td></tr>
- <tr><td>SPY</td><td>8/28/2018 16:00:00</td><td>290.3</td><td>290.42</td><td>289.4</td><td>289.92</td><td>46943472</td></tr>
- <tr><td>SPY</td><td>8/29/2018 16:00:00</td><td>290.16</td><td>291.74</td><td>289.89</td><td>291.48</td><td>61485514</td></tr>
- <tr><td>SPY</td><td>8/30/2018 16:00:00</td><td>290.94</td><td>291.36</td><td>289.63</td><td>290.3</td><td>61229501</td></tr>
- <tr><td>SPY</td><td>8/31/2018 16:00:00</td><td>289.84</td><td>290.81</td><td>289.29</td><td>290.31</td><td>66140838</td></tr>
- <tr><td>SPY</td><td>9/4/2018 16:00:00</td><td>289.84</td><td>290.21</td><td>288.68</td><td>289.81</td><td>57594367</td></tr>
- <tr><td>SPY</td><td>9/5/2018 16:00:00</td><td>289.41</td><td>289.64</td><td>287.89</td><td>289.03</td><td>72452437</td></tr>
- <tr><td>SPY</td><td>9/6/2018 16:00:00</td><td>289.15</td><td>289.49</td><td>287</td><td>288.16</td><td>65909863</td></tr>
- <tr><td>SPY</td><td>9/7/2018 16:00:00</td><td>286.98</td><td>288.7</td><td>286.71</td><td>287.6</td><td>73524824</td></tr>
- <tr><td>SPY</td><td>9/10/2018 16:00:00</td><td>288.74</td><td>289.04</td><td>287.88</td><td>288.1</td><td>50210903</td></tr>
- <tr><td>SPY</td><td>9/11/2018 16:00:00</td><td>287.37</td><td>289.55</td><td>286.98</td><td>289.05</td><td>50530492</td></tr>
- <tr><td>SPY</td><td>9/12/2018 16:00:00</td><td>289.06</td><td>289.8</td><td>288.23</td><td>289.12</td><td>59810758</td></tr>
- <tr><td>SPY</td><td>9/13/2018 16:00:00</td><td>290.32</td><td>291.04</td><td>290</td><td>290.83</td><td>51034222</td></tr>
- <tr><td>SPY</td><td>9/14/2018 16:00:00</td><td>291.06</td><td>291.27</td><td>290</td><td>290.88</td><td>55079875</td></tr>
- <tr><td>SPY</td><td>9/17/2018 16:00:00</td><td>290.82</td><td>290.86</td><td>289.03</td><td>289.34</td><td>68244043</td></tr>
- <tr><td>SPY</td><td>9/18/2018 16:00:00</td><td>289.58</td><td>291.58</td><td>289.55</td><td>290.91</td><td>61930407</td></tr>
- <tr><td>SPY</td><td>9/19/2018 16:00:00</td><td>290.97</td><td>291.69</td><td>290.83</td><td>291.22</td><td>49080562</td></tr>
- <tr><td>SPY</td><td>9/20/2018 16:00:00</td><td>292.64</td><td>293.94</td><td>291.24</td><td>293.58</td><td>100360646</td></tr>
- <tr><td>SPY</td><td>9/21/2018 16:00:00</td><td>293.09</td><td>293.22</td><td>291.81</td><td>291.99</td><td>105479656</td></tr>
- <tr><td>SPY</td><td>9/24/2018 16:00:00</td><td>291.34</td><td>291.5</td><td>290.37</td><td>291.02</td><td>53409645</td></tr>
- <tr><td>SPY</td><td>9/25/2018 16:00:00</td><td>291.53</td><td>291.65</td><td>290.48</td><td>290.75</td><td>44370037</td></tr>
- <tr><td>SPY</td><td>9/26/2018 16:00:00</td><td>290.91</td><td>292.24</td><td>289.41</td><td>289.88</td><td>79739674</td></tr>
- <tr><td>SPY</td><td>9/27/2018 16:00:00</td><td>290.41</td><td>291.91</td><td>290.1</td><td>290.69</td><td>59249455</td></tr>
- <tr><td>SPY</td><td>9/28/2018 16:00:00</td><td>289.99</td><td>291.28</td><td>289.95</td><td>290.72</td><td>70091385</td></tr>
- <tr><td>SPY</td><td>10/1/2018 16:00:00</td><td>292.11</td><td>292.93</td><td>290.98</td><td>291.73</td><td>62078937</td></tr>
- <tr><td>SPY</td><td>10/2/2018 16:00:00</td><td>291.56</td><td>292.36</td><td>291.14</td><td>291.56</td><td>47258227</td></tr>
- <tr><td>BAC</td><td>10/2/2017 16:00:00</td><td>25.46</td><td>25.65</td><td>25.39</td><td>25.62</td><td>53976660</td></tr>
- <tr><td>BAC</td><td>10/3/2017 16:00:00</td><td>25.75</td><td>25.93</td><td>25.62</td><td>25.86</td><td>55914268</td></tr>
- <tr><td>BAC</td><td>10/4/2017 16:00:00</td><td>25.86</td><td>25.95</td><td>25.7</td><td>25.71</td><td>53360116</td></tr>
- <tr><td>BAC</td><td>10/5/2017 16:00:00</td><td>25.77</td><td>26.23</td><td>25.66</td><td>26.13</td><td>62608169</td></tr>
- <tr><td>BAC</td><td>10/6/2017 16:00:00</td><td>26.25</td><td>26.3</td><td>26.04</td><td>26.21</td><td>53886876</td></tr>
- <tr><td>BAC</td><td>10/9/2017 16:00:00</td><td>26.26</td><td>26.27</td><td>25.76</td><td>25.85</td><td>55172516</td></tr>
- <tr><td>BAC</td><td>10/10/2017 16:00:00</td><td>25.83</td><td>25.95</td><td>25.71</td><td>25.93</td><td>46133801</td></tr>
- <tr><td>BAC</td><td>10/11/2017 16:00:00</td><td>25.93</td><td>25.93</td><td>25.65</td><td>25.83</td><td>51652304</td></tr>
- <tr><td>BAC</td><td>10/12/2017 16:00:00</td><td>25.87</td><td>25.93</td><td>25.34</td><td>25.45</td><td>71770031</td></tr>
- <tr><td>BAC</td><td>10/13/2017 16:00:00</td><td>25.38</td><td>26</td><td>25.12</td><td>25.83</td><td>104196860</td></tr>
- <tr><td>BAC</td><td>10/16/2017 16:00:00</td><td>25.87</td><td>26.33</td><td>25.87</td><td>26.24</td><td>71927178</td></tr>
- <tr><td>BAC</td><td>10/17/2017 16:00:00</td><td>26.37</td><td>26.43</td><td>26.11</td><td>26.2</td><td>48644424</td></tr>
- <tr><td>BAC</td><td>10/18/2017 16:00:00</td><td>26.34</td><td>26.55</td><td>26.33</td><td>26.48</td><td>55382456</td></tr>
- <tr><td>BAC</td><td>10/19/2017 16:00:00</td><td>26.2</td><td>26.59</td><td>26.15</td><td>26.58</td><td>54542694</td></tr>
- <tr><td>BAC</td><td>10/20/2017 16:00:00</td><td>27.04</td><td>27.18</td><td>26.9</td><td>27.17</td><td>83764655</td></tr>
- <tr><td>BAC</td><td>10/23/2017 16:00:00</td><td>27.22</td><td>27.43</td><td>27.09</td><td>27.16</td><td>69607678</td></tr>
- <tr><td>BAC</td><td>10/24/2017 16:00:00</td><td>27.35</td><td>27.84</td><td>27.34</td><td>27.68</td><td>90346455</td></tr>
- <tr><td>BAC</td><td>10/25/2017 16:00:00</td><td>27.89</td><td>27.92</td><td>27.34</td><td>27.63</td><td>81265326</td></tr>
- <tr><td>BAC</td><td>10/26/2017 16:00:00</td><td>27.69</td><td>27.98</td><td>27.68</td><td>27.74</td><td>55342484</td></tr>
- <tr><td>BAC</td><td>10/27/2017 16:00:00</td><td>27.68</td><td>27.96</td><td>27.62</td><td>27.8</td><td>58856675</td></tr>
- <tr><td>BAC</td><td>10/30/2017 16:00:00</td><td>27.65</td><td>27.76</td><td>27.46</td><td>27.6</td><td>51357595</td></tr>
- <tr><td>BAC</td><td>10/31/2017 16:00:00</td><td>27.64</td><td>27.72</td><td>27.34</td><td>27.39</td><td>50311194</td></tr>
- <tr><td>BAC</td><td>11/1/2017 16:00:00</td><td>27.64</td><td>27.73</td><td>27.36</td><td>27.53</td><td>46527703</td></tr>
- <tr><td>BAC</td><td>11/2/2017 16:00:00</td><td>27.51</td><td>27.94</td><td>27.28</td><td>27.87</td><td>59692017</td></tr>
- <tr><td>BAC</td><td>11/3/2017 16:00:00</td><td>27.73</td><td>27.82</td><td>27.62</td><td>27.82</td><td>37816149</td></tr>
- <tr><td>BAC</td><td>11/6/2017 16:00:00</td><td>27.74</td><td>27.82</td><td>27.62</td><td>27.75</td><td>37261039</td></tr>
- <tr><td>BAC</td><td>11/7/2017 16:00:00</td><td>27.74</td><td>27.77</td><td>27.02</td><td>27.18</td><td>68342144</td></tr>
- <tr><td>BAC</td><td>11/8/2017 16:00:00</td><td>26.96</td><td>26.96</td><td>26.49</td><td>26.79</td><td>83128157</td></tr>
- <tr><td>BAC</td><td>11/9/2017 16:00:00</td><td>26.49</td><td>26.66</td><td>26.12</td><td>26.49</td><td>95448558</td></tr>
- <tr><td>BAC</td><td>11/10/2017 16:00:00</td><td>26.59</td><td>26.74</td><td>26.46</td><td>26.51</td><td>61105339</td></tr>
- <tr><td>BAC</td><td>11/13/2017 16:00:00</td><td>26.26</td><td>26.48</td><td>26.14</td><td>26.4</td><td>55902185</td></tr>
- <tr><td>BAC</td><td>11/14/2017 16:00:00</td><td>26.26</td><td>26.35</td><td>26.08</td><td>26.24</td><td>61596789</td></tr>
- <tr><td>BAC</td><td>11/15/2017 16:00:00</td><td>25.99</td><td>26.93</td><td>25.81</td><td>26.79</td><td>98274925</td></tr>
- <tr><td>BAC</td><td>11/16/2017 16:00:00</td><td>26.91</td><td>27.05</td><td>26.74</td><td>26.76</td><td>54565191</td></tr>
- <tr><td>BAC</td><td>11/17/2017 16:00:00</td><td>26.51</td><td>26.73</td><td>26.44</td><td>26.62</td><td>48420719</td></tr>
- <tr><td>BAC</td><td>11/20/2017 16:00:00</td><td>26.74</td><td>26.84</td><td>26.54</td><td>26.74</td><td>46328828</td></tr>
- <tr><td>BAC</td><td>11/21/2017 16:00:00</td><td>26.8</td><td>26.86</td><td>26.69</td><td>26.73</td><td>57749094</td></tr>
- <tr><td>BAC</td><td>11/22/2017 16:00:00</td><td>26.77</td><td>26.9</td><td>26.59</td><td>26.66</td><td>38103201</td></tr>
- <tr><td>BAC</td><td>11/24/2017 13:00:00</td><td>26.72</td><td>26.74</td><td>26.57</td><td>26.59</td><td>14273573</td></tr>
- <tr><td>BAC</td><td>11/27/2017 16:00:00</td><td>26.52</td><td>26.92</td><td>26.51</td><td>26.59</td><td>44828641</td></tr>
- <tr><td>BAC</td><td>11/28/2017 16:00:00</td><td>26.62</td><td>27.7</td><td>26.57</td><td>27.64</td><td>99765018</td></tr>
- <tr><td>BAC</td><td>11/29/2017 16:00:00</td><td>28.02</td><td>28.49</td><td>27.84</td><td>28.28</td><td>119728368</td></tr>
- <tr><td>BAC</td><td>11/30/2017 16:00:00</td><td>28.62</td><td>28.72</td><td>28.08</td><td>28.17</td><td>122131900</td></tr>
- <tr><td>BAC</td><td>12/1/2017 16:00:00</td><td>28.25</td><td>28.51</td><td>27.5</td><td>28.1</td><td>137774781</td></tr>
- <tr><td>BAC</td><td>12/4/2017 16:00:00</td><td>28.85</td><td>29.31</td><td>28.82</td><td>29.06</td><td>145661692</td></tr>
- <tr><td>BAC</td><td>12/5/2017 16:00:00</td><td>29.27</td><td>29.3</td><td>28.85</td><td>28.93</td><td>91349782</td></tr>
- <tr><td>BAC</td><td>12/6/2017 16:00:00</td><td>28.73</td><td>28.97</td><td>28.57</td><td>28.64</td><td>74593807</td></tr>
- <tr><td>BAC</td><td>12/7/2017 16:00:00</td><td>28.45</td><td>28.97</td><td>28.37</td><td>28.78</td><td>80706146</td></tr>
- <tr><td>BAC</td><td>12/8/2017 16:00:00</td><td>29.08</td><td>29.09</td><td>28.76</td><td>29.05</td><td>60991334</td></tr>
- <tr><td>BAC</td><td>12/11/2017 16:00:00</td><td>29.05</td><td>29.17</td><td>28.9</td><td>28.94</td><td>54001895</td></tr>
- <tr><td>BAC</td><td>12/12/2017 16:00:00</td><td>29.05</td><td>29.5</td><td>28.91</td><td>29.32</td><td>76017169</td></tr>
- <tr><td>BAC</td><td>12/13/2017 16:00:00</td><td>29.31</td><td>29.44</td><td>28.83</td><td>28.84</td><td>79980564</td></tr>
- <tr><td>BAC</td><td>12/14/2017 16:00:00</td><td>29.06</td><td>29.18</td><td>28.71</td><td>28.73</td><td>60615822</td></tr>
- <tr><td>BAC</td><td>12/15/2017 16:00:00</td><td>28.91</td><td>29.18</td><td>28.74</td><td>29.04</td><td>129859355</td></tr>
- <tr><td>BAC</td><td>12/18/2017 16:00:00</td><td>29.29</td><td>29.5</td><td>29.27</td><td>29.48</td><td>70548609</td></tr>
- <tr><td>BAC</td><td>12/19/2017 16:00:00</td><td>29.6</td><td>29.64</td><td>29.37</td><td>29.45</td><td>67984139</td></tr>
- <tr><td>BAC</td><td>12/20/2017 16:00:00</td><td>29.76</td><td>29.84</td><td>29.45</td><td>29.48</td><td>81271224</td></tr>
- <tr><td>BAC</td><td>12/21/2017 16:00:00</td><td>29.59</td><td>29.98</td><td>29.58</td><td>29.82</td><td>72953163</td></tr>
- <tr><td>BAC</td><td>12/22/2017 16:00:00</td><td>29.98</td><td>30.03</td><td>29.62</td><td>29.88</td><td>54202956</td></tr>
- <tr><td>BAC</td><td>12/26/2017 16:00:00</td><td>29.74</td><td>29.94</td><td>29.58</td><td>29.78</td><td>42371183</td></tr>
- <tr><td>BAC</td><td>12/27/2017 16:00:00</td><td>29.66</td><td>29.73</td><td>29.6</td><td>29.73</td><td>35111837</td></tr>
- <tr><td>BAC</td><td>12/28/2017 16:00:00</td><td>29.73</td><td>29.82</td><td>29.66</td><td>29.8</td><td>37914949</td></tr>
- <tr><td>BAC</td><td>12/29/2017 16:00:00</td><td>29.85</td><td>29.88</td><td>29.52</td><td>29.52</td><td>40672012</td></tr>
- <tr><td>BAC</td><td>1/2/2018 16:00:00</td><td>29.75</td><td>29.9</td><td>29.61</td><td>29.9</td><td>57121603</td></tr>
- <tr><td>BAC</td><td>1/3/2018 16:00:00</td><td>29.9</td><td>29.94</td><td>29.69</td><td>29.8</td><td>57865727</td></tr>
- <tr><td>BAC</td><td>1/4/2018 16:00:00</td><td>29.97</td><td>30.44</td><td>29.88</td><td>30.19</td><td>76512451</td></tr>
- <tr><td>BAC</td><td>1/5/2018 16:00:00</td><td>30.37</td><td>30.42</td><td>30.05</td><td>30.33</td><td>56445186</td></tr>
- <tr><td>BAC</td><td>1/8/2018 16:00:00</td><td>30.23</td><td>30.27</td><td>30.05</td><td>30.12</td><td>42914839</td></tr>
- <tr><td>BAC</td><td>1/9/2018 16:00:00</td><td>30.2</td><td>30.54</td><td>30.13</td><td>30.27</td><td>69479053</td></tr>
- <tr><td>BAC</td><td>1/10/2018 16:00:00</td><td>30.37</td><td>30.73</td><td>30.31</td><td>30.55</td><td>63532811</td></tr>
- <tr><td>BAC</td><td>1/11/2018 16:00:00</td><td>30.66</td><td>30.69</td><td>30.45</td><td>30.66</td><td>59318309</td></tr>
- <tr><td>BAC</td><td>1/12/2018 16:00:00</td><td>30.88</td><td>31.2</td><td>30.77</td><td>31.19</td><td>66371596</td></tr>
- <tr><td>BAC</td><td>1/16/2018 16:00:00</td><td>31.74</td><td>31.79</td><td>31.03</td><td>31.24</td><td>104467922</td></tr>
- <tr><td>BAC</td><td>1/17/2018 16:00:00</td><td>31</td><td>31.29</td><td>30.34</td><td>31.18</td><td>124382905</td></tr>
- <tr><td>BAC</td><td>1/18/2018 16:00:00</td><td>31.33</td><td>31.71</td><td>31.21</td><td>31.48</td><td>76463847</td></tr>
- <tr><td>BAC</td><td>1/19/2018 16:00:00</td><td>31.58</td><td>31.74</td><td>31.46</td><td>31.72</td><td>66490985</td></tr>
- <tr><td>BAC</td><td>1/22/2018 16:00:00</td><td>31.67</td><td>31.94</td><td>31.58</td><td>31.94</td><td>53848818</td></tr>
- <tr><td>BAC</td><td>1/23/2018 16:00:00</td><td>31.86</td><td>32.13</td><td>31.79</td><td>31.92</td><td>56531378</td></tr>
- <tr><td>BAC</td><td>1/24/2018 16:00:00</td><td>32.01</td><td>32.21</td><td>31.82</td><td>32.09</td><td>81585015</td></tr>
- <tr><td>BAC</td><td>1/25/2018 16:00:00</td><td>32.24</td><td>32.25</td><td>31.93</td><td>32.09</td><td>62265824</td></tr>
- <tr><td>BAC</td><td>1/26/2018 16:00:00</td><td>32.11</td><td>32.2</td><td>31.95</td><td>32.2</td><td>52699881</td></tr>
- <tr><td>BAC</td><td>1/29/2018 16:00:00</td><td>32.25</td><td>32.45</td><td>32.18</td><td>32.28</td><td>59126457</td></tr>
- <tr><td>BAC</td><td>1/30/2018 16:00:00</td><td>31.95</td><td>32.2</td><td>31.85</td><td>31.88</td><td>60555757</td></tr>
- <tr><td>BAC</td><td>1/31/2018 16:00:00</td><td>32.05</td><td>32.29</td><td>31.95</td><td>32</td><td>65734118</td></tr>
- <tr><td>BAC</td><td>2/1/2018 16:00:00</td><td>32</td><td>32.5</td><td>31.96</td><td>32.5</td><td>62367448</td></tr>
- <tr><td>BAC</td><td>2/2/2018 16:00:00</td><td>32.44</td><td>32.67</td><td>31.86</td><td>31.95</td><td>96971924</td></tr>
- <tr><td>BAC</td><td>2/5/2018 16:00:00</td><td>31.12</td><td>31.98</td><td>29.15</td><td>30.26</td><td>155908256</td></tr>
- <tr><td>BAC</td><td>2/6/2018 16:00:00</td><td>29.41</td><td>31.29</td><td>29.3</td><td>31.2</td><td>165878399</td></tr>
- <tr><td>BAC</td><td>2/7/2018 16:00:00</td><td>31.12</td><td>31.74</td><td>30.86</td><td>31.25</td><td>101180515</td></tr>
- <tr><td>BAC</td><td>2/8/2018 16:00:00</td><td>31.31</td><td>31.38</td><td>29.73</td><td>29.74</td><td>128981328</td></tr>
- <tr><td>BAC</td><td>2/9/2018 16:00:00</td><td>30.17</td><td>30.61</td><td>29.13</td><td>30.33</td><td>143071053</td></tr>
- <tr><td>BAC</td><td>2/12/2018 16:00:00</td><td>30.62</td><td>31.44</td><td>30.54</td><td>31.12</td><td>95055132</td></tr>
- <tr><td>BAC</td><td>2/13/2018 16:00:00</td><td>31.04</td><td>31.4</td><td>30.76</td><td>31.18</td><td>76727349</td></tr>
- <tr><td>BAC</td><td>2/14/2018 16:00:00</td><td>31.17</td><td>32.03</td><td>31.06</td><td>32</td><td>97251515</td></tr>
- <tr><td>BAC</td><td>2/15/2018 16:00:00</td><td>32.39</td><td>32.47</td><td>31.87</td><td>32.21</td><td>68117398</td></tr>
- <tr><td>BAC</td><td>2/16/2018 16:00:00</td><td>32</td><td>32.26</td><td>31.92</td><td>31.97</td><td>62137801</td></tr>
- <tr><td>BAC</td><td>2/20/2018 16:00:00</td><td>31.96</td><td>32.16</td><td>31.75</td><td>31.93</td><td>58573929</td></tr>
- <tr><td>BAC</td><td>2/21/2018 16:00:00</td><td>31.8</td><td>32.37</td><td>31.77</td><td>31.87</td><td>72210258</td></tr>
- <tr><td>BAC</td><td>2/22/2018 16:00:00</td><td>31.99</td><td>32.14</td><td>31.59</td><td>31.69</td><td>64749717</td></tr>
- <tr><td>BAC</td><td>2/23/2018 16:00:00</td><td>31.8</td><td>32.06</td><td>31.76</td><td>32.03</td><td>53626263</td></tr>
- <tr><td>BAC</td><td>2/26/2018 16:00:00</td><td>32.17</td><td>32.44</td><td>32.05</td><td>32.42</td><td>61796254</td></tr>
- <tr><td>BAC</td><td>2/27/2018 16:00:00</td><td>32.32</td><td>32.85</td><td>32.32</td><td>32.33</td><td>69235524</td></tr>
- <tr><td>BAC</td><td>2/28/2018 16:00:00</td><td>32.49</td><td>32.77</td><td>32.09</td><td>32.1</td><td>72043995</td></tr>
- <tr><td>BAC</td><td>3/1/2018 16:00:00</td><td>32.07</td><td>32.35</td><td>31.36</td><td>31.48</td><td>90547117</td></tr>
- <tr><td>BAC</td><td>3/2/2018 16:00:00</td><td>31.12</td><td>31.69</td><td>30.63</td><td>31.63</td><td>82739099</td></tr>
- <tr><td>BAC</td><td>3/5/2018 16:00:00</td><td>31.35</td><td>32.35</td><td>31.17</td><td>32.13</td><td>70543121</td></tr>
- <tr><td>BAC</td><td>3/6/2018 16:00:00</td><td>32.3</td><td>32.32</td><td>31.95</td><td>32.11</td><td>50832605</td></tr>
- <tr><td>BAC</td><td>3/7/2018 16:00:00</td><td>31.7</td><td>32.23</td><td>31.58</td><td>32.18</td><td>52763869</td></tr>
- <tr><td>BAC</td><td>3/8/2018 16:00:00</td><td>32.19</td><td>32.27</td><td>31.81</td><td>32.2</td><td>53139846</td></tr>
- <tr><td>BAC</td><td>3/9/2018 16:00:00</td><td>32.47</td><td>32.73</td><td>32.4</td><td>32.72</td><td>73905831</td></tr>
- <tr><td>BAC</td><td>3/12/2018 16:00:00</td><td>32.69</td><td>33.05</td><td>32.64</td><td>32.84</td><td>60322843</td></tr>
- <tr><td>BAC</td><td>3/13/2018 16:00:00</td><td>32.97</td><td>32.99</td><td>32.3</td><td>32.36</td><td>63347502</td></tr>
- <tr><td>BAC</td><td>3/14/2018 16:00:00</td><td>32.55</td><td>32.55</td><td>31.93</td><td>32.14</td><td>58011350</td></tr>
- <tr><td>BAC</td><td>3/15/2018 16:00:00</td><td>32.29</td><td>32.34</td><td>31.93</td><td>32.1</td><td>41964199</td></tr>
- <tr><td>BAC</td><td>3/16/2018 16:00:00</td><td>32.11</td><td>32.57</td><td>32.08</td><td>32.17</td><td>83447552</td></tr>
- <tr><td>BAC</td><td>3/19/2018 16:00:00</td><td>32.13</td><td>32.22</td><td>31.68</td><td>31.98</td><td>57363195</td></tr>
- <tr><td>BAC</td><td>3/20/2018 16:00:00</td><td>32.06</td><td>32.2</td><td>31.88</td><td>31.98</td><td>44784462</td></tr>
- <tr><td>BAC</td><td>3/21/2018 16:00:00</td><td>32</td><td>32.45</td><td>31.68</td><td>31.87</td><td>64546309</td></tr>
- <tr><td>BAC</td><td>3/22/2018 16:00:00</td><td>31.44</td><td>31.49</td><td>30.42</td><td>30.55</td><td>110271917</td></tr>
- <tr><td>BAC</td><td>3/23/2018 16:00:00</td><td>30.69</td><td>30.82</td><td>29.05</td><td>29.17</td><td>115740203</td></tr>
- <tr><td>BAC</td><td>3/26/2018 16:00:00</td><td>29.89</td><td>30.56</td><td>29.65</td><td>30.44</td><td>83297045</td></tr>
- <tr><td>BAC</td><td>3/27/2018 16:00:00</td><td>30.65</td><td>30.67</td><td>29.21</td><td>29.52</td><td>85821839</td></tr>
- <tr><td>BAC</td><td>3/28/2018 16:00:00</td><td>29.79</td><td>29.96</td><td>29.01</td><td>29.39</td><td>79396116</td></tr>
- <tr><td>BAC</td><td>3/29/2018 16:00:00</td><td>29.57</td><td>30.14</td><td>29.31</td><td>29.99</td><td>65678285</td></tr>
- <tr><td>BAC</td><td>4/2/2018 16:00:00</td><td>29.8</td><td>30.06</td><td>28.75</td><td>29.31</td><td>86644166</td></tr>
- <tr><td>BAC</td><td>4/3/2018 16:00:00</td><td>29.54</td><td>29.65</td><td>29.1</td><td>29.59</td><td>69698726</td></tr>
- <tr><td>BAC</td><td>4/4/2018 16:00:00</td><td>29</td><td>29.97</td><td>28.95</td><td>29.88</td><td>66640759</td></tr>
- <tr><td>BAC</td><td>4/5/2018 16:00:00</td><td>30.18</td><td>30.55</td><td>30.12</td><td>30.32</td><td>55765513</td></tr>
- <tr><td>BAC</td><td>4/6/2018 16:00:00</td><td>30.01</td><td>30.29</td><td>29.37</td><td>29.63</td><td>79687623</td></tr>
- <tr><td>BAC</td><td>4/9/2018 16:00:00</td><td>29.82</td><td>30.63</td><td>29.76</td><td>29.87</td><td>65917535</td></tr>
- <tr><td>BAC</td><td>4/10/2018 16:00:00</td><td>30.48</td><td>30.58</td><td>30.23</td><td>30.48</td><td>60686336</td></tr>
- <tr><td>BAC</td><td>4/11/2018 16:00:00</td><td>30.15</td><td>30.24</td><td>29.89</td><td>29.9</td><td>62211487</td></tr>
- <tr><td>BAC</td><td>4/12/2018 16:00:00</td><td>30.22</td><td>30.8</td><td>30.17</td><td>30.65</td><td>57989106</td></tr>
- <tr><td>BAC</td><td>4/13/2018 16:00:00</td><td>31.13</td><td>31.17</td><td>29.56</td><td>29.8</td><td>99254533</td></tr>
- <tr><td>BAC</td><td>4/16/2018 16:00:00</td><td>30.08</td><td>30.37</td><td>29.47</td><td>29.93</td><td>110588918</td></tr>
- <tr><td>BAC</td><td>4/17/2018 16:00:00</td><td>30.17</td><td>30.37</td><td>29.88</td><td>30.04</td><td>83475898</td></tr>
- <tr><td>BAC</td><td>4/18/2018 16:00:00</td><td>30.03</td><td>30.22</td><td>29.5</td><td>29.53</td><td>79743217</td></tr>
- <tr><td>BAC</td><td>4/19/2018 16:00:00</td><td>29.55</td><td>30.24</td><td>29.54</td><td>30.18</td><td>80902612</td></tr>
- <tr><td>BAC</td><td>4/20/2018 16:00:00</td><td>30.26</td><td>30.53</td><td>30.13</td><td>30.26</td><td>65554554</td></tr>
- <tr><td>BAC</td><td>4/23/2018 16:00:00</td><td>30.27</td><td>30.4</td><td>30.12</td><td>30.32</td><td>50686347</td></tr>
- <tr><td>BAC</td><td>4/24/2018 16:00:00</td><td>30.46</td><td>30.86</td><td>30</td><td>30.19</td><td>81486781</td></tr>
- <tr><td>BAC</td><td>4/25/2018 16:00:00</td><td>30.09</td><td>30.34</td><td>29.8</td><td>30.14</td><td>65893478</td></tr>
- <tr><td>BAC</td><td>4/26/2018 16:00:00</td><td>30.04</td><td>30.28</td><td>29.99</td><td>30.07</td><td>45936713</td></tr>
- <tr><td>BAC</td><td>4/27/2018 16:00:00</td><td>29.99</td><td>30.21</td><td>29.97</td><td>30.15</td><td>47411234</td></tr>
- <tr><td>BAC</td><td>4/30/2018 16:00:00</td><td>30.27</td><td>30.43</td><td>29.92</td><td>29.92</td><td>55153947</td></tr>
- <tr><td>BAC</td><td>5/1/2018 16:00:00</td><td>29.92</td><td>29.96</td><td>29.62</td><td>29.95</td><td>52871713</td></tr>
- <tr><td>BAC</td><td>5/2/2018 16:00:00</td><td>29.95</td><td>30.07</td><td>29.56</td><td>29.58</td><td>68234557</td></tr>
- <tr><td>BAC</td><td>5/3/2018 16:00:00</td><td>29.51</td><td>29.52</td><td>28.43</td><td>29.2</td><td>110672740</td></tr>
- <tr><td>BAC</td><td>5/4/2018 16:00:00</td><td>28.99</td><td>29.42</td><td>28.82</td><td>29.3</td><td>58281856</td></tr>
- <tr><td>BAC</td><td>5/7/2018 16:00:00</td><td>29.44</td><td>29.79</td><td>29.33</td><td>29.64</td><td>46765219</td></tr>
- <tr><td>BAC</td><td>5/8/2018 16:00:00</td><td>29.77</td><td>30.13</td><td>29.67</td><td>29.93</td><td>65119831</td></tr>
- <tr><td>BAC</td><td>5/9/2018 16:00:00</td><td>30.1</td><td>30.79</td><td>30.08</td><td>30.72</td><td>72266529</td></tr>
- <tr><td>BAC</td><td>5/10/2018 16:00:00</td><td>30.61</td><td>31.07</td><td>30.42</td><td>30.89</td><td>54773215</td></tr>
- <tr><td>BAC</td><td>5/11/2018 16:00:00</td><td>30.91</td><td>31.03</td><td>30.81</td><td>30.92</td><td>42024768</td></tr>
- <tr><td>BAC</td><td>5/14/2018 16:00:00</td><td>31.04</td><td>31.23</td><td>31.03</td><td>31.12</td><td>41791621</td></tr>
- <tr><td>BAC</td><td>5/15/2018 16:00:00</td><td>30.92</td><td>31.36</td><td>30.85</td><td>31.22</td><td>64433546</td></tr>
- <tr><td>BAC</td><td>5/16/2018 16:00:00</td><td>31.18</td><td>31.25</td><td>31.02</td><td>31.06</td><td>43590053</td></tr>
- <tr><td>BAC</td><td>5/17/2018 16:00:00</td><td>31.04</td><td>31.08</td><td>30.67</td><td>30.81</td><td>45981500</td></tr>
- <tr><td>BAC</td><td>5/18/2018 16:00:00</td><td>31.04</td><td>31.08</td><td>30.67</td><td>30.81</td><td>391049</td></tr>
- <tr><td>BAC</td><td>5/21/2018 16:00:00</td><td>30.52</td><td>30.68</td><td>30.48</td><td>30.55</td><td>34983266</td></tr>
- <tr><td>BAC</td><td>5/22/2018 16:00:00</td><td>30.6</td><td>31.14</td><td>30.54</td><td>30.89</td><td>61103045</td></tr>
- <tr><td>BAC</td><td>5/23/2018 16:00:00</td><td>30.71</td><td>30.76</td><td>30.08</td><td>30.44</td><td>73893110</td></tr>
- <tr><td>BAC</td><td>5/24/2018 16:00:00</td><td>30.4</td><td>30.41</td><td>29.83</td><td>30.21</td><td>62146183</td></tr>
- <tr><td>BAC</td><td>5/25/2018 16:00:00</td><td>30.01</td><td>30.19</td><td>29.88</td><td>30.16</td><td>44166742</td></tr>
- <tr><td>BAC</td><td>5/29/2018 16:00:00</td><td>29.76</td><td>29.8</td><td>28.7</td><td>28.96</td><td>135895025</td></tr>
- <tr><td>BAC</td><td>5/30/2018 16:00:00</td><td>29.29</td><td>29.6</td><td>29.16</td><td>29.49</td><td>79435291</td></tr>
- <tr><td>BAC</td><td>5/31/2018 16:00:00</td><td>29.2</td><td>29.26</td><td>28.83</td><td>29.04</td><td>97509300</td></tr>
- <tr><td>BAC</td><td>6/1/2018 16:00:00</td><td>29.49</td><td>29.66</td><td>29.31</td><td>29.4</td><td>64796588</td></tr>
- <tr><td>BAC</td><td>6/4/2018 16:00:00</td><td>29.55</td><td>29.59</td><td>29.33</td><td>29.4</td><td>43777001</td></tr>
- <tr><td>BAC</td><td>6/5/2018 16:00:00</td><td>29.31</td><td>29.34</td><td>29.06</td><td>29.12</td><td>47690803</td></tr>
- <tr><td>BAC</td><td>6/6/2018 16:00:00</td><td>29.29</td><td>30.05</td><td>29.28</td><td>30.04</td><td>74995766</td></tr>
- <tr><td>BAC</td><td>6/7/2018 16:00:00</td><td>30.2</td><td>30.31</td><td>29.89</td><td>30.09</td><td>68402664</td></tr>
- <tr><td>BAC</td><td>6/8/2018 16:00:00</td><td>30.01</td><td>30.05</td><td>29.81</td><td>30.01</td><td>49572935</td></tr>
- <tr><td>BAC</td><td>6/11/2018 16:00:00</td><td>30.13</td><td>30.41</td><td>30.06</td><td>30.06</td><td>46732804</td></tr>
- <tr><td>BAC</td><td>6/12/2018 16:00:00</td><td>30.17</td><td>30.27</td><td>29.75</td><td>29.9</td><td>49644578</td></tr>
- <tr><td>BAC</td><td>6/13/2018 16:00:00</td><td>29.98</td><td>30.36</td><td>29.7</td><td>29.84</td><td>68900241</td></tr>
- <tr><td>BAC</td><td>6/14/2018 16:00:00</td><td>30.04</td><td>30.05</td><td>29.38</td><td>29.5</td><td>77863246</td></tr>
- <tr><td>BAC</td><td>6/15/2018 16:00:00</td><td>29.25</td><td>29.41</td><td>28.87</td><td>29.28</td><td>105079500</td></tr>
- <tr><td>BAC</td><td>6/18/2018 16:00:00</td><td>28.94</td><td>29.5</td><td>28.81</td><td>29.4</td><td>52644116</td></tr>
- <tr><td>BAC</td><td>6/19/2018 16:00:00</td><td>29.04</td><td>29.37</td><td>28.95</td><td>29.26</td><td>65466248</td></tr>
- <tr><td>BAC</td><td>6/20/2018 16:00:00</td><td>29.42</td><td>29.5</td><td>29.18</td><td>29.24</td><td>52256491</td></tr>
- <tr><td>BAC</td><td>6/21/2018 16:00:00</td><td>29.21</td><td>29.45</td><td>29</td><td>29.29</td><td>68322596</td></tr>
- <tr><td>BAC</td><td>6/22/2018 16:00:00</td><td>29.46</td><td>29.52</td><td>28.99</td><td>28.99</td><td>77348906</td></tr>
- <tr><td>BAC</td><td>6/25/2018 16:00:00</td><td>28.86</td><td>28.91</td><td>28.26</td><td>28.48</td><td>73616371</td></tr>
- <tr><td>BAC</td><td>6/26/2018 16:00:00</td><td>28.52</td><td>28.67</td><td>28.01</td><td>28.54</td><td>56369344</td></tr>
- <tr><td>BAC</td><td>6/27/2018 16:00:00</td><td>28.51</td><td>28.85</td><td>28.24</td><td>28.24</td><td>61764440</td></tr>
- <tr><td>BAC</td><td>6/28/2018 16:00:00</td><td>28.4</td><td>28.84</td><td>28.3</td><td>28.67</td><td>71292115</td></tr>
- <tr><td>BAC</td><td>6/29/2018 16:00:00</td><td>29.09</td><td>29.17</td><td>28.18</td><td>28.19</td><td>102438345</td></tr>
- <tr><td>BAC</td><td>7/2/2018 16:00:00</td><td>28.08</td><td>28.28</td><td>27.83</td><td>28.28</td><td>52534348</td></tr>
- <tr><td>BAC</td><td>7/3/2018 13:00:00</td><td>28.33</td><td>28.43</td><td>27.74</td><td>27.78</td><td>40599019</td></tr>
- <tr><td>BAC</td><td>7/5/2018 16:00:00</td><td>27.95</td><td>28.08</td><td>27.81</td><td>27.92</td><td>44506827</td></tr>
- <tr><td>BAC</td><td>7/6/2018 16:00:00</td><td>27.81</td><td>28.15</td><td>27.63</td><td>28.03</td><td>40275279</td></tr>
- <tr><td>BAC</td><td>7/9/2018 16:00:00</td><td>28.23</td><td>29.09</td><td>28.22</td><td>29.05</td><td>61758903</td></tr>
- <tr><td>BAC</td><td>7/10/2018 16:00:00</td><td>29.22</td><td>29.33</td><td>28.75</td><td>28.83</td><td>58858393</td></tr>
- <tr><td>BAC</td><td>7/11/2018 16:00:00</td><td>28.67</td><td>28.91</td><td>28.62</td><td>28.68</td><td>50218921</td></tr>
- <tr><td>BAC</td><td>7/12/2018 16:00:00</td><td>28.9</td><td>28.97</td><td>28.66</td><td>28.77</td><td>51700696</td></tr>
- <tr><td>BAC</td><td>7/13/2018 16:00:00</td><td>28.62</td><td>28.69</td><td>28.22</td><td>28.55</td><td>75240878</td></tr>
- <tr><td>BAC</td><td>7/16/2018 16:00:00</td><td>28.78</td><td>29.85</td><td>28.73</td><td>29.78</td><td>129171967</td></tr>
- <tr><td>BAC</td><td>7/17/2018 16:00:00</td><td>29.89</td><td>30.2</td><td>29.58</td><td>30.01</td><td>87778861</td></tr>
- <tr><td>BAC</td><td>7/18/2018 16:00:00</td><td>29.92</td><td>30.29</td><td>29.84</td><td>30.13</td><td>59109223</td></tr>
- <tr><td>BAC</td><td>7/19/2018 16:00:00</td><td>29.93</td><td>30.02</td><td>29.64</td><td>29.67</td><td>59260578</td></tr>
- <tr><td>BAC</td><td>7/20/2018 16:00:00</td><td>29.62</td><td>30.16</td><td>29.46</td><td>30.13</td><td>82019603</td></tr>
- <tr><td>BAC</td><td>7/23/2018 16:00:00</td><td>30.14</td><td>30.85</td><td>30.13</td><td>30.75</td><td>74080229</td></tr>
- <tr><td>BAC</td><td>7/24/2018 16:00:00</td><td>30.85</td><td>31.11</td><td>30.65</td><td>30.83</td><td>64761475</td></tr>
- <tr><td>BAC</td><td>7/25/2018 16:00:00</td><td>30.7</td><td>31.11</td><td>30.67</td><td>31.07</td><td>57554743</td></tr>
- <tr><td>BAC</td><td>7/26/2018 16:00:00</td><td>31.19</td><td>31.21</td><td>30.89</td><td>30.94</td><td>46215034</td></tr>
- <tr><td>BAC</td><td>7/27/2018 16:00:00</td><td>30.99</td><td>31.14</td><td>30.8</td><td>31.06</td><td>57215299</td></tr>
- <tr><td>BAC</td><td>7/30/2018 16:00:00</td><td>31.14</td><td>31.45</td><td>31.13</td><td>31.31</td><td>58721006</td></tr>
- <tr><td>BAC</td><td>7/31/2018 16:00:00</td><td>31.36</td><td>31.42</td><td>30.82</td><td>30.88</td><td>64066047</td></tr>
- <tr><td>BAC</td><td>8/1/2018 16:00:00</td><td>31.22</td><td>31.55</td><td>31.17</td><td>31.25</td><td>69070663</td></tr>
- <tr><td>BAC</td><td>8/2/2018 16:00:00</td><td>30.98</td><td>31.31</td><td>30.87</td><td>31.28</td><td>46427161</td></tr>
- <tr><td>BAC</td><td>8/3/2018 16:00:00</td><td>31.18</td><td>31.51</td><td>31.16</td><td>31.51</td><td>50153768</td></tr>
- <tr><td>BAC</td><td>8/6/2018 16:00:00</td><td>31.45</td><td>31.59</td><td>31.32</td><td>31.52</td><td>41261494</td></tr>
- <tr><td>BAC</td><td>8/7/2018 16:00:00</td><td>31.55</td><td>31.8</td><td>31.49</td><td>31.51</td><td>43946164</td></tr>
- <tr><td>BAC</td><td>8/8/2018 16:00:00</td><td>31.51</td><td>31.91</td><td>31.48</td><td>31.8</td><td>43689582</td></tr>
- <tr><td>BAC</td><td>8/9/2018 16:00:00</td><td>31.73</td><td>31.79</td><td>31.55</td><td>31.6</td><td>38219057</td></tr>
- <tr><td>BAC</td><td>8/10/2018 16:00:00</td><td>31.23</td><td>31.33</td><td>30.9</td><td>31.19</td><td>55679849</td></tr>
- <tr><td>BAC</td><td>8/13/2018 16:00:00</td><td>31.08</td><td>31.12</td><td>30.45</td><td>30.48</td><td>63960630</td></tr>
- <tr><td>BAC</td><td>8/14/2018 16:00:00</td><td>30.61</td><td>30.9</td><td>30.42</td><td>30.79</td><td>42521241</td></tr>
- <tr><td>BAC</td><td>8/15/2018 16:00:00</td><td>30.48</td><td>30.62</td><td>30.16</td><td>30.36</td><td>59747876</td></tr>
- <tr><td>BAC</td><td>8/16/2018 16:00:00</td><td>30.56</td><td>30.84</td><td>30.52</td><td>30.72</td><td>44015361</td></tr>
- <tr><td>BAC</td><td>8/17/2018 16:00:00</td><td>30.66</td><td>30.86</td><td>30.55</td><td>30.74</td><td>39843538</td></tr>
- <tr><td>BAC</td><td>8/20/2018 16:00:00</td><td>30.69</td><td>30.93</td><td>30.65</td><td>30.87</td><td>40011041</td></tr>
- <tr><td>BAC</td><td>8/21/2018 16:00:00</td><td>30.91</td><td>31.25</td><td>30.83</td><td>31.02</td><td>53510571</td></tr>
- <tr><td>BAC</td><td>8/22/2018 16:00:00</td><td>30.92</td><td>31.09</td><td>30.88</td><td>30.98</td><td>33062884</td></tr>
- <tr><td>BAC</td><td>8/23/2018 16:00:00</td><td>30.94</td><td>30.98</td><td>30.74</td><td>30.84</td><td>38259064</td></tr>
- <tr><td>BAC</td><td>8/24/2018 16:00:00</td><td>30.94</td><td>31.08</td><td>30.85</td><td>30.89</td><td>43585013</td></tr>
- <tr><td>BAC</td><td>8/27/2018 16:00:00</td><td>31.03</td><td>31.49</td><td>30.99</td><td>31.31</td><td>47729273</td></tr>
- <tr><td>BAC</td><td>8/28/2018 16:00:00</td><td>31.36</td><td>31.41</td><td>31.19</td><td>31.27</td><td>38538983</td></tr>
- <tr><td>BAC</td><td>8/29/2018 16:00:00</td><td>31.24</td><td>31.31</td><td>31.07</td><td>31.14</td><td>46401765</td></tr>
- <tr><td>BAC</td><td>8/30/2018 16:00:00</td><td>31.02</td><td>31.15</td><td>30.95</td><td>31.01</td><td>47358915</td></tr>
- <tr><td>BAC</td><td>8/31/2018 16:00:00</td><td>30.88</td><td>30.95</td><td>30.62</td><td>30.93</td><td>49265952</td></tr>
- <tr><td>BAC</td><td>9/4/2018 16:00:00</td><td>30.91</td><td>31.16</td><td>30.82</td><td>31.14</td><td>44745551</td></tr>
- <tr><td>BAC</td><td>9/5/2018 16:00:00</td><td>31.07</td><td>31.24</td><td>30.97</td><td>31.18</td><td>48516722</td></tr>
- <tr><td>BAC</td><td>9/6/2018 16:00:00</td><td>31.05</td><td>31.11</td><td>30.73</td><td>30.85</td><td>42666015</td></tr>
- <tr><td>BAC</td><td>9/7/2018 16:00:00</td><td>31</td><td>31.12</td><td>30.63</td><td>30.86</td><td>49103817</td></tr>
- <tr><td>BAC</td><td>9/10/2018 16:00:00</td><td>30.88</td><td>31</td><td>30.75</td><td>30.82</td><td>34156191</td></tr>
- <tr><td>BAC</td><td>9/11/2018 16:00:00</td><td>30.72</td><td>30.9</td><td>30.7</td><td>30.85</td><td>53071044</td></tr>
- <tr><td>BAC</td><td>9/12/2018 16:00:00</td><td>30.88</td><td>30.96</td><td>30.38</td><td>30.43</td><td>59482315</td></tr>
- <tr><td>BAC</td><td>9/13/2018 16:00:00</td><td>30.53</td><td>30.67</td><td>30.08</td><td>30.14</td><td>59219530</td></tr>
- <tr><td>BAC</td><td>9/14/2018 16:00:00</td><td>30.13</td><td>30.39</td><td>30.11</td><td>30.37</td><td>33743874</td></tr>
- <tr><td>BAC</td><td>9/17/2018 16:00:00</td><td>30.34</td><td>30.49</td><td>30.15</td><td>30.28</td><td>35026584</td></tr>
- <tr><td>BAC</td><td>9/18/2018 16:00:00</td><td>30.33</td><td>30.4</td><td>30.13</td><td>30.21</td><td>49921737</td></tr>
- <tr><td>BAC</td><td>9/19/2018 16:00:00</td><td>30.13</td><td>31.2</td><td>30.13</td><td>31</td><td>92666317</td></tr>
- <tr><td>BAC</td><td>9/20/2018 16:00:00</td><td>31.3</td><td>31.37</td><td>31.14</td><td>31.19</td><td>83357431</td></tr>
- <tr><td>BAC</td><td>9/21/2018 16:00:00</td><td>31.34</td><td>31.37</td><td>30.97</td><td>31.03</td><td>85992133</td></tr>
- <tr><td>BAC</td><td>9/24/2018 16:00:00</td><td>30.98</td><td>31.2</td><td>30.66</td><td>30.74</td><td>45587684</td></tr>
- <tr><td>BAC</td><td>9/25/2018 16:00:00</td><td>30.85</td><td>31.04</td><td>30.6</td><td>30.67</td><td>40949876</td></tr>
- <tr><td>BAC</td><td>9/26/2018 16:00:00</td><td>30.71</td><td>30.74</td><td>30.06</td><td>30.13</td><td>57882434</td></tr>
- <tr><td>BAC</td><td>9/27/2018 16:00:00</td><td>30.24</td><td>30.31</td><td>29.93</td><td>29.94</td><td>45879701</td></tr>
- <tr><td>BAC</td><td>9/28/2018 16:00:00</td><td>29.65</td><td>29.85</td><td>29.42</td><td>29.46</td><td>74707597</td></tr>
- <tr><td>BAC</td><td>10/1/2018 16:00:00</td><td>29.68</td><td>29.94</td><td>29.54</td><td>29.65</td><td>53900922</td></tr>
- <tr><td>BAC</td><td>10/2/2018 16:00:00</td><td>29.58</td><td>29.72</td><td>29.27</td><td>29.58</td><td>42940345</td></tr>
- <tr><td>AMD</td><td>10/2/2017 16:00:00</td><td>12.8</td><td>12.85</td><td>12.62</td><td>12.71</td><td>34461080</td></tr>
- <tr><td>AMD</td><td>10/3/2017 16:00:00</td><td>12.73</td><td>13.48</td><td>12.7</td><td>13.42</td><td>85174031</td></tr>
- <tr><td>AMD</td><td>10/4/2017 16:00:00</td><td>13.31</td><td>13.5</td><td>13.15</td><td>13.31</td><td>42303159</td></tr>
- <tr><td>AMD</td><td>10/5/2017 16:00:00</td><td>13.38</td><td>13.46</td><td>13.21</td><td>13.34</td><td>34758604</td></tr>
- <tr><td>AMD</td><td>10/6/2017 16:00:00</td><td>13.22</td><td>13.39</td><td>13.18</td><td>13.23</td><td>28258656</td></tr>
- <tr><td>AMD</td><td>10/9/2017 16:00:00</td><td>13.26</td><td>13.83</td><td>13.26</td><td>13.47</td><td>54032528</td></tr>
- <tr><td>AMD</td><td>10/10/2017 16:00:00</td><td>13.72</td><td>13.79</td><td>13.44</td><td>13.7</td><td>43303955</td></tr>
- <tr><td>AMD</td><td>10/11/2017 16:00:00</td><td>13.62</td><td>13.96</td><td>13.61</td><td>13.88</td><td>38746553</td></tr>
- <tr><td>AMD</td><td>10/12/2017 16:00:00</td><td>13.85</td><td>14.37</td><td>13.81</td><td>14.2</td><td>69874095</td></tr>
- <tr><td>AMD</td><td>10/13/2017 16:00:00</td><td>14.32</td><td>14.41</td><td>14.12</td><td>14.22</td><td>37515843</td></tr>
- <tr><td>AMD</td><td>10/16/2017 16:00:00</td><td>14.25</td><td>14.35</td><td>14.12</td><td>14.26</td><td>34136783</td></tr>
- <tr><td>AMD</td><td>10/17/2017 16:00:00</td><td>14.24</td><td>14.35</td><td>14.14</td><td>14.16</td><td>28995567</td></tr>
- <tr><td>AMD</td><td>10/18/2017 16:00:00</td><td>14.2</td><td>14.28</td><td>13.76</td><td>14.07</td><td>39020286</td></tr>
- <tr><td>AMD</td><td>10/19/2017 16:00:00</td><td>13.85</td><td>14.04</td><td>13.69</td><td>13.95</td><td>33795708</td></tr>
- <tr><td>AMD</td><td>10/20/2017 16:00:00</td><td>14.03</td><td>14.09</td><td>13.8</td><td>13.81</td><td>32538937</td></tr>
- <tr><td>AMD</td><td>10/23/2017 16:00:00</td><td>13.94</td><td>14.19</td><td>13.9</td><td>14.1</td><td>49838009</td></tr>
- <tr><td>AMD</td><td>10/24/2017 16:00:00</td><td>14.2</td><td>14.36</td><td>14.15</td><td>14.25</td><td>84891583</td></tr>
- <tr><td>AMD</td><td>10/25/2017 16:00:00</td><td>12.95</td><td>13.13</td><td>12.29</td><td>12.33</td><td>166762120</td></tr>
- <tr><td>AMD</td><td>10/26/2017 16:00:00</td><td>12.45</td><td>12.46</td><td>12</td><td>12.01</td><td>87625437</td></tr>
- <tr><td>AMD</td><td>10/27/2017 16:00:00</td><td>12.17</td><td>12.19</td><td>11.35</td><td>11.84</td><td>115650373</td></tr>
- <tr><td>AMD</td><td>10/30/2017 16:00:00</td><td>11.26</td><td>11.42</td><td>10.65</td><td>10.89</td><td>137785101</td></tr>
- <tr><td>AMD</td><td>10/31/2017 16:00:00</td><td>10.76</td><td>11.31</td><td>10.69</td><td>10.99</td><td>78600023</td></tr>
- <tr><td>AMD</td><td>11/1/2017 16:00:00</td><td>11.25</td><td>11.29</td><td>10.72</td><td>10.8</td><td>66875483</td></tr>
- <tr><td>AMD</td><td>11/2/2017 16:00:00</td><td>10.87</td><td>10.99</td><td>10.66</td><td>10.85</td><td>47942464</td></tr>
- <tr><td>AMD</td><td>11/3/2017 16:00:00</td><td>10.95</td><td>11.13</td><td>10.82</td><td>11.12</td><td>44264291</td></tr>
- <tr><td>AMD</td><td>11/6/2017 16:00:00</td><td>12.04</td><td>12.09</td><td>11.64</td><td>11.93</td><td>96349758</td></tr>
- <tr><td>AMD</td><td>11/7/2017 16:00:00</td><td>11.94</td><td>12.27</td><td>11.92</td><td>12.05</td><td>67900203</td></tr>
- <tr><td>AMD</td><td>11/8/2017 16:00:00</td><td>11.94</td><td>11.95</td><td>11.51</td><td>11.71</td><td>59065041</td></tr>
- <tr><td>AMD</td><td>11/9/2017 16:00:00</td><td>11.25</td><td>11.35</td><td>11.03</td><td>11.12</td><td>76821154</td></tr>
- <tr><td>AMD</td><td>11/10/2017 16:00:00</td><td>11.22</td><td>11.43</td><td>11.12</td><td>11.26</td><td>50209909</td></tr>
- <tr><td>AMD</td><td>11/13/2017 16:00:00</td><td>11.18</td><td>11.2</td><td>10.92</td><td>11.09</td><td>54068315</td></tr>
- <tr><td>AMD</td><td>11/14/2017 16:00:00</td><td>11.03</td><td>11.26</td><td>11</td><td>11.12</td><td>37245039</td></tr>
- <tr><td>AMD</td><td>11/15/2017 16:00:00</td><td>11.01</td><td>11.13</td><td>10.77</td><td>11.07</td><td>33524701</td></tr>
- <tr><td>AMD</td><td>11/16/2017 16:00:00</td><td>11.13</td><td>11.32</td><td>11.13</td><td>11.25</td><td>31800408</td></tr>
- <tr><td>AMD</td><td>11/17/2017 16:00:00</td><td>11.3</td><td>11.75</td><td>11.28</td><td>11.38</td><td>56775579</td></tr>
- <tr><td>AMD</td><td>11/20/2017 16:00:00</td><td>11.47</td><td>11.51</td><td>11.19</td><td>11.34</td><td>35960204</td></tr>
- <tr><td>AMD</td><td>11/21/2017 16:00:00</td><td>11.42</td><td>11.49</td><td>11.24</td><td>11.4</td><td>31881681</td></tr>
- <tr><td>AMD</td><td>11/22/2017 16:00:00</td><td>11.41</td><td>11.49</td><td>11.3</td><td>11.37</td><td>23816482</td></tr>
- <tr><td>AMD</td><td>11/24/2017 13:00:00</td><td>11.38</td><td>11.42</td><td>11.3</td><td>11.38</td><td>11035758</td></tr>
- <tr><td>AMD</td><td>11/27/2017 16:00:00</td><td>11.34</td><td>11.74</td><td>11.34</td><td>11.55</td><td>41798250</td></tr>
- <tr><td>AMD</td><td>11/28/2017 16:00:00</td><td>11.45</td><td>11.54</td><td>11</td><td>11.17</td><td>65325749</td></tr>
- <tr><td>AMD</td><td>11/29/2017 16:00:00</td><td>11.08</td><td>11.17</td><td>10.73</td><td>10.83</td><td>63333806</td></tr>
- <tr><td>AMD</td><td>11/30/2017 16:00:00</td><td>10.87</td><td>11.03</td><td>10.76</td><td>10.89</td><td>43205030</td></tr>
- <tr><td>AMD</td><td>12/1/2017 16:00:00</td><td>10.81</td><td>10.97</td><td>10.53</td><td>10.73</td><td>42128778</td></tr>
- <tr><td>AMD</td><td>12/4/2017 16:00:00</td><td>10.85</td><td>10.86</td><td>9.82</td><td>10.03</td><td>97328281</td></tr>
- <tr><td>AMD</td><td>12/5/2017 16:00:00</td><td>9.89</td><td>10.34</td><td>9.7</td><td>9.91</td><td>67304144</td></tr>
- <tr><td>AMD</td><td>12/6/2017 16:00:00</td><td>9.9</td><td>10.05</td><td>9.71</td><td>10</td><td>38952174</td></tr>
- <tr><td>AMD</td><td>12/7/2017 16:00:00</td><td>10.07</td><td>10.19</td><td>9.95</td><td>10.04</td><td>32665616</td></tr>
- <tr><td>AMD</td><td>12/8/2017 16:00:00</td><td>10.15</td><td>10.2</td><td>9.92</td><td>9.94</td><td>34896958</td></tr>
- <tr><td>AMD</td><td>12/11/2017 16:00:00</td><td>9.97</td><td>10.16</td><td>9.96</td><td>10.16</td><td>29956421</td></tr>
- <tr><td>AMD</td><td>12/12/2017 16:00:00</td><td>10.13</td><td>10.14</td><td>9.88</td><td>9.9</td><td>36211043</td></tr>
- <tr><td>AMD</td><td>12/13/2017 16:00:00</td><td>9.97</td><td>10.21</td><td>9.95</td><td>10.11</td><td>41494800</td></tr>
- <tr><td>AMD</td><td>12/14/2017 16:00:00</td><td>10.1</td><td>10.17</td><td>9.96</td><td>10.13</td><td>29006846</td></tr>
- <tr><td>AMD</td><td>12/15/2017 16:00:00</td><td>10.13</td><td>10.32</td><td>10.02</td><td>10.29</td><td>45462280</td></tr>
- <tr><td>AMD</td><td>12/18/2017 16:00:00</td><td>10.6</td><td>11</td><td>10.51</td><td>10.98</td><td>63797732</td></tr>
- <tr><td>AMD</td><td>12/19/2017 16:00:00</td><td>11</td><td>11.19</td><td>10.87</td><td>10.95</td><td>43852949</td></tr>
- <tr><td>AMD</td><td>12/20/2017 16:00:00</td><td>11.1</td><td>11.18</td><td>10.8</td><td>10.98</td><td>31420328</td></tr>
- <tr><td>AMD</td><td>12/21/2017 16:00:00</td><td>10.98</td><td>11.08</td><td>10.87</td><td>10.89</td><td>21884331</td></tr>
- <tr><td>AMD</td><td>12/22/2017 16:00:00</td><td>10.75</td><td>10.77</td><td>10.2</td><td>10.54</td><td>50744495</td></tr>
- <tr><td>AMD</td><td>12/26/2017 16:00:00</td><td>10.38</td><td>10.58</td><td>10.34</td><td>10.46</td><td>20437891</td></tr>
- <tr><td>AMD</td><td>12/27/2017 16:00:00</td><td>10.45</td><td>10.74</td><td>10.4</td><td>10.53</td><td>22921775</td></tr>
- <tr><td>AMD</td><td>12/28/2017 16:00:00</td><td>10.57</td><td>10.64</td><td>10.43</td><td>10.55</td><td>18609365</td></tr>
- <tr><td>AMD</td><td>12/29/2017 16:00:00</td><td>10.57</td><td>10.58</td><td>10.27</td><td>10.28</td><td>26678928</td></tr>
- <tr><td>AMD</td><td>1/2/2018 16:00:00</td><td>10.42</td><td>11.02</td><td>10.34</td><td>10.98</td><td>44146332</td></tr>
- <tr><td>AMD</td><td>1/3/2018 16:00:00</td><td>11.61</td><td>12.14</td><td>11.36</td><td>11.55</td><td>154066661</td></tr>
- <tr><td>AMD</td><td>1/4/2018 16:00:00</td><td>12.1</td><td>12.43</td><td>11.97</td><td>12.12</td><td>109502970</td></tr>
- <tr><td>AMD</td><td>1/5/2018 16:00:00</td><td>12.19</td><td>12.22</td><td>11.66</td><td>11.88</td><td>63808946</td></tr>
- <tr><td>AMD</td><td>1/8/2018 16:00:00</td><td>12.01</td><td>12.3</td><td>11.85</td><td>12.28</td><td>63346034</td></tr>
- <tr><td>AMD</td><td>1/9/2018 16:00:00</td><td>12</td><td>12.02</td><td>11.71</td><td>11.82</td><td>62560940</td></tr>
- <tr><td>AMD</td><td>1/10/2018 16:00:00</td><td>11.63</td><td>12.15</td><td>11.56</td><td>11.96</td><td>52561170</td></tr>
- <tr><td>AMD</td><td>1/11/2018 16:00:00</td><td>12.07</td><td>12.19</td><td>11.9</td><td>12.14</td><td>38354916</td></tr>
- <tr><td>AMD</td><td>1/12/2018 16:00:00</td><td>11.82</td><td>12.07</td><td>11.8</td><td>12.02</td><td>47149344</td></tr>
- <tr><td>AMD</td><td>1/16/2018 16:00:00</td><td>12.05</td><td>12.2</td><td>11.8</td><td>11.91</td><td>42686623</td></tr>
- <tr><td>AMD</td><td>1/17/2018 16:00:00</td><td>11.9</td><td>12.19</td><td>11.82</td><td>12.18</td><td>39020825</td></tr>
- <tr><td>AMD</td><td>1/18/2018 16:00:00</td><td>12.18</td><td>12.68</td><td>12.15</td><td>12.47</td><td>62086151</td></tr>
- <tr><td>AMD</td><td>1/19/2018 16:00:00</td><td>12.56</td><td>12.88</td><td>12.54</td><td>12.59</td><td>46800669</td></tr>
- <tr><td>AMD</td><td>1/22/2018 16:00:00</td><td>12.61</td><td>12.74</td><td>12.37</td><td>12.65</td><td>34758615</td></tr>
- <tr><td>AMD</td><td>1/23/2018 16:00:00</td><td>12.82</td><td>13</td><td>12.76</td><td>12.94</td><td>46417226</td></tr>
- <tr><td>AMD</td><td>1/24/2018 16:00:00</td><td>13.02</td><td>13.05</td><td>12.6</td><td>12.71</td><td>41956439</td></tr>
- <tr><td>AMD</td><td>1/25/2018 16:00:00</td><td>12.78</td><td>12.94</td><td>12.32</td><td>12.41</td><td>42966567</td></tr>
- <tr><td>AMD</td><td>1/26/2018 16:00:00</td><td>12.7</td><td>12.95</td><td>12.62</td><td>12.95</td><td>44238971</td></tr>
- <tr><td>AMD</td><td>1/29/2018 16:00:00</td><td>13.13</td><td>13.47</td><td>13.05</td><td>13.32</td><td>66645418</td></tr>
- <tr><td>AMD</td><td>1/30/2018 16:00:00</td><td>13.12</td><td>13.27</td><td>12.69</td><td>12.87</td><td>91236383</td></tr>
- <tr><td>AMD</td><td>1/31/2018 16:00:00</td><td>13.24</td><td>13.85</td><td>13.15</td><td>13.74</td><td>140977843</td></tr>
- <tr><td>AMD</td><td>2/1/2018 16:00:00</td><td>13.62</td><td>13.84</td><td>13.21</td><td>13.25</td><td>67543333</td></tr>
- <tr><td>AMD</td><td>2/2/2018 16:00:00</td><td>13.05</td><td>13.06</td><td>12.43</td><td>12.45</td><td>79432558</td></tr>
- <tr><td>AMD</td><td>2/5/2018 16:00:00</td><td>12.05</td><td>12.18</td><td>10.93</td><td>11.57</td><td>116568862</td></tr>
- <tr><td>AMD</td><td>2/6/2018 16:00:00</td><td>11.04</td><td>11.74</td><td>11</td><td>11.65</td><td>87123202</td></tr>
- <tr><td>AMD</td><td>2/7/2018 16:00:00</td><td>11.7</td><td>11.9</td><td>11.53</td><td>11.6</td><td>55758364</td></tr>
- <tr><td>AMD</td><td>2/8/2018 16:00:00</td><td>11.72</td><td>11.85</td><td>11.21</td><td>11.22</td><td>56471761</td></tr>
- <tr><td>AMD</td><td>2/9/2018 16:00:00</td><td>11.54</td><td>11.57</td><td>10.63</td><td>11.31</td><td>85458235</td></tr>
- <tr><td>AMD</td><td>2/12/2018 16:00:00</td><td>11.47</td><td>11.8</td><td>11.43</td><td>11.68</td><td>63160875</td></tr>
- <tr><td>AMD</td><td>2/13/2018 16:00:00</td><td>11.6</td><td>11.82</td><td>11.53</td><td>11.78</td><td>33661383</td></tr>
- <tr><td>AMD</td><td>2/14/2018 16:00:00</td><td>11.72</td><td>12.31</td><td>11.63</td><td>12.2</td><td>51756817</td></tr>
- <tr><td>AMD</td><td>2/15/2018 16:00:00</td><td>12.4</td><td>12.63</td><td>12.07</td><td>12.19</td><td>59593761</td></tr>
- <tr><td>AMD</td><td>2/16/2018 16:00:00</td><td>12.11</td><td>12.23</td><td>11.82</td><td>11.82</td><td>47332348</td></tr>
- <tr><td>AMD</td><td>2/20/2018 16:00:00</td><td>11.72</td><td>12.19</td><td>11.71</td><td>12.02</td><td>47096492</td></tr>
- <tr><td>AMD</td><td>2/21/2018 16:00:00</td><td>12.12</td><td>12.12</td><td>11.72</td><td>11.72</td><td>40195847</td></tr>
- <tr><td>AMD</td><td>2/22/2018 16:00:00</td><td>11.82</td><td>12</td><td>11.63</td><td>11.84</td><td>37886263</td></tr>
- <tr><td>AMD</td><td>2/23/2018 16:00:00</td><td>11.95</td><td>12.16</td><td>11.94</td><td>12.07</td><td>33317579</td></tr>
- <tr><td>AMD</td><td>2/26/2018 16:00:00</td><td>12.14</td><td>12.43</td><td>12.05</td><td>12.42</td><td>42265208</td></tr>
- <tr><td>AMD</td><td>2/27/2018 16:00:00</td><td>12.43</td><td>12.88</td><td>12.39</td><td>12.53</td><td>55975268</td></tr>
- <tr><td>AMD</td><td>2/28/2018 16:00:00</td><td>12.66</td><td>12.73</td><td>12.1</td><td>12.11</td><td>43387460</td></tr>
- <tr><td>AMD</td><td>3/1/2018 16:00:00</td><td>12.26</td><td>12.27</td><td>11.66</td><td>11.9</td><td>63207377</td></tr>
- <tr><td>AMD</td><td>3/2/2018 16:00:00</td><td>11.67</td><td>11.93</td><td>11.43</td><td>11.81</td><td>58123518</td></tr>
- <tr><td>AMD</td><td>3/5/2018 16:00:00</td><td>11.69</td><td>12.06</td><td>11.61</td><td>11.91</td><td>43734836</td></tr>
- <tr><td>AMD</td><td>3/6/2018 16:00:00</td><td>12.01</td><td>12.05</td><td>11.71</td><td>11.76</td><td>46751179</td></tr>
- <tr><td>AMD</td><td>3/7/2018 16:00:00</td><td>11.58</td><td>12.82</td><td>11.55</td><td>12.24</td><td>127603194</td></tr>
- <tr><td>AMD</td><td>3/8/2018 16:00:00</td><td>12.4</td><td>12.59</td><td>11.74</td><td>11.97</td><td>76011217</td></tr>
- <tr><td>AMD</td><td>3/9/2018 16:00:00</td><td>12.03</td><td>12.04</td><td>11.58</td><td>11.7</td><td>89674365</td></tr>
- <tr><td>AMD</td><td>3/12/2018 16:00:00</td><td>11.76</td><td>11.82</td><td>11.48</td><td>11.52</td><td>83748671</td></tr>
- <tr><td>AMD</td><td>3/13/2018 16:00:00</td><td>11.5</td><td>12.04</td><td>11.1</td><td>11.64</td><td>174302560</td></tr>
- <tr><td>AMD</td><td>3/14/2018 16:00:00</td><td>11.7</td><td>11.72</td><td>11.26</td><td>11.36</td><td>80540846</td></tr>
- <tr><td>AMD</td><td>3/15/2018 16:00:00</td><td>11.43</td><td>11.55</td><td>11.19</td><td>11.46</td><td>66373911</td></tr>
- <tr><td>AMD</td><td>3/16/2018 16:00:00</td><td>11.49</td><td>11.55</td><td>11.32</td><td>11.47</td><td>37590983</td></tr>
- <tr><td>AMD</td><td>3/19/2018 16:00:00</td><td>11.41</td><td>11.74</td><td>11.35</td><td>11.43</td><td>53308617</td></tr>
- <tr><td>AMD</td><td>3/20/2018 16:00:00</td><td>11.41</td><td>11.52</td><td>11</td><td>11.11</td><td>65116930</td></tr>
- <tr><td>AMD</td><td>3/21/2018 16:00:00</td><td>11.16</td><td>11.34</td><td>11.11</td><td>11.26</td><td>44691711</td></tr>
- <tr><td>AMD</td><td>3/22/2018 16:00:00</td><td>11.1</td><td>11.26</td><td>10.85</td><td>10.91</td><td>59944232</td></tr>
- <tr><td>AMD</td><td>3/23/2018 16:00:00</td><td>10.91</td><td>10.97</td><td>10.57</td><td>10.63</td><td>54844461</td></tr>
- <tr><td>AMD</td><td>3/26/2018 16:00:00</td><td>10.71</td><td>10.8</td><td>10.18</td><td>10.44</td><td>75878505</td></tr>
- <tr><td>AMD</td><td>3/27/2018 16:00:00</td><td>10.51</td><td>10.59</td><td>9.9</td><td>10</td><td>68551265</td></tr>
- <tr><td>AMD</td><td>3/28/2018 16:00:00</td><td>9.99</td><td>10.17</td><td>9.79</td><td>9.81</td><td>64832148</td></tr>
- <tr><td>AMD</td><td>3/29/2018 16:00:00</td><td>9.94</td><td>10.08</td><td>9.81</td><td>10.05</td><td>48681415</td></tr>
- <tr><td>AMD</td><td>4/2/2018 16:00:00</td><td>9.99</td><td>10.14</td><td>9.51</td><td>9.53</td><td>64824596</td></tr>
- <tr><td>AMD</td><td>4/3/2018 16:00:00</td><td>9.63</td><td>9.77</td><td>9.3</td><td>9.55</td><td>54891576</td></tr>
- <tr><td>AMD</td><td>4/4/2018 16:00:00</td><td>9.08</td><td>9.81</td><td>9.04</td><td>9.77</td><td>67356888</td></tr>
- <tr><td>AMD</td><td>4/5/2018 16:00:00</td><td>10.05</td><td>10.2</td><td>9.91</td><td>10.02</td><td>65758791</td></tr>
- <tr><td>AMD</td><td>4/6/2018 16:00:00</td><td>9.83</td><td>10.1</td><td>9.5</td><td>9.61</td><td>51087146</td></tr>
- <tr><td>AMD</td><td>4/9/2018 16:00:00</td><td>9.75</td><td>9.84</td><td>9.52</td><td>9.53</td><td>38382608</td></tr>
- <tr><td>AMD</td><td>4/10/2018 16:00:00</td><td>9.75</td><td>10.04</td><td>9.71</td><td>9.98</td><td>43036502</td></tr>
- <tr><td>AMD</td><td>4/11/2018 16:00:00</td><td>9.87</td><td>10.03</td><td>9.79</td><td>9.82</td><td>29169324</td></tr>
- <tr><td>AMD</td><td>4/12/2018 16:00:00</td><td>9.98</td><td>10.1</td><td>9.82</td><td>10.08</td><td>47784419</td></tr>
- <tr><td>AMD</td><td>4/13/2018 16:00:00</td><td>10.2</td><td>10.22</td><td>9.88</td><td>9.93</td><td>38935658</td></tr>
- <tr><td>AMD</td><td>4/16/2018 16:00:00</td><td>10</td><td>10.17</td><td>9.9</td><td>10.09</td><td>28875069</td></tr>
- <tr><td>AMD</td><td>4/17/2018 16:00:00</td><td>10.28</td><td>10.53</td><td>10.2</td><td>10.52</td><td>45360314</td></tr>
- <tr><td>AMD</td><td>4/18/2018 16:00:00</td><td>10.51</td><td>10.65</td><td>10.33</td><td>10.36</td><td>42449590</td></tr>
- <tr><td>AMD</td><td>4/19/2018 16:00:00</td><td>10.18</td><td>10.33</td><td>9.99</td><td>10.11</td><td>57841640</td></tr>
- <tr><td>AMD</td><td>4/20/2018 16:00:00</td><td>10.05</td><td>10.14</td><td>9.95</td><td>9.99</td><td>39011902</td></tr>
- <tr><td>AMD</td><td>4/23/2018 16:00:00</td><td>10.09</td><td>10.19</td><td>9.97</td><td>10.04</td><td>42971272</td></tr>
- <tr><td>AMD</td><td>4/24/2018 16:00:00</td><td>10.19</td><td>10.35</td><td>9.95</td><td>10.09</td><td>44992223</td></tr>
- <tr><td>AMD</td><td>4/25/2018 16:00:00</td><td>10.06</td><td>10.09</td><td>9.56</td><td>9.71</td><td>90577981</td></tr>
- <tr><td>AMD</td><td>4/26/2018 16:00:00</td><td>10.87</td><td>11.19</td><td>10.61</td><td>11.04</td><td>145284090</td></tr>
- <tr><td>AMD</td><td>4/27/2018 16:00:00</td><td>11.2</td><td>11.36</td><td>11.02</td><td>11.11</td><td>74347782</td></tr>
- <tr><td>AMD</td><td>4/30/2018 16:00:00</td><td>11.06</td><td>11.14</td><td>10.87</td><td>10.88</td><td>50608764</td></tr>
- <tr><td>AMD</td><td>5/1/2018 16:00:00</td><td>10.83</td><td>11.15</td><td>10.77</td><td>11.13</td><td>43441602</td></tr>
- <tr><td>AMD</td><td>5/2/2018 16:00:00</td><td>11.1</td><td>11.16</td><td>10.97</td><td>10.97</td><td>29267302</td></tr>
- <tr><td>AMD</td><td>5/3/2018 16:00:00</td><td>10.9</td><td>11.06</td><td>10.83</td><td>10.93</td><td>33310596</td></tr>
- <tr><td>AMD</td><td>5/4/2018 16:00:00</td><td>10.88</td><td>11.29</td><td>10.87</td><td>11.28</td><td>47884940</td></tr>
- <tr><td>AMD</td><td>5/7/2018 16:00:00</td><td>11.32</td><td>11.68</td><td>11.3</td><td>11.59</td><td>54001692</td></tr>
- <tr><td>AMD</td><td>5/8/2018 16:00:00</td><td>11.49</td><td>11.66</td><td>11.4</td><td>11.61</td><td>35218414</td></tr>
- <tr><td>AMD</td><td>5/9/2018 16:00:00</td><td>11.65</td><td>11.98</td><td>11.57</td><td>11.95</td><td>49605743</td></tr>
- <tr><td>AMD</td><td>5/10/2018 16:00:00</td><td>11.98</td><td>12.18</td><td>11.95</td><td>12.13</td><td>49744484</td></tr>
- <tr><td>AMD</td><td>5/11/2018 16:00:00</td><td>11.89</td><td>12.03</td><td>11.69</td><td>11.95</td><td>43863746</td></tr>
- <tr><td>AMD</td><td>5/14/2018 16:00:00</td><td>12.14</td><td>12.36</td><td>12.11</td><td>12.23</td><td>50263792</td></tr>
- <tr><td>AMD</td><td>5/15/2018 16:00:00</td><td>12.18</td><td>12.46</td><td>12.16</td><td>12.45</td><td>44183179</td></tr>
- <tr><td>AMD</td><td>5/16/2018 16:00:00</td><td>12.64</td><td>12.98</td><td>12.62</td><td>12.82</td><td>73363996</td></tr>
- <tr><td>AMD</td><td>5/17/2018 16:00:00</td><td>12.79</td><td>12.9</td><td>12.66</td><td>12.82</td><td>38692510</td></tr>
- <tr><td>AMD</td><td>5/18/2018 16:00:00</td><td>12.79</td><td>12.9</td><td>12.66</td><td>12.82</td><td>1949274</td></tr>
- <tr><td>AMD</td><td>5/21/2018 16:00:00</td><td>13.25</td><td>13.31</td><td>12.88</td><td>12.99</td><td>49714221</td></tr>
- <tr><td>AMD</td><td>5/22/2018 16:00:00</td><td>13</td><td>13.14</td><td>12.71</td><td>12.98</td><td>43267033</td></tr>
- <tr><td>AMD</td><td>5/23/2018 16:00:00</td><td>12.93</td><td>13.18</td><td>12.9</td><td>13.1</td><td>44517762</td></tr>
- <tr><td>AMD</td><td>5/24/2018 16:00:00</td><td>13.06</td><td>13.43</td><td>13.03</td><td>13.41</td><td>47785726</td></tr>
- <tr><td>AMD</td><td>5/25/2018 16:00:00</td><td>13.4</td><td>13.72</td><td>13.36</td><td>13.54</td><td>43850067</td></tr>
- <tr><td>AMD</td><td>5/29/2018 16:00:00</td><td>13.45</td><td>13.63</td><td>13.26</td><td>13.36</td><td>39578498</td></tr>
- <tr><td>AMD</td><td>5/30/2018 16:00:00</td><td>13.48</td><td>13.95</td><td>13.48</td><td>13.82</td><td>58186435</td></tr>
- <tr><td>AMD</td><td>5/31/2018 16:00:00</td><td>13.74</td><td>13.93</td><td>13.69</td><td>13.73</td><td>46797677</td></tr>
- <tr><td>AMD</td><td>6/1/2018 16:00:00</td><td>13.98</td><td>14.4</td><td>13.92</td><td>14.4</td><td>71677869</td></tr>
- <tr><td>AMD</td><td>6/4/2018 16:00:00</td><td>14.76</td><td>14.98</td><td>14.52</td><td>14.85</td><td>74545986</td></tr>
- <tr><td>AMD</td><td>6/5/2018 16:00:00</td><td>14.85</td><td>14.92</td><td>14.63</td><td>14.85</td><td>56122654</td></tr>
- <tr><td>AMD</td><td>6/6/2018 16:00:00</td><td>15.07</td><td>15.74</td><td>15.04</td><td>15.67</td><td>97089040</td></tr>
- <tr><td>AMD</td><td>6/7/2018 16:00:00</td><td>15.83</td><td>15.97</td><td>14.85</td><td>14.89</td><td>99860297</td></tr>
- <tr><td>AMD</td><td>6/8/2018 16:00:00</td><td>14.52</td><td>15.33</td><td>14.31</td><td>15.25</td><td>81930486</td></tr>
- <tr><td>AMD</td><td>6/11/2018 16:00:00</td><td>15.21</td><td>15.89</td><td>15.01</td><td>15.73</td><td>80737640</td></tr>
- <tr><td>AMD</td><td>6/12/2018 16:00:00</td><td>15.84</td><td>15.95</td><td>15.43</td><td>15.85</td><td>67002592</td></tr>
- <tr><td>AMD</td><td>6/13/2018 16:00:00</td><td>15.81</td><td>16.52</td><td>15.78</td><td>16.32</td><td>90227322</td></tr>
- <tr><td>AMD</td><td>6/14/2018 16:00:00</td><td>16.62</td><td>16.79</td><td>15.58</td><td>16.25</td><td>113048551</td></tr>
- <tr><td>AMD</td><td>6/15/2018 16:00:00</td><td>16.06</td><td>16.52</td><td>15.82</td><td>16.34</td><td>77612174</td></tr>
- <tr><td>AMD</td><td>6/18/2018 16:00:00</td><td>16.18</td><td>17.34</td><td>16.13</td><td>17.11</td><td>104317396</td></tr>
- <tr><td>AMD</td><td>6/19/2018 16:00:00</td><td>16.85</td><td>17.29</td><td>16.31</td><td>16.69</td><td>92542859</td></tr>
- <tr><td>AMD</td><td>6/20/2018 16:00:00</td><td>16.83</td><td>17.13</td><td>16.37</td><td>16.52</td><td>76280646</td></tr>
- <tr><td>AMD</td><td>6/21/2018 16:00:00</td><td>16.65</td><td>16.87</td><td>15.46</td><td>15.65</td><td>95638369</td></tr>
- <tr><td>AMD</td><td>6/22/2018 16:00:00</td><td>15.78</td><td>15.91</td><td>15.56</td><td>15.8</td><td>59257099</td></tr>
- <tr><td>AMD</td><td>6/25/2018 16:00:00</td><td>15.64</td><td>15.74</td><td>14.54</td><td>15.11</td><td>94418420</td></tr>
- <tr><td>AMD</td><td>6/26/2018 16:00:00</td><td>15.32</td><td>15.6</td><td>15.1</td><td>15.5</td><td>54213466</td></tr>
- <tr><td>AMD</td><td>6/27/2018 16:00:00</td><td>15.65</td><td>15.76</td><td>14.96</td><td>14.97</td><td>56014335</td></tr>
- <tr><td>AMD</td><td>6/28/2018 16:00:00</td><td>14.85</td><td>15.36</td><td>14.75</td><td>15.31</td><td>48716794</td></tr>
- <tr><td>AMD</td><td>6/29/2018 16:00:00</td><td>15.41</td><td>15.49</td><td>14.98</td><td>14.99</td><td>41527791</td></tr>
- <tr><td>AMD</td><td>7/2/2018 16:00:00</td><td>14.8</td><td>15.18</td><td>14.74</td><td>15.16</td><td>43398768</td></tr>
- <tr><td>AMD</td><td>7/3/2018 13:00:00</td><td>15.21</td><td>15.34</td><td>14.96</td><td>15</td><td>32094031</td></tr>
- <tr><td>AMD</td><td>7/5/2018 16:00:00</td><td>15.13</td><td>15.5</td><td>15.02</td><td>15.5</td><td>40703271</td></tr>
- <tr><td>AMD</td><td>7/6/2018 16:00:00</td><td>15.52</td><td>16.39</td><td>15.48</td><td>16.36</td><td>65101672</td></tr>
- <tr><td>AMD</td><td>7/9/2018 16:00:00</td><td>16.73</td><td>16.84</td><td>16.17</td><td>16.61</td><td>58525542</td></tr>
- <tr><td>AMD</td><td>7/10/2018 16:00:00</td><td>16.59</td><td>16.65</td><td>16.31</td><td>16.55</td><td>37092975</td></tr>
- <tr><td>AMD</td><td>7/11/2018 16:00:00</td><td>16.15</td><td>16.53</td><td>16.02</td><td>16.27</td><td>42544103</td></tr>
- <tr><td>AMD</td><td>7/12/2018 16:00:00</td><td>16.41</td><td>16.79</td><td>16.38</td><td>16.56</td><td>44188137</td></tr>
- <tr><td>AMD</td><td>7/13/2018 16:00:00</td><td>16.68</td><td>16.69</td><td>16.22</td><td>16.27</td><td>40698475</td></tr>
- <tr><td>AMD</td><td>7/16/2018 16:00:00</td><td>16.42</td><td>17</td><td>16.41</td><td>16.58</td><td>65275291</td></tr>
- <tr><td>AMD</td><td>7/17/2018 16:00:00</td><td>16.5</td><td>16.88</td><td>16.48</td><td>16.87</td><td>42313518</td></tr>
- <tr><td>AMD</td><td>7/18/2018 16:00:00</td><td>16.94</td><td>16.99</td><td>16.55</td><td>16.85</td><td>40881493</td></tr>
- <tr><td>AMD</td><td>7/19/2018 16:00:00</td><td>16.71</td><td>16.88</td><td>16.55</td><td>16.71</td><td>41267829</td></tr>
- <tr><td>AMD</td><td>7/20/2018 16:00:00</td><td>16.66</td><td>16.88</td><td>16.44</td><td>16.5</td><td>42906009</td></tr>
- <tr><td>AMD</td><td>7/23/2018 16:00:00</td><td>16.47</td><td>16.68</td><td>15.9</td><td>16.66</td><td>44940819</td></tr>
- <tr><td>AMD</td><td>7/24/2018 16:00:00</td><td>16.75</td><td>16.86</td><td>16.11</td><td>16.19</td><td>58201458</td></tr>
- <tr><td>AMD</td><td>7/25/2018 16:00:00</td><td>16.3</td><td>16.39</td><td>15.72</td><td>16.05</td><td>83639684</td></tr>
- <tr><td>AMD</td><td>7/26/2018 16:00:00</td><td>17.16</td><td>18.45</td><td>16.83</td><td>18.35</td><td>192661124</td></tr>
- <tr><td>AMD</td><td>7/27/2018 16:00:00</td><td>19.07</td><td>19.88</td><td>18.31</td><td>18.94</td><td>161903789</td></tr>
- <tr><td>AMD</td><td>7/30/2018 16:00:00</td><td>19.4</td><td>20.18</td><td>19.31</td><td>19.42</td><td>160823407</td></tr>
- <tr><td>AMD</td><td>7/31/2018 16:00:00</td><td>19.35</td><td>19.5</td><td>18.27</td><td>18.33</td><td>118403405</td></tr>
- <tr><td>AMD</td><td>8/1/2018 16:00:00</td><td>18.34</td><td>18.95</td><td>18.32</td><td>18.48</td><td>75495240</td></tr>
- <tr><td>AMD</td><td>8/2/2018 16:00:00</td><td>18.17</td><td>18.83</td><td>18</td><td>18.79</td><td>52867121</td></tr>
- <tr><td>AMD</td><td>8/3/2018 16:00:00</td><td>18.94</td><td>19.06</td><td>18.37</td><td>18.49</td><td>53232065</td></tr>
- <tr><td>AMD</td><td>8/6/2018 16:00:00</td><td>18.89</td><td>19.44</td><td>18.46</td><td>19.43</td><td>83579668</td></tr>
- <tr><td>AMD</td><td>8/7/2018 16:00:00</td><td>19.53</td><td>19.71</td><td>19.08</td><td>19.56</td><td>72822590</td></tr>
- <tr><td>AMD</td><td>8/8/2018 16:00:00</td><td>19.46</td><td>19.77</td><td>19.26</td><td>19.58</td><td>52081364</td></tr>
- <tr><td>AMD</td><td>8/9/2018 16:00:00</td><td>19.58</td><td>19.71</td><td>19.08</td><td>19.1</td><td>46653358</td></tr>
- <tr><td>AMD</td><td>8/10/2018 16:00:00</td><td>19.09</td><td>19.48</td><td>18.85</td><td>19.06</td><td>65821056</td></tr>
- <tr><td>AMD</td><td>8/13/2018 16:00:00</td><td>19.16</td><td>19.93</td><td>19.12</td><td>19.73</td><td>81411331</td></tr>
- <tr><td>AMD</td><td>8/14/2018 16:00:00</td><td>19.97</td><td>20.28</td><td>19.63</td><td>20.02</td><td>89195509</td></tr>
- <tr><td>AMD</td><td>8/15/2018 16:00:00</td><td>19.86</td><td>20.1</td><td>19.2</td><td>19.7</td><td>86355654</td></tr>
- <tr><td>AMD</td><td>8/16/2018 16:00:00</td><td>19.86</td><td>20.07</td><td>19.25</td><td>19.33</td><td>69733708</td></tr>
- <tr><td>AMD</td><td>8/17/2018 16:00:00</td><td>19.12</td><td>19.82</td><td>18.73</td><td>19.77</td><td>60616638</td></tr>
- <tr><td>AMD</td><td>8/20/2018 16:00:00</td><td>19.79</td><td>20.08</td><td>19.35</td><td>19.98</td><td>62983236</td></tr>
- <tr><td>AMD</td><td>8/21/2018 16:00:00</td><td>19.98</td><td>20.42</td><td>19.86</td><td>20.4</td><td>55628983</td></tr>
- <tr><td>AMD</td><td>8/22/2018 16:00:00</td><td>20.28</td><td>20.92</td><td>20.21</td><td>20.9</td><td>62002721</td></tr>
- <tr><td>AMD</td><td>8/23/2018 16:00:00</td><td>21.19</td><td>22.32</td><td>21.14</td><td>22.29</td><td>113444117</td></tr>
- <tr><td>AMD</td><td>8/24/2018 16:00:00</td><td>22.91</td><td>24</td><td>22.67</td><td>23.98</td><td>164328182</td></tr>
- <tr><td>AMD</td><td>8/27/2018 16:00:00</td><td>24.94</td><td>27.3</td><td>24.63</td><td>25.26</td><td>325058416</td></tr>
- <tr><td>AMD</td><td>8/28/2018 16:00:00</td><td>25.51</td><td>26.18</td><td>24.04</td><td>25.05</td><td>215771220</td></tr>
- <tr><td>AMD</td><td>8/29/2018 16:00:00</td><td>24.36</td><td>25.41</td><td>24.01</td><td>25.2</td><td>143223187</td></tr>
- <tr><td>AMD</td><td>8/30/2018 16:00:00</td><td>25.29</td><td>25.67</td><td>24.76</td><td>24.89</td><td>103607291</td></tr>
- <tr><td>AMD</td><td>8/31/2018 16:00:00</td><td>24.89</td><td>25.24</td><td>24.72</td><td>25.17</td><td>65206352</td></tr>
- <tr><td>AMD</td><td>9/4/2018 16:00:00</td><td>25.62</td><td>28.11</td><td>25.57</td><td>28.06</td><td>192541253</td></tr>
- <tr><td>AMD</td><td>9/5/2018 16:00:00</td><td>29.41</td><td>29.94</td><td>26.84</td><td>28.51</td><td>257349007</td></tr>
- <tr><td>AMD</td><td>9/6/2018 16:00:00</td><td>28.12</td><td>28.58</td><td>27.19</td><td>27.84</td><td>143942935</td></tr>
- <tr><td>AMD</td><td>9/7/2018 16:00:00</td><td>26.96</td><td>28.27</td><td>26.8</td><td>27.38</td><td>123348744</td></tr>
- <tr><td>AMD</td><td>9/10/2018 16:00:00</td><td>28.15</td><td>29.93</td><td>27.84</td><td>29.89</td><td>162253798</td></tr>
- <tr><td>AMD</td><td>9/11/2018 16:00:00</td><td>30.02</td><td>30.59</td><td>29.37</td><td>30.1</td><td>159902483</td></tr>
- <tr><td>AMD</td><td>9/12/2018 16:00:00</td><td>29.91</td><td>32.29</td><td>29.45</td><td>32.21</td><td>197889598</td></tr>
- <tr><td>AMD</td><td>9/13/2018 16:00:00</td><td>33.16</td><td>34.14</td><td>29.87</td><td>30.48</td><td>304147108</td></tr>
- <tr><td>AMD</td><td>9/14/2018 16:00:00</td><td>31.43</td><td>33.09</td><td>30.54</td><td>32.72</td><td>217762820</td></tr>
- <tr><td>AMD</td><td>9/17/2018 16:00:00</td><td>31.75</td><td>33.23</td><td>31.6</td><td>32.43</td><td>180410560</td></tr>
- <tr><td>AMD</td><td>9/18/2018 16:00:00</td><td>32.99</td><td>33.37</td><td>31.2</td><td>31.93</td><td>176673169</td></tr>
- <tr><td>AMD</td><td>9/19/2018 16:00:00</td><td>31.52</td><td>31.83</td><td>30.51</td><td>31.21</td><td>124287022</td></tr>
- <tr><td>AMD</td><td>9/20/2018 16:00:00</td><td>32.1</td><td>32.2</td><td>30.64</td><td>31.18</td><td>123116549</td></tr>
- <tr><td>AMD</td><td>9/21/2018 16:00:00</td><td>31.19</td><td>32.42</td><td>30.91</td><td>31.02</td><td>129792949</td></tr>
- <tr><td>AMD</td><td>9/24/2018 16:00:00</td><td>31.13</td><td>32.65</td><td>30.91</td><td>32.61</td><td>118332614</td></tr>
- <tr><td>AMD</td><td>9/25/2018 16:00:00</td><td>33.18</td><td>33.6</td><td>32.19</td><td>32.57</td><td>118570163</td></tr>
- <tr><td>AMD</td><td>9/26/2018 16:00:00</td><td>32.4</td><td>32.6</td><td>31.72</td><td>32.19</td><td>79347320</td></tr>
- <tr><td>AMD</td><td>9/27/2018 16:00:00</td><td>31.86</td><td>32.63</td><td>31.39</td><td>32.59</td><td>87934428</td></tr>
- <tr><td>AMD</td><td>9/28/2018 16:00:00</td><td>32.24</td><td>32.78</td><td>29.98</td><td>30.89</td><td>165453485</td></tr>
- <tr><td>AMD</td><td>10/1/2018 16:00:00</td><td>30.69</td><td>31.91</td><td>30.25</td><td>31.42</td><td>94742859</td></tr>
- <tr><td>AMD</td><td>10/2/2018 16:00:00</td><td>30.73</td><td>30.82</td><td>28.65</td><td>29.02</td><td>145276455</td></tr>
- <tr><td>QQQ</td><td>10/2/2017 16:00:00</td><td>145.67</td><td>146.17</td><td>144.93</td><td>145.58</td><td>27351260</td></tr>
- <tr><td>QQQ</td><td>10/3/2017 16:00:00</td><td>145.74</td><td>146.06</td><td>145.45</td><td>145.89</td><td>19715152</td></tr>
- <tr><td>QQQ</td><td>10/4/2017 16:00:00</td><td>145.6</td><td>146.34</td><td>145.47</td><td>146.03</td><td>26381099</td></tr>
- <tr><td>QQQ</td><td>10/5/2017 16:00:00</td><td>146.54</td><td>147.54</td><td>146.41</td><td>147.46</td><td>31562353</td></tr>
- <tr><td>QQQ</td><td>10/6/2017 16:00:00</td><td>146.97</td><td>147.66</td><td>146.96</td><td>147.66</td><td>23561069</td></tr>
- <tr><td>QQQ</td><td>10/9/2017 16:00:00</td><td>147.86</td><td>148.01</td><td>147.3</td><td>147.49</td><td>13704835</td></tr>
- <tr><td>QQQ</td><td>10/10/2017 16:00:00</td><td>147.98</td><td>148.14</td><td>146.95</td><td>147.6</td><td>19223092</td></tr>
- <tr><td>QQQ</td><td>10/11/2017 16:00:00</td><td>147.53</td><td>148.07</td><td>147.34</td><td>148.04</td><td>12439051</td></tr>
- <tr><td>QQQ</td><td>10/12/2017 16:00:00</td><td>147.84</td><td>148.35</td><td>147.62</td><td>147.77</td><td>14513477</td></tr>
- <tr><td>QQQ</td><td>10/13/2017 16:00:00</td><td>148.4</td><td>148.51</td><td>147.78</td><td>148.34</td><td>18409888</td></tr>
- <tr><td>QQQ</td><td>10/16/2017 16:00:00</td><td>148.7</td><td>148.89</td><td>148.39</td><td>148.85</td><td>21809410</td></tr>
- <tr><td>QQQ</td><td>10/17/2017 16:00:00</td><td>148.79</td><td>149.06</td><td>148.57</td><td>149.04</td><td>13138157</td></tr>
- <tr><td>QQQ</td><td>10/18/2017 16:00:00</td><td>149.21</td><td>149.21</td><td>148.64</td><td>148.86</td><td>17218243</td></tr>
- <tr><td>QQQ</td><td>10/19/2017 16:00:00</td><td>148.02</td><td>148.33</td><td>147.27</td><td>148.31</td><td>27680285</td></tr>
- <tr><td>QQQ</td><td>10/20/2017 16:00:00</td><td>148.91</td><td>149.04</td><td>148.53</td><td>148.71</td><td>30173268</td></tr>
- <tr><td>QQQ</td><td>10/23/2017 16:00:00</td><td>149.01</td><td>149.03</td><td>147.53</td><td>147.74</td><td>29297126</td></tr>
- <tr><td>QQQ</td><td>10/24/2017 16:00:00</td><td>148</td><td>148.3</td><td>147.44</td><td>147.99</td><td>20289467</td></tr>
- <tr><td>QQQ</td><td>10/25/2017 16:00:00</td><td>147.7</td><td>148.18</td><td>146.33</td><td>147.43</td><td>36179124</td></tr>
- <tr><td>QQQ</td><td>10/26/2017 16:00:00</td><td>147.36</td><td>147.71</td><td>146.92</td><td>146.96</td><td>28230199</td></tr>
- <tr><td>QQQ</td><td>10/27/2017 16:00:00</td><td>149.33</td><td>151.52</td><td>149.2</td><td>151.24</td><td>60165127</td></tr>
- <tr><td>QQQ</td><td>10/30/2017 16:00:00</td><td>151.08</td><td>152.19</td><td>150.99</td><td>151.58</td><td>31733386</td></tr>
- <tr><td>QQQ</td><td>10/31/2017 16:00:00</td><td>152.04</td><td>152.37</td><td>151.63</td><td>152.15</td><td>26319327</td></tr>
- <tr><td>QQQ</td><td>11/1/2017 16:00:00</td><td>152.75</td><td>152.83</td><td>151.5</td><td>152.1</td><td>29481569</td></tr>
- <tr><td>QQQ</td><td>11/2/2017 16:00:00</td><td>151.92</td><td>151.99</td><td>150.77</td><td>151.81</td><td>31017426</td></tr>
- <tr><td>QQQ</td><td>11/3/2017 16:00:00</td><td>152.39</td><td>153.29</td><td>151.84</td><td>153.27</td><td>26199249</td></tr>
- <tr><td>QQQ</td><td>11/6/2017 16:00:00</td><td>153.13</td><td>153.85</td><td>153.1</td><td>153.79</td><td>28693919</td></tr>
- <tr><td>QQQ</td><td>11/7/2017 16:00:00</td><td>153.67</td><td>154.08</td><td>153.34</td><td>153.88</td><td>21333062</td></tr>
- <tr><td>QQQ</td><td>11/8/2017 16:00:00</td><td>153.81</td><td>154.54</td><td>153.62</td><td>154.5</td><td>17373517</td></tr>
- <tr><td>QQQ</td><td>11/9/2017 16:00:00</td><td>153.26</td><td>153.77</td><td>152.11</td><td>153.69</td><td>40594482</td></tr>
- <tr><td>QQQ</td><td>11/10/2017 16:00:00</td><td>153.36</td><td>153.8</td><td>153.06</td><td>153.68</td><td>20150762</td></tr>
- <tr><td>QQQ</td><td>11/13/2017 16:00:00</td><td>153.12</td><td>154.07</td><td>153.1</td><td>153.87</td><td>12522399</td></tr>
- <tr><td>QQQ</td><td>11/14/2017 16:00:00</td><td>153.31</td><td>153.5</td><td>152.57</td><td>153.31</td><td>25173763</td></tr>
- <tr><td>QQQ</td><td>11/15/2017 16:00:00</td><td>152.61</td><td>153</td><td>151.78</td><td>152.59</td><td>24808004</td></tr>
- <tr><td>QQQ</td><td>11/16/2017 16:00:00</td><td>153.38</td><td>154.89</td><td>153.33</td><td>154.54</td><td>34790570</td></tr>
- <tr><td>QQQ</td><td>11/17/2017 16:00:00</td><td>154.58</td><td>154.69</td><td>153.8</td><td>153.95</td><td>28725800</td></tr>
- <tr><td>QQQ</td><td>11/20/2017 16:00:00</td><td>154.08</td><td>154.2</td><td>153.61</td><td>153.83</td><td>21143944</td></tr>
- <tr><td>QQQ</td><td>11/21/2017 16:00:00</td><td>154.56</td><td>155.57</td><td>154.49</td><td>155.5</td><td>20147763</td></tr>
- <tr><td>QQQ</td><td>11/22/2017 16:00:00</td><td>155.63</td><td>155.84</td><td>155.34</td><td>155.69</td><td>17299040</td></tr>
- <tr><td>QQQ</td><td>11/24/2017 13:00:00</td><td>155.86</td><td>156.31</td><td>155.76</td><td>156.26</td><td>8280586</td></tr>
- <tr><td>QQQ</td><td>11/27/2017 16:00:00</td><td>156.2</td><td>156.56</td><td>155.83</td><td>156.19</td><td>22653389</td></tr>
- <tr><td>QQQ</td><td>11/28/2017 16:00:00</td><td>156.52</td><td>156.69</td><td>155.7</td><td>156.59</td><td>25227320</td></tr>
- <tr><td>QQQ</td><td>11/29/2017 16:00:00</td><td>156.45</td><td>156.45</td><td>153.12</td><td>153.86</td><td>71986338</td></tr>
- <tr><td>QQQ</td><td>11/30/2017 16:00:00</td><td>154.46</td><td>155.45</td><td>154.15</td><td>155.15</td><td>56595465</td></tr>
- <tr><td>QQQ</td><td>12/1/2017 16:00:00</td><td>154.19</td><td>155.24</td><td>152.26</td><td>154.49</td><td>59015828</td></tr>
- <tr><td>QQQ</td><td>12/4/2017 16:00:00</td><td>155.47</td><td>155.63</td><td>152.56</td><td>152.71</td><td>51319146</td></tr>
- <tr><td>QQQ</td><td>12/5/2017 16:00:00</td><td>152.64</td><td>154.55</td><td>152.1</td><td>152.81</td><td>40604211</td></tr>
- <tr><td>QQQ</td><td>12/6/2017 16:00:00</td><td>152.26</td><td>153.74</td><td>152.06</td><td>153.5</td><td>28647769</td></tr>
- <tr><td>QQQ</td><td>12/7/2017 16:00:00</td><td>153.49</td><td>154.46</td><td>153.33</td><td>154.02</td><td>32666207</td></tr>
- <tr><td>QQQ</td><td>12/8/2017 16:00:00</td><td>155.1</td><td>155.53</td><td>154.46</td><td>154.7</td><td>28081666</td></tr>
- <tr><td>QQQ</td><td>12/11/2017 16:00:00</td><td>154.76</td><td>155.95</td><td>154.76</td><td>155.9</td><td>20821528</td></tr>
- <tr><td>QQQ</td><td>12/12/2017 16:00:00</td><td>155.81</td><td>156.15</td><td>155.36</td><td>155.69</td><td>20310252</td></tr>
- <tr><td>QQQ</td><td>12/13/2017 16:00:00</td><td>156.28</td><td>156.49</td><td>155.76</td><td>155.99</td><td>24418479</td></tr>
- <tr><td>QQQ</td><td>12/14/2017 16:00:00</td><td>156.28</td><td>156.66</td><td>155.71</td><td>155.88</td><td>24594682</td></tr>
- <tr><td>QQQ</td><td>12/15/2017 16:00:00</td><td>156.49</td><td>157.82</td><td>156.23</td><td>157.65</td><td>49816151</td></tr>
- <tr><td>QQQ</td><td>12/18/2017 16:00:00</td><td>158.29</td><td>158.77</td><td>158.07</td><td>158.64</td><td>26844519</td></tr>
- <tr><td>QQQ</td><td>12/19/2017 16:00:00</td><td>158.34</td><td>158.5</td><td>157.26</td><td>157.7</td><td>31414968</td></tr>
- <tr><td>QQQ</td><td>12/20/2017 16:00:00</td><td>158.25</td><td>158.28</td><td>156.91</td><td>157.53</td><td>38972602</td></tr>
- <tr><td>QQQ</td><td>12/21/2017 16:00:00</td><td>157.73</td><td>158.25</td><td>157.37</td><td>157.55</td><td>18638679</td></tr>
- <tr><td>QQQ</td><td>12/22/2017 16:00:00</td><td>157.31</td><td>157.43</td><td>156.95</td><td>157.37</td><td>23330440</td></tr>
- <tr><td>QQQ</td><td>12/26/2017 16:00:00</td><td>156.53</td><td>156.72</td><td>155.95</td><td>156.52</td><td>21918720</td></tr>
- <tr><td>QQQ</td><td>12/27/2017 16:00:00</td><td>156.52</td><td>156.96</td><td>156.39</td><td>156.54</td><td>22388186</td></tr>
- <tr><td>QQQ</td><td>12/28/2017 16:00:00</td><td>157.05</td><td>157.07</td><td>156.54</td><td>156.73</td><td>25393825</td></tr>
- <tr><td>QQQ</td><td>12/29/2017 16:00:00</td><td>156.9</td><td>156.9</td><td>155.7</td><td>155.76</td><td>33185962</td></tr>
- <tr><td>QQQ</td><td>1/2/2018 16:00:00</td><td>156.5</td><td>158.53</td><td>156.17</td><td>158.49</td><td>32573272</td></tr>
- <tr><td>QQQ</td><td>1/3/2018 16:00:00</td><td>158.61</td><td>160.17</td><td>158.61</td><td>160.03</td><td>29383557</td></tr>
- <tr><td>QQQ</td><td>1/4/2018 16:00:00</td><td>160.59</td><td>160.79</td><td>160.08</td><td>160.31</td><td>24776125</td></tr>
- <tr><td>QQQ</td><td>1/5/2018 16:00:00</td><td>161.04</td><td>162.03</td><td>160.77</td><td>161.92</td><td>26992340</td></tr>
- <tr><td>QQQ</td><td>1/8/2018 16:00:00</td><td>161.9</td><td>162.63</td><td>161.86</td><td>162.55</td><td>23159061</td></tr>
- <tr><td>QQQ</td><td>1/9/2018 16:00:00</td><td>162.85</td><td>163.04</td><td>162.07</td><td>162.56</td><td>24782448</td></tr>
- <tr><td>QQQ</td><td>1/10/2018 16:00:00</td><td>161.8</td><td>162.21</td><td>161.12</td><td>162.18</td><td>34004028</td></tr>
- <tr><td>QQQ</td><td>1/11/2018 16:00:00</td><td>162.48</td><td>163.3</td><td>162.21</td><td>163.29</td><td>20473518</td></tr>
- <tr><td>QQQ</td><td>1/12/2018 16:00:00</td><td>163.03</td><td>164.66</td><td>162.94</td><td>164.49</td><td>37762708</td></tr>
- <tr><td>QQQ</td><td>1/16/2018 16:00:00</td><td>165.55</td><td>166.42</td><td>163.53</td><td>164.02</td><td>41231849</td></tr>
- <tr><td>QQQ</td><td>1/17/2018 16:00:00</td><td>164.77</td><td>166.04</td><td>164</td><td>165.79</td><td>33849879</td></tr>
- <tr><td>QQQ</td><td>1/18/2018 16:00:00</td><td>165.55</td><td>166.2</td><td>165.14</td><td>165.82</td><td>26432166</td></tr>
- <tr><td>QQQ</td><td>1/19/2018 16:00:00</td><td>166.32</td><td>166.61</td><td>165.54</td><td>166.34</td><td>38937588</td></tr>
- <tr><td>QQQ</td><td>1/22/2018 16:00:00</td><td>166.27</td><td>168.12</td><td>166.09</td><td>168.12</td><td>26081388</td></tr>
- <tr><td>QQQ</td><td>1/23/2018 16:00:00</td><td>168.64</td><td>169.66</td><td>168.56</td><td>169.51</td><td>37989650</td></tr>
- <tr><td>QQQ</td><td>1/24/2018 16:00:00</td><td>169.81</td><td>170.24</td><td>167.44</td><td>168.41</td><td>54287377</td></tr>
- <tr><td>QQQ</td><td>1/25/2018 16:00:00</td><td>169.55</td><td>169.63</td><td>167.81</td><td>168.35</td><td>28924956</td></tr>
- <tr><td>QQQ</td><td>1/26/2018 16:00:00</td><td>169.27</td><td>170.95</td><td>168.96</td><td>170.93</td><td>32038184</td></tr>
- <tr><td>QQQ</td><td>1/29/2018 16:00:00</td><td>170.52</td><td>170.91</td><td>169.74</td><td>170.1</td><td>37277849</td></tr>
- <tr><td>QQQ</td><td>1/30/2018 16:00:00</td><td>168.55</td><td>169.42</td><td>167.82</td><td>168.7</td><td>44987688</td></tr>
- <tr><td>QQQ</td><td>1/31/2018 16:00:00</td><td>169.67</td><td>169.99</td><td>168.34</td><td>169.4</td><td>42449199</td></tr>
- <tr><td>QQQ</td><td>2/1/2018 16:00:00</td><td>168.12</td><td>169.73</td><td>167.42</td><td>167.96</td><td>38037875</td></tr>
- <tr><td>QQQ</td><td>2/2/2018 16:00:00</td><td>167.34</td><td>167.7</td><td>164.47</td><td>164.61</td><td>68478082</td></tr>
- <tr><td>QQQ</td><td>2/5/2018 16:00:00</td><td>163.13</td><td>165.75</td><td>158</td><td>158.12</td><td>105372224</td></tr>
- <tr><td>QQQ</td><td>2/6/2018 16:00:00</td><td>155.96</td><td>162.51</td><td>155.1</td><td>162.31</td><td>118537891</td></tr>
- <tr><td>QQQ</td><td>2/7/2018 16:00:00</td><td>161.79</td><td>163.55</td><td>160.2</td><td>160.21</td><td>91028328</td></tr>
- <tr><td>QQQ</td><td>2/8/2018 16:00:00</td><td>160.69</td><td>160.8</td><td>153.45</td><td>153.45</td><td>94184831</td></tr>
- <tr><td>QQQ</td><td>2/9/2018 16:00:00</td><td>155.66</td><td>157.24</td><td>150.13</td><td>156.1</td><td>113836554</td></tr>
- <tr><td>QQQ</td><td>2/12/2018 16:00:00</td><td>157.67</td><td>159.95</td><td>156.46</td><td>158.87</td><td>63050637</td></tr>
- <tr><td>QQQ</td><td>2/13/2018 16:00:00</td><td>157.98</td><td>160.01</td><td>157.72</td><td>159.69</td><td>31785595</td></tr>
- <tr><td>QQQ</td><td>2/14/2018 16:00:00</td><td>158.79</td><td>162.93</td><td>158</td><td>162.68</td><td>52107431</td></tr>
- <tr><td>QQQ</td><td>2/15/2018 16:00:00</td><td>164.14</td><td>165.7</td><td>162.44</td><td>165.7</td><td>51633887</td></tr>
- <tr><td>QQQ</td><td>2/16/2018 16:00:00</td><td>165.18</td><td>166.76</td><td>164.68</td><td>164.96</td><td>62256291</td></tr>
- <tr><td>QQQ</td><td>2/20/2018 16:00:00</td><td>164.39</td><td>166.68</td><td>164.31</td><td>165.29</td><td>36785626</td></tr>
- <tr><td>QQQ</td><td>2/21/2018 16:00:00</td><td>166.06</td><td>167.72</td><td>164.72</td><td>164.82</td><td>41161779</td></tr>
- <tr><td>QQQ</td><td>2/22/2018 16:00:00</td><td>165.54</td><td>166.42</td><td>164.38</td><td>164.8</td><td>37074413</td></tr>
- <tr><td>QQQ</td><td>2/23/2018 16:00:00</td><td>166.06</td><td>168.17</td><td>165.45</td><td>168.17</td><td>50096916</td></tr>
- <tr><td>QQQ</td><td>2/26/2018 16:00:00</td><td>168.93</td><td>170.4</td><td>168.82</td><td>170.4</td><td>39266658</td></tr>
- <tr><td>QQQ</td><td>2/27/2018 16:00:00</td><td>170.42</td><td>170.73</td><td>168.21</td><td>168.29</td><td>42209873</td></tr>
- <tr><td>QQQ</td><td>2/28/2018 16:00:00</td><td>169.25</td><td>169.8</td><td>167.1</td><td>167.21</td><td>42936334</td></tr>
- <tr><td>QQQ</td><td>3/1/2018 16:00:00</td><td>167.29</td><td>168.07</td><td>163</td><td>164.48</td><td>76809904</td></tr>
- <tr><td>QQQ</td><td>3/2/2018 16:00:00</td><td>162.59</td><td>166.28</td><td>161.96</td><td>165.99</td><td>57445063</td></tr>
- <tr><td>QQQ</td><td>3/5/2018 16:00:00</td><td>165.26</td><td>168.26</td><td>164.59</td><td>167.83</td><td>38540207</td></tr>
- <tr><td>QQQ</td><td>3/6/2018 16:00:00</td><td>168.61</td><td>169.11</td><td>167.48</td><td>168.54</td><td>29480927</td></tr>
- <tr><td>QQQ</td><td>3/7/2018 16:00:00</td><td>167.26</td><td>169.07</td><td>166.96</td><td>168.93</td><td>34609407</td></tr>
- <tr><td>QQQ</td><td>3/8/2018 16:00:00</td><td>169.54</td><td>169.98</td><td>168.95</td><td>169.86</td><td>25828371</td></tr>
- <tr><td>QQQ</td><td>3/9/2018 16:00:00</td><td>171.1</td><td>173.16</td><td>170.82</td><td>173.16</td><td>38310546</td></tr>
- <tr><td>QQQ</td><td>3/12/2018 16:00:00</td><td>173.65</td><td>174.48</td><td>173.28</td><td>174.08</td><td>37634971</td></tr>
- <tr><td>QQQ</td><td>3/13/2018 16:00:00</td><td>174.8</td><td>175.21</td><td>171.27</td><td>171.71</td><td>55638925</td></tr>
- <tr><td>QQQ</td><td>3/14/2018 16:00:00</td><td>172.58</td><td>172.74</td><td>170.93</td><td>171.68</td><td>40536383</td></tr>
- <tr><td>QQQ</td><td>3/15/2018 16:00:00</td><td>171.83</td><td>172.53</td><td>170.9</td><td>171.53</td><td>28810366</td></tr>
- <tr><td>QQQ</td><td>3/16/2018 16:00:00</td><td>171.78</td><td>172.2</td><td>170.94</td><td>171.02</td><td>31176742</td></tr>
- <tr><td>QQQ</td><td>3/19/2018 16:00:00</td><td>169.16</td><td>169.22</td><td>165.64</td><td>167.1</td><td>71395061</td></tr>
- <tr><td>QQQ</td><td>3/20/2018 16:00:00</td><td>167.1</td><td>168.04</td><td>166.61</td><td>167.65</td><td>34075664</td></tr>
- <tr><td>QQQ</td><td>3/21/2018 16:00:00</td><td>167.23</td><td>168.76</td><td>166.19</td><td>166.92</td><td>43863543</td></tr>
- <tr><td>QQQ</td><td>3/22/2018 16:00:00</td><td>164.7</td><td>165.77</td><td>162.59</td><td>162.8</td><td>66607288</td></tr>
- <tr><td>QQQ</td><td>3/23/2018 16:00:00</td><td>162.6</td><td>163.3</td><td>158.43</td><td>158.51</td><td>80110392</td></tr>
- <tr><td>QQQ</td><td>3/26/2018 16:00:00</td><td>161.68</td><td>164.6</td><td>159.16</td><td>164.4</td><td>57481503</td></tr>
- <tr><td>QQQ</td><td>3/27/2018 16:00:00</td><td>165.6</td><td>165.62</td><td>157.68</td><td>159.08</td><td>78889105</td></tr>
- <tr><td>QQQ</td><td>3/28/2018 16:00:00</td><td>158.25</td><td>159.78</td><td>156.04</td><td>157.25</td><td>89369655</td></tr>
- <tr><td>QQQ</td><td>3/29/2018 16:00:00</td><td>158.13</td><td>161.71</td><td>156.63</td><td>160.13</td><td>68692566</td></tr>
- <tr><td>QQQ</td><td>4/2/2018 16:00:00</td><td>159</td><td>159.74</td><td>153.88</td><td>155.51</td><td>85549443</td></tr>
- <tr><td>QQQ</td><td>4/3/2018 16:00:00</td><td>156.92</td><td>157.92</td><td>154.44</td><td>157.26</td><td>64090049</td></tr>
- <tr><td>QQQ</td><td>4/4/2018 16:00:00</td><td>154.27</td><td>160.23</td><td>154.04</td><td>159.74</td><td>65768692</td></tr>
- <tr><td>QQQ</td><td>4/5/2018 16:00:00</td><td>161.33</td><td>161.58</td><td>159.48</td><td>160.65</td><td>43054868</td></tr>
- <tr><td>QQQ</td><td>4/6/2018 16:00:00</td><td>158.94</td><td>160.46</td><td>155.88</td><td>156.63</td><td>59870865</td></tr>
- <tr><td>QQQ</td><td>4/9/2018 16:00:00</td><td>158.01</td><td>160.88</td><td>157.46</td><td>157.73</td><td>41810380</td></tr>
- <tr><td>QQQ</td><td>4/10/2018 16:00:00</td><td>160.13</td><td>161.73</td><td>159.07</td><td>161.21</td><td>48601323</td></tr>
- <tr><td>QQQ</td><td>4/11/2018 16:00:00</td><td>160.2</td><td>162</td><td>160.1</td><td>160.28</td><td>41622139</td></tr>
- <tr><td>QQQ</td><td>4/12/2018 16:00:00</td><td>161.3</td><td>162.77</td><td>161.16</td><td>162.21</td><td>30467889</td></tr>
- <tr><td>QQQ</td><td>4/13/2018 16:00:00</td><td>163.01</td><td>163.26</td><td>160.67</td><td>161.37</td><td>44604892</td></tr>
- <tr><td>QQQ</td><td>4/16/2018 16:00:00</td><td>162.45</td><td>163.19</td><td>161.48</td><td>162.6</td><td>28180780</td></tr>
- <tr><td>QQQ</td><td>4/17/2018 16:00:00</td><td>164.19</td><td>166.46</td><td>163.91</td><td>166.1</td><td>35536087</td></tr>
- <tr><td>QQQ</td><td>4/18/2018 16:00:00</td><td>166.12</td><td>167</td><td>165.31</td><td>166.44</td><td>29573880</td></tr>
- <tr><td>QQQ</td><td>4/19/2018 16:00:00</td><td>165.65</td><td>165.99</td><td>164.34</td><td>164.91</td><td>34705692</td></tr>
- <tr><td>QQQ</td><td>4/20/2018 16:00:00</td><td>164.49</td><td>164.61</td><td>161.73</td><td>162.3</td><td>49197140</td></tr>
- <tr><td>QQQ</td><td>4/23/2018 16:00:00</td><td>163.08</td><td>163.73</td><td>161.02</td><td>161.89</td><td>33040646</td></tr>
- <tr><td>QQQ</td><td>4/24/2018 16:00:00</td><td>162.62</td><td>162.91</td><td>157.39</td><td>158.46</td><td>70256751</td></tr>
- <tr><td>QQQ</td><td>4/25/2018 16:00:00</td><td>158.8</td><td>159.31</td><td>156.47</td><td>158.65</td><td>52089323</td></tr>
- <tr><td>QQQ</td><td>4/26/2018 16:00:00</td><td>160.72</td><td>162.53</td><td>160.18</td><td>161.99</td><td>43005532</td></tr>
- <tr><td>QQQ</td><td>4/27/2018 16:00:00</td><td>164.35</td><td>164.41</td><td>161.17</td><td>162.09</td><td>51043406</td></tr>
- <tr><td>QQQ</td><td>4/30/2018 16:00:00</td><td>162.48</td><td>163.48</td><td>160.54</td><td>160.94</td><td>35615273</td></tr>
- <tr><td>QQQ</td><td>5/1/2018 16:00:00</td><td>160.52</td><td>162.8</td><td>160.14</td><td>162.78</td><td>36513529</td></tr>
- <tr><td>QQQ</td><td>5/2/2018 16:00:00</td><td>163.1</td><td>163.57</td><td>161.63</td><td>161.82</td><td>38646842</td></tr>
- <tr><td>QQQ</td><td>5/3/2018 16:00:00</td><td>161.08</td><td>162.4</td><td>159.22</td><td>161.8</td><td>60337134</td></tr>
- <tr><td>QQQ</td><td>5/4/2018 16:00:00</td><td>161.11</td><td>165.25</td><td>160.98</td><td>164.87</td><td>41543243</td></tr>
- <tr><td>QQQ</td><td>5/7/2018 16:00:00</td><td>165.64</td><td>166.78</td><td>165.51</td><td>166.24</td><td>32500152</td></tr>
- <tr><td>QQQ</td><td>5/8/2018 16:00:00</td><td>165.83</td><td>166.43</td><td>164.86</td><td>166.07</td><td>26040170</td></tr>
- <tr><td>QQQ</td><td>5/9/2018 16:00:00</td><td>166.4</td><td>168</td><td>165.78</td><td>167.88</td><td>29122718</td></tr>
- <tr><td>QQQ</td><td>5/10/2018 16:00:00</td><td>168.43</td><td>169.74</td><td>168.29</td><td>169.62</td><td>27067597</td></tr>
- <tr><td>QQQ</td><td>5/11/2018 16:00:00</td><td>169.35</td><td>169.86</td><td>168.72</td><td>169.46</td><td>24688847</td></tr>
- <tr><td>QQQ</td><td>5/14/2018 16:00:00</td><td>169.84</td><td>170.82</td><td>169.47</td><td>169.75</td><td>21821749</td></tr>
- <tr><td>QQQ</td><td>5/15/2018 16:00:00</td><td>168.4</td><td>168.5</td><td>166.98</td><td>167.87</td><td>49361638</td></tr>
- <tr><td>QQQ</td><td>5/16/2018 16:00:00</td><td>168.1</td><td>169.37</td><td>168.01</td><td>168.98</td><td>22941159</td></tr>
- <tr><td>QQQ</td><td>5/17/2018 16:00:00</td><td>168.4</td><td>169.61</td><td>167.51</td><td>168.33</td><td>27480164</td></tr>
- <tr><td>QQQ</td><td>5/18/2018 16:00:00</td><td>167.71</td><td>168.26</td><td>167.21</td><td>167.46</td><td>26217939</td></tr>
- <tr><td>QQQ</td><td>5/21/2018 16:00:00</td><td>168.73</td><td>169.5</td><td>167.68</td><td>168.4</td><td>22954565</td></tr>
- <tr><td>QQQ</td><td>5/22/2018 16:00:00</td><td>169.15</td><td>169.45</td><td>167.88</td><td>168.18</td><td>19477721</td></tr>
- <tr><td>QQQ</td><td>5/23/2018 16:00:00</td><td>166.9</td><td>169.62</td><td>166.88</td><td>169.6</td><td>26557835</td></tr>
- <tr><td>QQQ</td><td>5/24/2018 16:00:00</td><td>169.56</td><td>169.85</td><td>167.84</td><td>169.55</td><td>27696539</td></tr>
- <tr><td>QQQ</td><td>5/25/2018 16:00:00</td><td>169.54</td><td>170.33</td><td>169.21</td><td>169.72</td><td>27460536</td></tr>
- <tr><td>QQQ</td><td>5/29/2018 16:00:00</td><td>168.91</td><td>169.92</td><td>167.96</td><td>168.97</td><td>41220468</td></tr>
- <tr><td>QQQ</td><td>5/30/2018 16:00:00</td><td>169.63</td><td>170.48</td><td>169.22</td><td>170.18</td><td>22665836</td></tr>
- <tr><td>QQQ</td><td>5/31/2018 16:00:00</td><td>170.13</td><td>171.2</td><td>169.63</td><td>170.07</td><td>35670946</td></tr>
- <tr><td>QQQ</td><td>6/1/2018 16:00:00</td><td>170.88</td><td>172.84</td><td>170.87</td><td>172.74</td><td>45543331</td></tr>
- <tr><td>QQQ</td><td>6/4/2018 16:00:00</td><td>173.16</td><td>174.34</td><td>173.07</td><td>174.3</td><td>20459634</td></tr>
- <tr><td>QQQ</td><td>6/5/2018 16:00:00</td><td>174.69</td><td>175.13</td><td>174.07</td><td>174.84</td><td>24779284</td></tr>
- <tr><td>QQQ</td><td>6/6/2018 16:00:00</td><td>175.02</td><td>175.89</td><td>174.14</td><td>175.86</td><td>25036647</td></tr>
- <tr><td>QQQ</td><td>6/7/2018 16:00:00</td><td>175.91</td><td>175.93</td><td>173.55</td><td>174.43</td><td>39600316</td></tr>
- <tr><td>QQQ</td><td>6/8/2018 16:00:00</td><td>173.57</td><td>174.88</td><td>173.18</td><td>174.44</td><td>31780348</td></tr>
- <tr><td>QQQ</td><td>6/11/2018 16:00:00</td><td>174.3</td><td>175.34</td><td>174.28</td><td>174.91</td><td>22319709</td></tr>
- <tr><td>QQQ</td><td>6/12/2018 16:00:00</td><td>175.15</td><td>176</td><td>174.96</td><td>175.83</td><td>22511832</td></tr>
- <tr><td>QQQ</td><td>6/13/2018 16:00:00</td><td>176.09</td><td>177.14</td><td>175.43</td><td>175.82</td><td>37858584</td></tr>
- <tr><td>QQQ</td><td>6/14/2018 16:00:00</td><td>176.62</td><td>177.89</td><td>176.5</td><td>177.6</td><td>35915978</td></tr>
- <tr><td>QQQ</td><td>6/15/2018 16:00:00</td><td>176.98</td><td>177.33</td><td>176.11</td><td>176.98</td><td>49615730</td></tr>
- <tr><td>QQQ</td><td>6/18/2018 16:00:00</td><td>175.53</td><td>176.65</td><td>174.94</td><td>176.5</td><td>31633192</td></tr>
- <tr><td>QQQ</td><td>6/19/2018 16:00:00</td><td>174.26</td><td>176.04</td><td>173.71</td><td>176</td><td>38235994</td></tr>
- <tr><td>QQQ</td><td>6/20/2018 16:00:00</td><td>176.79</td><td>177.98</td><td>176.65</td><td>177.25</td><td>33038042</td></tr>
- <tr><td>QQQ</td><td>6/21/2018 16:00:00</td><td>177.69</td><td>177.88</td><td>175.37</td><td>175.71</td><td>43469439</td></tr>
- <tr><td>QQQ</td><td>6/22/2018 16:00:00</td><td>176.31</td><td>176.37</td><td>174.69</td><td>175.32</td><td>30073187</td></tr>
- <tr><td>QQQ</td><td>6/25/2018 16:00:00</td><td>173.76</td><td>173.99</td><td>169.81</td><td>171.37</td><td>77799725</td></tr>
- <tr><td>QQQ</td><td>6/26/2018 16:00:00</td><td>171.99</td><td>173.06</td><td>171.37</td><td>172.07</td><td>39008146</td></tr>
- <tr><td>QQQ</td><td>6/27/2018 16:00:00</td><td>172.77</td><td>173.58</td><td>169.61</td><td>169.73</td><td>52843497</td></tr>
- <tr><td>QQQ</td><td>6/28/2018 16:00:00</td><td>169.52</td><td>171.77</td><td>169.17</td><td>171.19</td><td>46407708</td></tr>
- <tr><td>QQQ</td><td>6/29/2018 16:00:00</td><td>172</td><td>172.92</td><td>171.4</td><td>171.65</td><td>36408464</td></tr>
- <tr><td>QQQ</td><td>7/2/2018 16:00:00</td><td>170.04</td><td>172.85</td><td>169.67</td><td>172.8</td><td>31770026</td></tr>
- <tr><td>QQQ</td><td>7/3/2018 13:00:00</td><td>173.41</td><td>173.45</td><td>170.63</td><td>170.8</td><td>25512707</td></tr>
- <tr><td>QQQ</td><td>7/5/2018 16:00:00</td><td>171.91</td><td>173.06</td><td>171.03</td><td>172.92</td><td>31626198</td></tr>
- <tr><td>QQQ</td><td>7/6/2018 16:00:00</td><td>173.31</td><td>175.74</td><td>173</td><td>175.61</td><td>37005574</td></tr>
- <tr><td>QQQ</td><td>7/9/2018 16:00:00</td><td>176.49</td><td>177.23</td><td>175.82</td><td>177.19</td><td>27362061</td></tr>
- <tr><td>QQQ</td><td>7/10/2018 16:00:00</td><td>177.41</td><td>177.72</td><td>176.71</td><td>177.32</td><td>23902488</td></tr>
- <tr><td>QQQ</td><td>7/11/2018 16:00:00</td><td>175.96</td><td>177.07</td><td>175.8</td><td>176.42</td><td>30280553</td></tr>
- <tr><td>QQQ</td><td>7/12/2018 16:00:00</td><td>177.21</td><td>179.46</td><td>177.08</td><td>179.46</td><td>27930119</td></tr>
- <tr><td>QQQ</td><td>7/13/2018 16:00:00</td><td>179.42</td><td>179.9</td><td>178.95</td><td>179.61</td><td>28067961</td></tr>
- <tr><td>QQQ</td><td>7/16/2018 16:00:00</td><td>179.64</td><td>179.95</td><td>178.88</td><td>179.18</td><td>21405310</td></tr>
- <tr><td>QQQ</td><td>7/17/2018 16:00:00</td><td>177.3</td><td>180.65</td><td>177.28</td><td>180.27</td><td>31034075</td></tr>
- <tr><td>QQQ</td><td>7/18/2018 16:00:00</td><td>180.28</td><td>180.44</td><td>179.38</td><td>179.93</td><td>23220839</td></tr>
- <tr><td>QQQ</td><td>7/19/2018 16:00:00</td><td>179.34</td><td>179.88</td><td>178.82</td><td>179.03</td><td>31094145</td></tr>
- <tr><td>QQQ</td><td>7/20/2018 16:00:00</td><td>179.57</td><td>180.17</td><td>178.79</td><td>178.99</td><td>35907619</td></tr>
- <tr><td>QQQ</td><td>7/23/2018 16:00:00</td><td>178.45</td><td>179.64</td><td>177.74</td><td>179.56</td><td>22184720</td></tr>
- <tr><td>QQQ</td><td>7/24/2018 16:00:00</td><td>181.39</td><td>182.05</td><td>179.56</td><td>180.3</td><td>36900281</td></tr>
- <tr><td>QQQ</td><td>7/25/2018 16:00:00</td><td>180.36</td><td>182.93</td><td>180.29</td><td>182.82</td><td>36022078</td></tr>
- <tr><td>QQQ</td><td>7/26/2018 16:00:00</td><td>180.35</td><td>180.92</td><td>179.81</td><td>180.05</td><td>40873485</td></tr>
- <tr><td>QQQ</td><td>7/27/2018 16:00:00</td><td>181.26</td><td>181.31</td><td>176.6</td><td>177.62</td><td>59456093</td></tr>
- <tr><td>QQQ</td><td>7/30/2018 16:00:00</td><td>177.66</td><td>177.73</td><td>174.27</td><td>175.11</td><td>60192990</td></tr>
- <tr><td>QQQ</td><td>7/31/2018 16:00:00</td><td>175.75</td><td>177.13</td><td>174.82</td><td>176.45</td><td>47285135</td></tr>
- <tr><td>QQQ</td><td>8/1/2018 16:00:00</td><td>176.87</td><td>177.65</td><td>176.1</td><td>177.12</td><td>37101925</td></tr>
- <tr><td>QQQ</td><td>8/2/2018 16:00:00</td><td>175.87</td><td>179.74</td><td>175.79</td><td>179.53</td><td>47178229</td></tr>
- <tr><td>QQQ</td><td>8/3/2018 16:00:00</td><td>179.8</td><td>180.09</td><td>179.08</td><td>180.08</td><td>28934445</td></tr>
- <tr><td>QQQ</td><td>8/6/2018 16:00:00</td><td>179.97</td><td>181.19</td><td>179.74</td><td>181.14</td><td>24808763</td></tr>
- <tr><td>QQQ</td><td>8/7/2018 16:00:00</td><td>181.63</td><td>182.14</td><td>181.26</td><td>181.8</td><td>29895664</td></tr>
- <tr><td>QQQ</td><td>8/8/2018 16:00:00</td><td>181.55</td><td>182.35</td><td>181.06</td><td>182.02</td><td>22680749</td></tr>
- <tr><td>QQQ</td><td>8/9/2018 16:00:00</td><td>181.94</td><td>182.63</td><td>181.64</td><td>181.91</td><td>18852898</td></tr>
- <tr><td>QQQ</td><td>8/10/2018 16:00:00</td><td>180.68</td><td>181.22</td><td>179.84</td><td>180.52</td><td>33818464</td></tr>
- <tr><td>QQQ</td><td>8/13/2018 16:00:00</td><td>180.85</td><td>182.01</td><td>180.24</td><td>180.32</td><td>26089195</td></tr>
- <tr><td>QQQ</td><td>8/14/2018 16:00:00</td><td>181.01</td><td>181.66</td><td>180.04</td><td>181.45</td><td>20913021</td></tr>
- <tr><td>QQQ</td><td>8/15/2018 16:00:00</td><td>180.09</td><td>180.58</td><td>178.12</td><td>179.23</td><td>58528016</td></tr>
- <tr><td>QQQ</td><td>8/16/2018 16:00:00</td><td>180.57</td><td>180.99</td><td>179.47</td><td>179.82</td><td>27711761</td></tr>
- <tr><td>QQQ</td><td>8/17/2018 16:00:00</td><td>179.36</td><td>180.31</td><td>178.27</td><td>179.86</td><td>36092641</td></tr>
- <tr><td>QQQ</td><td>8/20/2018 16:00:00</td><td>180.28</td><td>180.33</td><td>179</td><td>179.7</td><td>24938956</td></tr>
- <tr><td>QQQ</td><td>8/21/2018 16:00:00</td><td>180.26</td><td>181.44</td><td>180.13</td><td>180.36</td><td>26258657</td></tr>
- <tr><td>QQQ</td><td>8/22/2018 16:00:00</td><td>179.96</td><td>181.27</td><td>179.75</td><td>181.06</td><td>18042380</td></tr>
- <tr><td>QQQ</td><td>8/23/2018 16:00:00</td><td>180.77</td><td>182.05</td><td>180.5</td><td>180.8</td><td>25776166</td></tr>
- <tr><td>QQQ</td><td>8/24/2018 16:00:00</td><td>181.4</td><td>182.63</td><td>181.36</td><td>182.48</td><td>23136113</td></tr>
- <tr><td>QQQ</td><td>8/27/2018 16:00:00</td><td>183.43</td><td>184.34</td><td>183.11</td><td>184.34</td><td>29343552</td></tr>
- <tr><td>QQQ</td><td>8/28/2018 16:00:00</td><td>184.8</td><td>185.02</td><td>184.22</td><td>184.61</td><td>20277036</td></tr>
- <tr><td>QQQ</td><td>8/29/2018 16:00:00</td><td>184.91</td><td>186.84</td><td>184.86</td><td>186.74</td><td>29175591</td></tr>
- <tr><td>QQQ</td><td>8/30/2018 16:00:00</td><td>186.41</td><td>187.52</td><td>185.79</td><td>186.41</td><td>29315453</td></tr>
- <tr><td>QQQ</td><td>8/31/2018 16:00:00</td><td>186.18</td><td>187.18</td><td>185.98</td><td>186.65</td><td>28653248</td></tr>
- <tr><td>QQQ</td><td>9/4/2018 16:00:00</td><td>186.1</td><td>186.4</td><td>184.85</td><td>185.85</td><td>29063537</td></tr>
- <tr><td>QQQ</td><td>9/5/2018 16:00:00</td><td>185.55</td><td>185.55</td><td>182.82</td><td>183.45</td><td>42623326</td></tr>
- <tr><td>QQQ</td><td>9/6/2018 16:00:00</td><td>183.54</td><td>183.75</td><td>180.58</td><td>181.81</td><td>46091403</td></tr>
- <tr><td>QQQ</td><td>9/7/2018 16:00:00</td><td>180.53</td><td>182.67</td><td>180.44</td><td>181.11</td><td>46629495</td></tr>
- <tr><td>QQQ</td><td>9/10/2018 16:00:00</td><td>182.12</td><td>182.25</td><td>180.73</td><td>181.72</td><td>26131977</td></tr>
- <tr><td>QQQ</td><td>9/11/2018 16:00:00</td><td>180.97</td><td>183.42</td><td>180.52</td><td>183.12</td><td>30116460</td></tr>
- <tr><td>QQQ</td><td>9/12/2018 16:00:00</td><td>182.87</td><td>182.98</td><td>181.01</td><td>182.58</td><td>36203973</td></tr>
- <tr><td>QQQ</td><td>9/13/2018 16:00:00</td><td>183.67</td><td>184.88</td><td>183.64</td><td>184.53</td><td>31133188</td></tr>
- <tr><td>QQQ</td><td>9/14/2018 16:00:00</td><td>184.66</td><td>184.95</td><td>183.26</td><td>183.99</td><td>31224132</td></tr>
- <tr><td>QQQ</td><td>9/17/2018 16:00:00</td><td>183.66</td><td>183.81</td><td>181.17</td><td>181.34</td><td>33071197</td></tr>
- <tr><td>QQQ</td><td>9/18/2018 16:00:00</td><td>181.52</td><td>183.73</td><td>181.4</td><td>182.84</td><td>31877347</td></tr>
- <tr><td>QQQ</td><td>9/19/2018 16:00:00</td><td>182.86</td><td>183.3</td><td>181.51</td><td>182.7</td><td>31843377</td></tr>
- <tr><td>QQQ</td><td>9/20/2018 16:00:00</td><td>183.95</td><td>184.97</td><td>183.52</td><td>184.72</td><td>33295820</td></tr>
- <tr><td>QQQ</td><td>9/21/2018 16:00:00</td><td>185.27</td><td>185.48</td><td>183.48</td><td>183.71</td><td>38605353</td></tr>
- <tr><td>QQQ</td><td>9/24/2018 16:00:00</td><td>182.05</td><td>183.96</td><td>181.3</td><td>183.89</td><td>34945602</td></tr>
- <tr><td>QQQ</td><td>9/25/2018 16:00:00</td><td>183.78</td><td>184.28</td><td>183.18</td><td>184.14</td><td>25277520</td></tr>
- <tr><td>QQQ</td><td>9/26/2018 16:00:00</td><td>184.25</td><td>185.99</td><td>183.91</td><td>184.27</td><td>36210571</td></tr>
- <tr><td>QQQ</td><td>9/27/2018 16:00:00</td><td>185.04</td><td>186.49</td><td>184.92</td><td>185.83</td><td>33113269</td></tr>
- <tr><td>QQQ</td><td>9/28/2018 16:00:00</td><td>185.25</td><td>186.28</td><td>184.97</td><td>185.79</td><td>28076843</td></tr>
- <tr><td>QQQ</td><td>10/1/2018 16:00:00</td><td>186.82</td><td>187.53</td><td>185.7</td><td>186.17</td><td>27371297</td></tr>
- <tr><td>QQQ</td><td>10/2/2018 16:00:00</td><td>185.95</td><td>187.18</td><td>185.32</td><td>185.75</td><td>25618608</td></tr>
-</tbody>
-</table>
-</div>
+  <tbody>
+    <tr><td>2017-11-29</td><td>SPY</td><td>262.71</td><td>77512102</td><td>5</td><td>2230000</td></tr>
+    <tr><td>2017-11-30</td><td>SPY</td><td>265.01</td><td>127894389</td><td>26</td><td>2756000</td></tr>
+    <tr><td>2017-12-01</td><td>SPY</td><td>264.46</td><td>164390902</td><td>15</td><td>1752000</td></tr>
+    <tr><td>2017-12-04</td><td>SPY</td><td>264.14</td><td>94040560</td><td>1</td><td>194000</td></tr>
+    <tr><td>2017-12-05</td><td>SPY</td><td>263.19</td><td>77994544</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2017-12-06</td><td>SPY</td><td>263.24</td><td>75898566</td><td>2</td><td>54000</td></tr>
+    <tr><td>2017-12-07</td><td>SPY</td><td>264.07</td><td>77218569</td><td>21</td><td>1905000</td></tr>
+    <tr><td>2017-12-08</td><td>SPY</td><td>265.51</td><td>76563873</td><td>3</td><td>157000</td></tr>
+    <tr><td>2017-12-11</td><td>SPY</td><td>266.31</td><td>83077533</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2017-12-12</td><td>SPY</td><td>266.78</td><td>85195750</td><td>1</td><td>990000</td></tr>
+    <tr><td>2017-12-13</td><td>SPY</td><td>266.75</td><td>102905409</td><td>3</td><td>47000</td></tr>
+    <tr><td>2017-12-14</td><td>SPY</td><td>265.66</td><td>100666692</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2017-12-15</td><td>SPY</td><td>266.51</td><td>144610290</td><td>9</td><td>1159000</td></tr>
+    <tr><td>2017-12-18</td><td>SPY</td><td>268.2</td><td>83653572</td><td>7</td><td>2398000</td></tr>
+    <tr><td>2017-12-19</td><td>SPY</td><td>267.17</td><td>82382876</td><td>1</td><td>36000</td></tr>
+    <tr><td>2017-12-20</td><td>SPY</td><td>267.03</td><td>76751500</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2017-12-21</td><td>SPY</td><td>267.58</td><td>67032339</td><td>4</td><td>141000</td></tr>
+    <tr><td>2017-12-22</td><td>SPY</td><td>267.51</td><td>78720873</td><td>2</td><td>40000</td></tr>
+    <tr><td>2017-12-26</td><td>SPY</td><td>267.19</td><td>45244433</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2017-12-27</td><td>SPY</td><td>267.32</td><td>57750986</td><td>1</td><td>63000</td></tr>
+    <tr><td>2017-12-28</td><td>SPY</td><td>267.87</td><td>45116139</td><td>3</td><td>149000</td></tr>
+    <tr><td>2017-12-29</td><td>SPY</td><td>266.86</td><td>96007424</td><td>1</td><td>9000</td></tr>
+    <tr><td>2018-01-02</td><td>SPY</td><td>268.77</td><td>86655749</td><td>6</td><td>343000</td></tr>
+    <tr><td>2018-01-03</td><td>SPY</td><td>270.47</td><td>90070416</td><td>5</td><td>628000</td></tr>
+    <tr><td>2018-01-04</td><td>SPY</td><td>271.61</td><td>80636408</td><td>30</td><td>6070000</td></tr>
+    <tr><td>2018-01-05</td><td>SPY</td><td>273.42</td><td>83523995</td><td>23</td><td>5511000</td></tr>
+    <tr><td>2018-01-08</td><td>SPY</td><td>273.92</td><td>57319192</td><td>9</td><td>344000</td></tr>
+    <tr><td>2018-01-09</td><td>SPY</td><td>274.54</td><td>57253957</td><td>16</td><td>4165000</td></tr>
+    <tr><td>2018-01-10</td><td>SPY</td><td>274.12</td><td>69574318</td><td>2</td><td>107000</td></tr>
+    <tr><td>2018-01-11</td><td>SPY</td><td>276.12</td><td>62361455</td><td>17</td><td>785000</td></tr>
+    <tr><td>2018-01-12</td><td>SPY</td><td>277.92</td><td>90816076</td><td>61</td><td>5772000</td></tr>
+    <tr><td>2018-01-16</td><td>SPY</td><td>276.97</td><td>106555142</td><td>10</td><td>1409000</td></tr>
+    <tr><td>2018-01-17</td><td>SPY</td><td>279.61</td><td>113258799</td><td>8</td><td>1218000</td></tr>
+    <tr><td>2018-01-18</td><td>SPY</td><td>279.14</td><td>100728006</td><td>7</td><td>685000</td></tr>
+    <tr><td>2018-01-19</td><td>SPY</td><td>280.41</td><td>140920098</td><td>3</td><td>60000</td></tr>
+    <tr><td>2018-01-22</td><td>SPY</td><td>282.69</td><td>91322408</td><td>21</td><td>3577000</td></tr>
+    <tr><td>2018-01-23</td><td>SPY</td><td>283.29</td><td>97084700</td><td>13</td><td>1089000</td></tr>
+    <tr><td>2018-01-24</td><td>SPY</td><td>283.18</td><td>134816117</td><td>18</td><td>1507000</td></tr>
+    <tr><td>2018-01-25</td><td>SPY</td><td>283.3</td><td>84587313</td><td>10</td><td>5500000</td></tr>
+    <tr><td>2018-01-26</td><td>SPY</td><td>286.58</td><td>107743119</td><td>16</td><td>2975000</td></tr>
+    <tr><td>2018-01-29</td><td>SPY</td><td>284.68</td><td>90118337</td><td>2</td><td>491000</td></tr>
+    <tr><td>2018-01-30</td><td>SPY</td><td>281.76</td><td>131796419</td><td>9</td><td>1035000</td></tr>
+    <tr><td>2018-01-31</td><td>SPY</td><td>281.9</td><td>118948131</td><td>7</td><td>1164000</td></tr>
+    <tr><td>2018-02-01</td><td>SPY</td><td>281.58</td><td>90102470</td><td>9</td><td>2176000</td></tr>
+    <tr><td>2018-02-02</td><td>SPY</td><td>275.45</td><td>173174790</td><td>19</td><td>2832000</td></tr>
+    <tr><td>2018-02-05</td><td>SPY</td><td>263.93</td><td>294681816</td><td>17</td><td>6945000</td></tr>
+    <tr><td>2018-02-06</td><td>SPY</td><td>269.13</td><td>355026782</td><td>14</td><td>7048000</td></tr>
+    <tr><td>2018-02-07</td><td>SPY</td><td>267.67</td><td>167376100</td><td>2</td><td>240000</td></tr>
+    <tr><td>2018-02-08</td><td>SPY</td><td>257.63</td><td>246449505</td><td>6</td><td>4230000</td></tr>
+    <tr><td>2018-02-09</td><td>SPY</td><td>261.5</td><td>283565315</td><td>14</td><td>3498000</td></tr>
+    <tr><td>2018-02-12</td><td>SPY</td><td>265.34</td><td>143735976</td><td>4</td><td>1069000</td></tr>
+    <tr><td>2018-02-13</td><td>SPY</td><td>266</td><td>81223640</td><td>2</td><td>39000</td></tr>
+    <tr><td>2018-02-14</td><td>SPY</td><td>269.59</td><td>120735685</td><td>10</td><td>2807000</td></tr>
+    <tr><td>2018-02-15</td><td>SPY</td><td>273.03</td><td>111200286</td><td>3</td><td>751000</td></tr>
+    <tr><td>2018-02-16</td><td>SPY</td><td>273.11</td><td>160420135</td><td>7</td><td>878000</td></tr>
+    <tr><td>2018-02-20</td><td>SPY</td><td>271.4</td><td>86369662</td><td>4</td><td>1089000</td></tr>
+    <tr><td>2018-02-21</td><td>SPY</td><td>270.05</td><td>98883740</td><td>4</td><td>628000</td></tr>
+    <tr><td>2018-02-22</td><td>SPY</td><td>270.4</td><td>110511290</td><td>1</td><td>31000</td></tr>
+    <tr><td>2018-02-23</td><td>SPY</td><td>274.71</td><td>92766428</td><td>19</td><td>1173000</td></tr>
+    <tr><td>2018-02-26</td><td>SPY</td><td>277.9</td><td>86491406</td><td>3</td><td>505000</td></tr>
+    <tr><td>2018-02-27</td><td>SPY</td><td>274.43</td><td>99099165</td><td>2</td><td>99000</td></tr>
+    <tr><td>2018-02-28</td><td>SPY</td><td>271.65</td><td>121907767</td><td>8</td><td>608000</td></tr>
+    <tr><td>2018-03-01</td><td>SPY</td><td>267.7</td><td>176855077</td><td>2</td><td>296000</td></tr>
+    <tr><td>2018-03-02</td><td>SPY</td><td>269.08</td><td>139083217</td><td>16</td><td>1956000</td></tr>
+    <tr><td>2018-03-05</td><td>SPY</td><td>272.19</td><td>97307387</td><td>16</td><td>2899000</td></tr>
+    <tr><td>2018-03-06</td><td>SPY</td><td>272.88</td><td>79213163</td><td>6</td><td>1320000</td></tr>
+    <tr><td>2018-03-07</td><td>SPY</td><td>272.78</td><td>87063502</td><td>3</td><td>204000</td></tr>
+    <tr><td>2018-03-08</td><td>SPY</td><td>274.1</td><td>66901150</td><td>4</td><td>419000</td></tr>
+    <tr><td>2018-03-09</td><td>SPY</td><td>278.87</td><td>113625335</td><td>9</td><td>1293000</td></tr>
+    <tr><td>2018-03-12</td><td>SPY</td><td>278.52</td><td>71924793</td><td>2</td><td>194000</td></tr>
+    <tr><td>2018-03-13</td><td>SPY</td><td>276.72</td><td>91968937</td><td>1</td><td>498000</td></tr>
+    <tr><td>2018-03-14</td><td>SPY</td><td>275.3</td><td>105895079</td><td>1</td><td>49000</td></tr>
+    <tr><td>2018-03-15</td><td>SPY</td><td>275</td><td>83433038</td><td>1</td><td>150000</td></tr>
+    <tr><td>2018-03-16</td><td>SPY</td><td>274.2</td><td>100343673</td><td>5</td><td>1506000</td></tr>
+    <tr><td>2018-03-19</td><td>SPY</td><td>270.49</td><td>109208442</td><td>3</td><td>16396000</td></tr>
+    <tr><td>2018-03-20</td><td>SPY</td><td>270.95</td><td>59757271</td><td>4</td><td>717000</td></tr>
+    <tr><td>2018-03-21</td><td>SPY</td><td>270.43</td><td>78709578</td><td>5</td><td>1196000</td></tr>
+    <tr><td>2018-03-22</td><td>SPY</td><td>263.67</td><td>148785916</td><td>3</td><td>258000</td></tr>
+    <tr><td>2018-03-23</td><td>SPY</td><td>258.05</td><td>183534751</td><td>7</td><td>1604000</td></tr>
+    <tr><td>2018-03-26</td><td>SPY</td><td>265.11</td><td>141956102</td><td>20</td><td>2511000</td></tr>
+    <tr><td>2018-03-27</td><td>SPY</td><td>260.6</td><td>129941445</td><td>2</td><td>598000</td></tr>
+    <tr><td>2018-03-28</td><td>SPY</td><td>259.83</td><td>146452306</td><td>3</td><td>757000</td></tr>
+    <tr><td>2018-03-29</td><td>SPY</td><td>263.15</td><td>124244790</td><td>9</td><td>2561000</td></tr>
+    <tr><td>2018-04-02</td><td>SPY</td><td>257.47</td><td>186286343</td><td>13</td><td>3797000</td></tr>
+    <tr><td>2018-04-03</td><td>SPY</td><td>260.77</td><td>119956861</td><td>11</td><td>4461000</td></tr>
+    <tr><td>2018-04-04</td><td>SPY</td><td>263.56</td><td>123715339</td><td>32</td><td>4911000</td></tr>
+    <tr><td>2018-04-05</td><td>SPY</td><td>265.64</td><td>82652618</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-04-06</td><td>SPY</td><td>259.72</td><td>179521209</td><td>11</td><td>860000</td></tr>
+    <tr><td>2018-04-09</td><td>SPY</td><td>261</td><td>105442932</td><td>19</td><td>2343000</td></tr>
+    <tr><td>2018-04-10</td><td>SPY</td><td>265.15</td><td>105573736</td><td>13</td><td>3517000</td></tr>
+    <tr><td>2018-04-11</td><td>SPY</td><td>263.76</td><td>91140243</td><td>2</td><td>538000</td></tr>
+    <tr><td>2018-04-12</td><td>SPY</td><td>265.93</td><td>68890480</td><td>2</td><td>403000</td></tr>
+    <tr><td>2018-04-13</td><td>SPY</td><td>265.15</td><td>85079176</td><td>7</td><td>959000</td></tr>
+    <tr><td>2018-04-16</td><td>SPY</td><td>267.33</td><td>63405287</td><td>4</td><td>757000</td></tr>
+    <tr><td>2018-04-17</td><td>SPY</td><td>270.19</td><td>64682036</td><td>12</td><td>1907000</td></tr>
+    <tr><td>2018-04-18</td><td>SPY</td><td>270.39</td><td>57303857</td><td>2</td><td>159000</td></tr>
+    <tr><td>2018-04-19</td><td>SPY</td><td>268.89</td><td>77655909</td><td>5</td><td>391000</td></tr>
+    <tr><td>2018-04-20</td><td>SPY</td><td>266.61</td><td>99953133</td><td>2</td><td>137000</td></tr>
+    <tr><td>2018-04-23</td><td>SPY</td><td>266.57</td><td>65557954</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-04-24</td><td>SPY</td><td>262.98</td><td>112885452</td><td>2</td><td>200000</td></tr>
+    <tr><td>2018-04-25</td><td>SPY</td><td>263.63</td><td>103840948</td><td>4</td><td>439000</td></tr>
+    <tr><td>2018-04-26</td><td>SPY</td><td>266.31</td><td>67731942</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-04-27</td><td>SPY</td><td>266.56</td><td>57053647</td><td>2</td><td>869000</td></tr>
+    <tr><td>2018-04-30</td><td>SPY</td><td>264.51</td><td>82182324</td><td>6</td><td>438000</td></tr>
+    <tr><td>2018-05-01</td><td>SPY</td><td>264.98</td><td>74203365</td><td>2</td><td>362000</td></tr>
+    <tr><td>2018-05-02</td><td>SPY</td><td>263.2</td><td>86368943</td><td>1</td><td>35000</td></tr>
+    <tr><td>2018-05-03</td><td>SPY</td><td>262.62</td><td>136311479</td><td>9</td><td>2440000</td></tr>
+    <tr><td>2018-05-04</td><td>SPY</td><td>266.02</td><td>91222075</td><td>12</td><td>1609000</td></tr>
+    <tr><td>2018-05-07</td><td>SPY</td><td>266.92</td><td>55304907</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-05-08</td><td>SPY</td><td>266.92</td><td>67499247</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-05-09</td><td>SPY</td><td>269.5</td><td>59666143</td><td>2</td><td>760000</td></tr>
+    <tr><td>2018-05-10</td><td>SPY</td><td>272.02</td><td>72063931</td><td>3</td><td>81000</td></tr>
+    <tr><td>2018-05-11</td><td>SPY</td><td>272.85</td><td>59871511</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-05-14</td><td>SPY</td><td>272.98</td><td>54790606</td><td>4</td><td>683000</td></tr>
+    <tr><td>2018-05-15</td><td>SPY</td><td>271.1</td><td>87036136</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-05-16</td><td>SPY</td><td>272.24</td><td>53942631</td><td>4</td><td>2771000</td></tr>
+    <tr><td>2018-05-17</td><td>SPY</td><td>272.01</td><td>56536400</td><td>4</td><td>1078000</td></tr>
+    <tr><td>2018-05-18</td><td>SPY</td><td>271.33</td><td>64367959</td><td>2</td><td>937000</td></tr>
+    <tr><td>2018-05-21</td><td>SPY</td><td>273.37</td><td>58025875</td><td>4</td><td>278000</td></tr>
+    <tr><td>2018-05-22</td><td>SPY</td><td>272.61</td><td>52966358</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-05-23</td><td>SPY</td><td>273.36</td><td>64694184</td><td>6</td><td>223000</td></tr>
+    <tr><td>2018-05-24</td><td>SPY</td><td>272.8</td><td>76043827</td><td>1</td><td>144000</td></tr>
+    <tr><td>2018-05-25</td><td>SPY</td><td>272.15</td><td>56374755</td><td>3</td><td>285000</td></tr>
+    <tr><td>2018-05-29</td><td>SPY</td><td>269.02</td><td>115908607</td><td>6</td><td>432000</td></tr>
+    <tr><td>2018-05-30</td><td>SPY</td><td>272.61</td><td>69678449</td><td>3</td><td>651000</td></tr>
+    <tr><td>2018-05-31</td><td>SPY</td><td>270.94</td><td>93519941</td><td>4</td><td>198000</td></tr>
+    <tr><td>2018-06-01</td><td>SPY</td><td>273.6</td><td>71258411</td><td>6</td><td>3079000</td></tr>
+    <tr><td>2018-06-04</td><td>SPY</td><td>274.9</td><td>45385166</td><td>4</td><td>215000</td></tr>
+    <tr><td>2018-06-05</td><td>SPY</td><td>275.1</td><td>51135038</td><td>1</td><td>437000</td></tr>
+    <tr><td>2018-06-06</td><td>SPY</td><td>277.4</td><td>62732215</td><td>11</td><td>707000</td></tr>
+    <tr><td>2018-06-07</td><td>SPY</td><td>277.37</td><td>72969402</td><td>1</td><td>168000</td></tr>
+    <tr><td>2018-06-08</td><td>SPY</td><td>278.19</td><td>72139719</td><td>2</td><td>204000</td></tr>
+    <tr><td>2018-06-11</td><td>SPY</td><td>278.56</td><td>58892515</td><td>1</td><td>55000</td></tr>
+    <tr><td>2018-06-12</td><td>SPY</td><td>278.92</td><td>72329028</td><td>2</td><td>120000</td></tr>
+    <tr><td>2018-06-13</td><td>SPY</td><td>278.03</td><td>79070610</td><td>3</td><td>325000</td></tr>
+    <tr><td>2018-06-14</td><td>SPY</td><td>278.73</td><td>77097620</td><td>1</td><td>95000</td></tr>
+    <tr><td>2018-06-15</td><td>SPY</td><td>277.13</td><td>120041562</td><td>5</td><td>174000</td></tr>
+    <tr><td>2018-06-18</td><td>SPY</td><td>276.56</td><td>52917581</td><td>2</td><td>301000</td></tr>
+    <tr><td>2018-06-19</td><td>SPY</td><td>275.5</td><td>97531510</td><td>2</td><td>203000</td></tr>
+    <tr><td>2018-06-20</td><td>SPY</td><td>275.97</td><td>53785486</td><td>4</td><td>314000</td></tr>
+    <tr><td>2018-06-21</td><td>SPY</td><td>274.24</td><td>71061404</td><td>1</td><td>2921000</td></tr>
+    <tr><td>2018-06-22</td><td>SPY</td><td>274.74</td><td>56612003</td><td>3</td><td>875000</td></tr>
+    <tr><td>2018-06-25</td><td>SPY</td><td>271</td><td>137854162</td><td>5</td><td>453000</td></tr>
+    <tr><td>2018-06-26</td><td>SPY</td><td>271.6</td><td>68683211</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-06-27</td><td>SPY</td><td>271.6</td><td>2725809</td><td>1</td><td>595000</td></tr>
+    <tr><td>2018-06-28</td><td>SPY</td><td>270.89</td><td>76650517</td><td>2</td><td>106000</td></tr>
+    <tr><td>2018-06-29</td><td>SPY</td><td>271.28</td><td>97592499</td><td>1</td><td>106000</td></tr>
+    <tr><td>2018-07-02</td><td>SPY</td><td>271.86</td><td>63554774</td><td>4</td><td>315000</td></tr>
+    <tr><td>2018-07-03</td><td>SPY</td><td>270.9</td><td>42187071</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-05</td><td>SPY</td><td>273.11</td><td>56925919</td><td>2</td><td>257000</td></tr>
+    <tr><td>2018-07-06</td><td>SPY</td><td>275.42</td><td>66493696</td><td>1</td><td>97000</td></tr>
+    <tr><td>2018-07-09</td><td>SPY</td><td>277.9</td><td>50550399</td><td>6</td><td>762000</td></tr>
+    <tr><td>2018-07-10</td><td>SPY</td><td>278.9</td><td>51966829</td><td>5</td><td>301000</td></tr>
+    <tr><td>2018-07-11</td><td>SPY</td><td>276.86</td><td>77054739</td><td>13</td><td>1226000</td></tr>
+    <tr><td>2018-07-12</td><td>SPY</td><td>279.37</td><td>60124687</td><td>6</td><td>1057000</td></tr>
+    <tr><td>2018-07-13</td><td>SPY</td><td>279.59</td><td>48234964</td><td>1</td><td>488000</td></tr>
+    <tr><td>2018-07-16</td><td>SPY</td><td>279.34</td><td>48201038</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-17</td><td>SPY</td><td>280.47</td><td>52315500</td><td>14</td><td>2286000</td></tr>
+    <tr><td>2018-07-18</td><td>SPY</td><td>281.06</td><td>44593465</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-19</td><td>SPY</td><td>280</td><td>61412117</td><td>3</td><td>492000</td></tr>
+    <tr><td>2018-07-20</td><td>SPY</td><td>279.68</td><td>82372729</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-23</td><td>SPY</td><td>280.2</td><td>47047565</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-24</td><td>SPY</td><td>281.61</td><td>68026935</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-25</td><td>SPY</td><td>284.01</td><td>78882927</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-26</td><td>SPY</td><td>283.34</td><td>57919495</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-27</td><td>SPY</td><td>281.42</td><td>76783177</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-07-30</td><td>SPY</td><td>279.95</td><td>63742508</td><td>1</td><td>929000</td></tr>
+    <tr><td>2018-07-31</td><td>SPY</td><td>281.33</td><td>68570493</td><td>7</td><td>1327000</td></tr>
+    <tr><td>2018-08-01</td><td>SPY</td><td>280.86</td><td>53853326</td><td>2</td><td>117000</td></tr>
+    <tr><td>2018-08-02</td><td>SPY</td><td>282.39</td><td>63426363</td><td>2</td><td>291000</td></tr>
+    <tr><td>2018-08-03</td><td>SPY</td><td>283.6</td><td>53935386</td><td>1</td><td>14000</td></tr>
+    <tr><td>2018-08-06</td><td>SPY</td><td>284.64</td><td>39400887</td><td>11</td><td>559000</td></tr>
+    <tr><td>2018-08-07</td><td>SPY</td><td>285.58</td><td>43196646</td><td>7</td><td>1870000</td></tr>
+    <tr><td>2018-08-08</td><td>SPY</td><td>285.46</td><td>42114551</td><td>4</td><td>749000</td></tr>
+    <tr><td>2018-08-09</td><td>SPY</td><td>285.07</td><td>35716976</td><td>2</td><td>166000</td></tr>
+    <tr><td>2018-08-10</td><td>SPY</td><td>283.16</td><td>77076044</td><td>5</td><td>352000</td></tr>
+    <tr><td>2018-08-13</td><td>SPY</td><td>282.1</td><td>65732909</td><td>8</td><td>241000</td></tr>
+    <tr><td>2018-08-14</td><td>SPY</td><td>283.9</td><td>43842031</td><td>6</td><td>161000</td></tr>
+    <tr><td>2018-08-15</td><td>SPY</td><td>281.78</td><td>102925355</td><td>2</td><td>254000</td></tr>
+    <tr><td>2018-08-16</td><td>SPY</td><td>284.06</td><td>69967919</td><td>16</td><td>1567000</td></tr>
+    <tr><td>2018-08-17</td><td>SPY</td><td>285.06</td><td>65618481</td><td>5</td><td>890000</td></tr>
+    <tr><td>2018-08-20</td><td>SPY</td><td>285.67</td><td>39807490</td><td>6</td><td>262000</td></tr>
+    <tr><td>2018-08-21</td><td>SPY</td><td>286.34</td><td>67271983</td><td>15</td><td>2665000</td></tr>
+    <tr><td>2018-08-22</td><td>SPY</td><td>286.17</td><td>44993333</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-08-23</td><td>SPY</td><td>285.79</td><td>49204851</td><td>1</td><td>212000</td></tr>
+    <tr><td>2018-08-24</td><td>SPY</td><td>287.51</td><td>57487399</td><td>5</td><td>427000</td></tr>
+    <tr><td>2018-08-27</td><td>SPY</td><td>289.78</td><td>57072377</td><td>11</td><td>2271000</td></tr>
+    <tr><td>2018-08-28</td><td>SPY</td><td>289.92</td><td>46943472</td><td>5</td><td>308000</td></tr>
+    <tr><td>2018-08-29</td><td>SPY</td><td>291.48</td><td>61485514</td><td>15</td><td>1212000</td></tr>
+    <tr><td>2018-08-30</td><td>SPY</td><td>290.3</td><td>61229501</td><td>6</td><td>1052000</td></tr>
+    <tr><td>2018-08-31</td><td>SPY</td><td>290.31</td><td>66140838</td><td>29</td><td>2589000</td></tr>
+    <tr><td>2018-09-04</td><td>SPY</td><td>289.81</td><td>57594367</td><td>4</td><td>1003000</td></tr>
+    <tr><td>2018-09-05</td><td>SPY</td><td>289.03</td><td>72452437</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-09-06</td><td>SPY</td><td>288.16</td><td>65909863</td><td>3</td><td>235000</td></tr>
+    <tr><td>2018-09-07</td><td>SPY</td><td>287.6</td><td>73524824</td><td>8</td><td>466000</td></tr>
+    <tr><td>2018-09-10</td><td>SPY</td><td>288.1</td><td>50210903</td><td>11</td><td>448000</td></tr>
+    <tr><td>2018-09-11</td><td>SPY</td><td>289.05</td><td>50530492</td><td>NULL</td><td>NULL</td></tr>
+    <tr><td>2018-09-12</td><td>SPY</td><td>289.12</td><td>59810758</td><td>6</td><td>991000</td></tr>
+    <tr><td>2018-09-13</td><td>SPY</td><td>290.83</td><td>51034222</td><td>3</td><td>283000</td></tr>
+    <tr><td>2018-09-14</td><td>SPY</td><td>290.88</td><td>55079875</td><td>2</td><td>22000</td></tr>
+    <tr><td>2018-09-17</td><td>SPY</td><td>289.34</td><td>68244043</td><td>5</td><td>656000</td></tr>
+    <tr><td>2018-09-18</td><td>SPY</td><td>290.91</td><td>61930407</td><td>1</td><td>75000</td></tr>
+    <tr><td>2018-09-19</td><td>SPY</td><td>291.22</td><td>49080562</td><td>1</td><td>64000</td></tr>
+    <tr><td>2018-09-20</td><td>SPY</td><td>293.58</td><td>100360646</td><td>3</td><td>185000</td></tr>
+    <tr><td>2018-09-21</td><td>SPY</td><td>291.99</td><td>105479656</td><td>11</td><td>774000</td></tr>
+    <tr><td>2018-09-24</td><td>SPY</td><td>291.02</td><td>53409645</td><td>1</td><td>185000</td></tr>
+    <tr><td>2018-09-25</td><td>SPY</td><td>290.75</td><td>44370037</td><td>5</td><td>659000</td></tr>
+    <tr><td>2018-09-26</td><td>SPY</td><td>289.88</td><td>79739674</td><td>6</td><td>735000</td></tr>
+    <tr><td>2018-09-27</td><td>SPY</td><td>290.69</td><td>59249455</td><td>12</td><td>2268000</td></tr>
+    <tr><td>2018-09-28</td><td>SPY</td><td>290.72</td><td>70091385</td><td>1</td><td>510000</td></tr>
+    <tr><td>2018-10-01</td><td>SPY</td><td>291.73</td><td>62078937</td><td>8</td><td>492000</td></tr>
+    <tr><td>2018-10-02</td><td>SPY</td><td>291.56</td><td>47258227</td><td>6</td><td>760000</td></tr>
+    <tr><td>2018-10-03</td><td>SPY</td><td>291.72</td><td>64694594</td><td>2</td><td>510000</td></tr>
+    <tr><td>2018-10-04</td><td>SPY</td><td>289.44</td><td>111545910</td><td>21</td><td>2272000</td></tr>
+    <tr><td>2018-10-05</td><td>SPY</td><td>287.82</td><td>105951698</td><td>8</td><td>969000</td></tr>
+    <tr><td>2018-10-08</td><td>SPY</td><td>287.82</td><td>87742172</td><td>13</td><td>2314000</td></tr>
+    <tr><td>2018-10-09</td><td>SPY</td><td>287.4</td><td>74338982</td><td>3</td><td>133000</td></tr>
+    <tr><td>2018-10-10</td><td>SPY</td><td>278.3</td><td>214731042</td><td>7</td><td>2358000</td></tr>
+    <tr><td>2018-10-11</td><td>SPY</td><td>272.17</td><td>274840491</td><td>13</td><td>2745000</td></tr>
+    <tr><td>2018-10-12</td><td>SPY</td><td>275.95</td><td>183186492</td><td>10</td><td>1774000</td></tr>
+    <tr><td>2018-10-15</td><td>SPY</td><td>274.4</td><td>102263717</td><td>5</td><td>305000</td></tr>
+    <tr><td>2018-10-16</td><td>SPY</td><td>280.4</td><td>118255834</td><td>5</td><td>679000</td></tr>
+    <tr><td>2018-10-17</td><td>SPY</td><td>280.45</td><td>110625987</td><td>5</td><td>1090000</td></tr>
+    <tr><td>2018-10-18</td><td>SPY</td><td>276.4</td><td>134557525</td><td>3</td><td>215000</td></tr>
+    <tr><td>2018-10-19</td><td>SPY</td><td>276.25</td><td>139901634</td><td>4</td><td>592000</td></tr>
+    <tr><td>2018-10-22</td><td>SPY</td><td>275.01</td><td>82415812</td><td>6</td><td>983000</td></tr>
+    <tr><td>2018-10-23</td><td>SPY</td><td>273.61</td><td>146352719</td><td>21</td><td>4205000</td></tr>
+    <tr><td>2018-10-24</td><td>SPY</td><td>265.32</td><td>177806697</td><td>8</td><td>1444000</td></tr>
+    <tr><td>2018-10-25</td><td>SPY</td><td>270.08</td><td>138061545</td><td>1</td><td>66000</td></tr>
+    <tr><td>2018-10-26</td><td>SPY</td><td>265.33</td><td>201574596</td><td>11</td><td>2662000</td></tr>
+    <tr><td>2018-10-29</td><td>SPY</td><td>263.86</td><td>160749101</td><td>7</td><td>615000</td></tr>
+    <tr><td>2018-10-30</td><td>SPY</td><td>267.77</td><td>157115995</td><td>18</td><td>4021000</td></tr>
+    <tr><td>2018-10-31</td><td>SPY</td><td>270.63</td><td>128296325</td><td>2</td><td>68000</td></tr>
+    <tr><td>2018-11-01</td><td>SPY</td><td>273.51</td><td>99495037</td><td>4</td><td>2130000</td></tr>
+    <tr><td>2018-11-02</td><td>SPY</td><td>271.89</td><td>122634107</td><td>4</td><td>10858000</td></tr>
+    <tr><td>2018-11-05</td><td>SPY</td><td>273.39</td><td>65622482</td><td>2</td><td>737000</td></tr>
+    <tr><td>2018-11-06</td><td>SPY</td><td>275.12</td><td>60085894</td><td>5</td><td>643000</td></tr>
+    <tr><td>2018-11-07</td><td>SPY</td><td>281.01</td><td>102752099</td><td>5</td><td>831000</td></tr>
+    <tr><td>2018-11-08</td><td>SPY</td><td>280.5</td><td>65584886</td><td>6</td><td>1412000</td></tr>
+    <tr><td>2018-11-09</td><td>SPY</td><td>277.76</td><td>98812561</td><td>8</td><td>875000</td></tr>
+    <tr><td>2018-11-12</td><td>SPY</td><td>272.57</td><td>99673574</td><td>5</td><td>1593000</td></tr>
+    <tr><td>2018-11-13</td><td>SPY</td><td>272.06</td><td>98176610</td><td>3</td><td>340000</td></tr>
+    <tr><td>2018-11-14</td><td>SPY</td><td>270.2</td><td>125335931</td><td>8</td><td>968000</td></tr>
+    <tr><td>2018-11-15</td><td>SPY</td><td>273.02</td><td>135101437</td><td>19</td><td>2189000</td></tr>
+    <tr><td>2018-11-16</td><td>SPY</td><td>273.73</td><td>126668040</td><td>7</td><td>1196000</td></tr>
+    <tr><td>2018-11-19</td><td>SPY</td><td>269.1</td><td>103061706</td><td>5</td><td>341000</td></tr>
+    <tr><td>2018-11-20</td><td>SPY</td><td>264.12</td><td>136021311</td><td>20</td><td>5603000</td></tr>
+    <tr><td>2018-11-21</td><td>SPY</td><td>265.02</td><td>75563743</td><td>8</td><td>1134000</td></tr>
+    <tr><td>2018-11-23</td><td>SPY</td><td>263.25</td><td>42807878</td><td>4</td><td>1161000</td></tr>
+    <tr><td>2018-11-26</td><td>SPY</td><td>267.5</td><td>79981362</td><td>6</td><td>506000</td></tr>
+    <tr><td>2018-11-27</td><td>SPY</td><td>268.4</td><td>75502441</td><td>3</td><td>1808000</td></tr>
+    <tr><td>2018-11-28</td><td>SPY</td><td>274.58</td><td>127629633</td><td>16</td><td>5454000</td></tr>
+    <tr><td>2018-11-29</td><td>SPY</td><td>273.98</td><td>82346420</td><td>NULL</td><td>NULL</td></tr>
+   </tbody></table>
+   </div>
