@@ -26,6 +26,14 @@
 	border: 1px solid gray;
     background-color: ghostwhite
     }
+   
+.comp-title{
+    text-align: center;
+    margin-right: 40px;
+    color: teal;
+
+}
+    
 .vizbox{
     padding-right: 25px;
     padding-left: 25px;
@@ -47,7 +55,9 @@
     
 }
 
-
+.sborder{
+    border: 3px solid teal;
+}
 
 .tableizer-firstrow{
     background-color: teal; 
